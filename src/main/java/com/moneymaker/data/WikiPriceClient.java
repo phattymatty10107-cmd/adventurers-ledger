@@ -23,7 +23,7 @@ import okhttp3.ResponseBody;
 public class WikiPriceClient
 {
 	private static final HttpUrl BASE = HttpUrl.parse("https://prices.runescape.wiki/api/v1/osrs/");
-	private static final String USER_AGENT = "RuneLite Adventurer's Ledger plugin - github.com/phattymatty10107-cmd/osrs-money-maker";
+	private static final String USER_AGENT = "RuneLite Adventurer's Ledger plugin - github.com/phattymatty10107-cmd/adventurers-ledger";
 
 	private static final Type MAPPING_TYPE = new TypeToken<List<Mapping>>()
 	{

@@ -1,6 +1,6 @@
 # Adventurer's Ledger: a RuneLite plugin
 
-A side panel with two tabs, priced live from the OSRS Wiki real-time prices API.
+A side panel with four tabs (Jobs, Train, Bosses and Farm), priced live from the OSRS Wiki real-time prices API.
 
 ## Jobs
 
