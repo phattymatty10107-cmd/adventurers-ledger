@@ -1,0 +1,95 @@
+# Gear the GE doesn't sell under the same name.
+# name|tradeable parts (Item*qty + Item*qty, or Item, Item for "cheapest of")|how to get it
+Toxic blowpipe|Toxic blowpipe (empty)|Add darts and scales before use
+Tumeken's shadow|Tumeken's shadow (uncharged)|Charge with soul and chaos runes
+Sanguinesti staff|Sanguinesti staff (uncharged)|Charge with blood runes
+Serpentine helm|Serpentine helm (uncharged)|Charge with Zulrah's scales
+Tome of fire|Tome of Fire (empty)|Charge with burnt pages
+Trident of the swamp|Uncharged toxic trident|Charge with runes and scales
+Bow of faerdhinen|Enhanced crystal weapon seed|Sing at the Singing Bowl (needs crystal shards)
+Blade of saeldor (c)|Enhanced crystal weapon seed|Sing at the Singing Bowl (needs crystal shards)
+Crystal bow|Crystal weapon seed|Sing at the Singing Bowl
+Crystal shield|Crystal weapon seed|Sing at the Singing Bowl
+Crystal helm|Crystal armour seed*1|Sing at the Singing Bowl (needs crystal shards)
+Crystal legs|Crystal armour seed*2|Sing at the Singing Bowl (needs crystal shards)
+Crystal body|Crystal armour seed*3|Sing at the Singing Bowl (needs crystal shards)
+Harmonised nightmare staff|Harmonised orb*1 + Nightmare staff*1|Combine the orb with a Nightmare staff
+Abyssal tentacle|Kraken tentacle*1 + Abyssal whip*1|Combine; degrades over 10,000 hits
+Amulet of blood fury|Blood shard*1 + Amulet of fury*1|Combine
+Elidinis' ward (f)|Elidinis' ward|Also needs an Arcane prayer scroll's worth of soul runes to fortify
+Neitiznot faceguard|Basilisk jaw*1 + Helm of neitiznot*1|Helm of neitiznot from The Fremennik Isles
+Ferocious gloves|Hydra leather|Craft at the Karuulm dungeon machine
+Avernic defender|Avernic defender hilt|Also needs a Dragon defender (Warriors' Guild)
+Berserker ring (i)|Berserker ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Archers ring (i)|Archers ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Warrior ring (i)|Warrior ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Tyrannical ring (i)|Tyrannical ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Ring of the gods (i)|Ring of the gods|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Ring of suffering (i)|Ring of suffering|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Ring of suffering (ri)|Ring of suffering|Plus an imbue, then charged with rings of recoil
+Magic shortbow (i)|Magic shortbow|Plus a Magic shortbow scroll from NMZ / Soul Wars
+Ring of endurance|Ring of endurance (uncharged)|Charge with stamina potions
+Blessed coif|Saradomin coif, Guthix coif, Zamorak coif, Armadyl coif, Bandos coif, Ancient coif|Any god coif
+Blessed body|Saradomin d'hide body, Guthix d'hide body, Zamorak d'hide body, Armadyl d'hide body, Bandos d'hide body, Ancient d'hide body|Any god d'hide body
+Blessed chaps|Saradomin chaps, Guthix chaps, Zamorak chaps, Armadyl chaps, Bandos chaps, Ancient chaps|Any god chaps
+Blessed vambraces|Saradomin bracers, Guthix bracers, Zamorak bracers, Armadyl bracers, Bandos bracers, Ancient bracers|Any god bracers
+Blessed boots|Saradomin d'hide boots, Guthix d'hide boots, Zamorak d'hide boots, Armadyl d'hide boots, Bandos d'hide boots, Ancient d'hide boots|Any god d'hide boots
+Ancient sceptre|Ancient staff|Upgraded from an Ancient staff (Desert Treasure II)
+Fire cape||Untradeable: TzHaar Fight Cave
+Infernal cape||Untradeable: the Inferno
+Barrows gloves||Untradeable: Recipe for Disaster
+Dragon gloves||Untradeable: Recipe for Disaster
+Rune gloves||Untradeable: Recipe for Disaster
+Void knight top||Untradeable: Pest Control
+Void knight robe||Untradeable: Pest Control
+Void knight gloves||Untradeable: Pest Control
+Void melee helm||Untradeable: Pest Control
+Void ranger helm||Untradeable: Pest Control
+Elite void top||Untradeable: Pest Control + Western Provinces hard diary
+Elite void robe||Untradeable: Pest Control + Western Provinces hard diary
+Imbued god cape||Untradeable: Mage Arena II
+God cape||Untradeable: Mage Arena
+Ava's accumulator||Untradeable: Animal Magnetism
+Ava's assembler||Untradeable: Dragon Slayer II + vorkath's head
+Dizana's quiver||Untradeable: Fortis Colosseum
+Ranging cape||Skillcape: 99 Ranged
+Ardougne cloak 2||Untradeable: Ardougne medium diary
+Ardougne cloak 3||Untradeable: Ardougne hard diary
+Ardougne cloak 4||Untradeable: Ardougne elite diary
+Salve amulet (e)||Untradeable: Haunted Mine + Lumbridge enchant
+Salve amulet(ei)||Untradeable: Haunted Mine + enchant + imbue
+Slayer helmet (i)||Untradeable: Slayer reward + imbue
+Dragon defender||Untradeable: Warriors' Guild
+Rune defender||Untradeable: Warriors' Guild
+Adamant defender||Untradeable: Warriors' Guild
+Fighter torso||Untradeable: Barbarian Assault
+Mythical cape||Untradeable: Dragon Slayer II
+Chaos gauntlets||Untradeable: Family Crest
+Ghommal's hilt 2||Untradeable: Combat Achievements (medium)
+Ring of shadows||Untradeable: Desert Treasure II
+Echo boots||Untradeable
+Iban's staff (u)||Untradeable: Underground Pass
+Colossal blade||Untradeable: Giants' Foundry
+God blessing||Untradeable: Horror from the Deep
+Rada's blessing 4||Untradeable: Kourend & Kebos elite diary
+Book of darkness||Untradeable: Horror from the Deep
+Scythe of Vitur|Scythe of Vitur (uncharged)|Charge with blood runes and vials of blood
+Blade of Saeldor|Blade of Saeldor (inactive)|Activate with crystal shards
+Eye of Ayak|Eye of Ayak (uncharged)|Charge before use
+Accursed sceptre|Accursed sceptre (u)|Charge with revenant ether
+Thammaron's sceptre|Thammaron's sceptre (u)|Charge with revenant ether
+Webweaver bow|Webweaver bow (u)|Charge with revenant ether
+Craw's bow|Craw's bow (u)|Charge with revenant ether
+Ursine chainmace|Ursine chainmace (u)|Charge with revenant ether
+Viggora's chainmace|Viggora's chainmace (u)|Charge with revenant ether
+Trident of the Seas|Uncharged trident|Charge with runes
+Tome of Earth|Tome of Earth (empty)|Charge with soaked pages
+Granite ring (i)|Granite ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Seers ring (i)|Seers ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Treasonous ring (i)|Treasonous ring|Plus an imbue (NMZ, Soul Wars or PvP Arena points)
+Ring of wealth (i)|Ring of wealth|Plus a ring of wealth scroll
+Mitre|Saradomin mitre, Guthix mitre, Zamorak mitre, Armadyl mitre, Bandos mitre, Ancient mitre|Any god mitre
+Avernic treads (max)||Untradeable: made by combining the three best boots with Avernic treads
+Max cape||Untradeable: 99 in every skill
+Salve amulet||Untradeable: Haunted Mine
+Keris partisan of breaching||Untradeable: Tombs of Amascut

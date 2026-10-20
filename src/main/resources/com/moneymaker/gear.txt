@@ -1,0 +1,160 @@
+T|MINING|Pickaxe|1|Bronze pickaxe
+T|MINING|Pickaxe|1|Iron pickaxe
+T|MINING|Pickaxe|6|Steel pickaxe
+T|MINING|Pickaxe|11|Black pickaxe
+T|MINING|Pickaxe|21|Mithril pickaxe
+T|MINING|Pickaxe|31|Adamant pickaxe
+T|MINING|Pickaxe|41|Rune pickaxe
+T|MINING|Pickaxe|41|=Gilded pickaxe
+T|MINING|Pickaxe|61|Dragon pickaxe
+T|MINING|Pickaxe|61|=3rd age pickaxe
+T|MINING|Pickaxe|61|=Infernal pickaxe
+T|MINING|Pickaxe|71|Crystal pickaxe
+O|MINING|Prospector kit|Prospector helmet;Prospector jacket;Prospector legs;Prospector boots|+2.5% Mining xp
+U|MINING|Coal bag|Carries 27+ coal
+U|MINING|Gem bag|Stores gems while mining
+U|MINING|Varrock armour|Chance of extra ore
+T|WOODCUTTING|Axe|1|Bronze axe
+T|WOODCUTTING|Axe|1|Iron axe
+T|WOODCUTTING|Axe|6|Steel axe
+T|WOODCUTTING|Axe|11|Black axe
+T|WOODCUTTING|Axe|21|Mithril axe
+T|WOODCUTTING|Axe|31|Adamant axe
+T|WOODCUTTING|Axe|41|Rune axe
+T|WOODCUTTING|Axe|41|=Gilded axe
+T|WOODCUTTING|Axe|61|Dragon axe
+T|WOODCUTTING|Axe|61|=3rd age axe
+T|WOODCUTTING|Axe|61|=Infernal axe
+T|WOODCUTTING|Axe|71|Crystal axe
+O|WOODCUTTING|Lumberjack outfit|Lumberjack hat;Lumberjack top;Lumberjack legs;Lumberjack boots|+2.5% Woodcutting xp
+U|WOODCUTTING|Log basket|Holds 28 extra logs
+U|WOODCUTTING|Forestry kit|Stores Forestry rewards
+T|FISHING|Harpoon|35|Harpoon
+T|FISHING|Harpoon|35|=Barb-tail harpoon
+T|FISHING|Harpoon|61|Dragon harpoon
+T|FISHING|Harpoon|75|=Infernal harpoon
+T|FISHING|Harpoon|71|Crystal harpoon
+U|FISHING|Fly fishing rod|Trout and salmon (20)
+U|FISHING|Barbarian rod|Barbarian fishing (48)
+O|FISHING|Angler outfit|Angler hat;Angler top;Angler waders;Angler boots|+2.5% Fishing xp
+U|FISHING|Fish barrel|Holds 28 extra fish
+U|FISHING|Tackle box|Stores fishing tools
+U|FISHING|Spirit flakes|Chance of extra fish at Tempoross
+O|FIREMAKING|Pyromancer outfit|Pyromancer hood;Pyromancer garb;Pyromancer robe;Pyromancer boots|+2.5% Firemaking xp
+U|FIREMAKING|Bruma torch|Lights fires without a tinderbox
+U|FIREMAKING|Tinderbox|Needed to light fires
+U|FIREMAKING|Warm gloves|Wintertodt cold protection
+O|FARMING|Farmer's outfit|Farmer's strawhat;Farmer's jacket;Farmer's boro trousers;Farmer's boots|+2.5% Farming xp
+U|FARMING|Magic secateurs|+10% herb and crop yield
+U|FARMING|Bottomless compost bucket|Stores compost
+U|FARMING|Seed box|Stores seeds
+U|FARMING|Ultracompost|Best compost
+O|CONSTRUCTION|Carpenter's outfit|Carpenter's helmet;Carpenter's shirt;Carpenter's trousers;Carpenter's boots|+2.5% Construction xp
+U|CONSTRUCTION|Hammer|Needed to build
+U|CONSTRUCTION|Saw|Needed to build (or Crystal saw)
+U|CONSTRUCTION|Plank sack|Holds extra planks
+O|THIEVING|Rogue outfit|Rogue mask;Rogue top;Rogue trousers;Rogue gloves;Rogue boots|Double loot from pickpocketing
+U|THIEVING|Dodgy necklace|Prevents stuns
+U|THIEVING|Ardougne cloak|Higher pickpocket success
+O|AGILITY|Graceful outfit|Graceful hood;Graceful top;Graceful legs;Graceful gloves;Graceful boots;Graceful cape|Faster run energy regeneration, lighter
+U|AGILITY|Stamina potion|Keeps you running
+O|RUNECRAFT|Raiments of the Eye|Hat of the eye;Robe top of the eye;Robe bottoms of the eye;Boots of the eye|Up to +60% runes crafted
+T|RUNECRAFT|Essence pouch|1|Small pouch
+T|RUNECRAFT|Essence pouch|25|Medium pouch
+T|RUNECRAFT|Essence pouch|50|Large pouch
+T|RUNECRAFT|Essence pouch|75|Giant pouch
+T|RUNECRAFT|Essence pouch|85|Colossal pouch
+U|RUNECRAFT|Binding necklace|100% combination rune success
+U|RUNECRAFT|Rune pouch|Carries your spell runes
+O|SMITHING|Smiths' uniform|Smiths tunic;Smiths trousers;Smiths boots;Smiths gloves|Faster smithing
+U|SMITHING|Goldsmith gauntlets|2.5x xp for gold bars
+U|SMITHING|Ice gloves|Take bars from the Blast Furnace
+U|SMITHING|Hammer|Needed to smith
+U|SMITHING|Coal bag|Carries extra coal for the Blast Furnace
+O|HUNTER|Guild hunter outfit|Guild hunter headwear;Guild hunter top;Guild hunter legs;Guild hunter boots|Better Hunter catch rates
+U|HUNTER|Box trap|Chinchompas, ferrets
+U|HUNTER|Small fishing net|Salamanders and lizards
+U|HUNTER|Rope|Salamander traps
+U|HUNTER|Bird snare|Birds
+U|HUNTER|Noose wand|Kebbits, Hunters' Rumours
+U|PRAYER|Bonecrusher|Buries bones for you while killing
+U|PRAYER|Ectoplasmator|Extra Prayer xp from kills
+U|PRAYER|Dragonbone necklace|Restores prayer when burying
+U|PRAYER|Dragon bones|Best common bones
+U|COOKING|Cooking gauntlets|Burn less lobster, swordfish, monkfish, shark, anglerfish
+U|HERBLORE|Herb sack|Holds grimy herbs
+U|HERBLORE|Amulet of chemistry|Chance of a 4-dose potion
+U|HERBLORE|Vial of water|Needed for every potion
+U|CRAFTING|Needle|Leather and d'hide
+U|CRAFTING|Chisel|Cutting gems
+U|CRAFTING|Glassblowing pipe|Glassblowing
+U|FLETCHING|Knife|Cutting logs
+U|FLETCHING|Feather|Arrows and darts
+T|ATTACK|Weapon|1|Iron scimitar
+T|ATTACK|Weapon|5|Steel scimitar
+T|ATTACK|Weapon|20|Mithril scimitar
+T|ATTACK|Weapon|30|Adamant scimitar
+T|ATTACK|Weapon|40|Rune scimitar
+T|ATTACK|Weapon|60|Dragon scimitar
+T|ATTACK|Weapon|70|Abyssal whip
+T|ATTACK|Weapon|75|Abyssal tentacle
+T|ATTACK|Weapon|75|=Blade of saeldor
+T|ATTACK|Weapon|80|Ghrazi rapier
+T|ATTACK|Weapon|82|Osmumten's fang
+T|STRENGTH|Weapon|1|Iron scimitar
+T|STRENGTH|Weapon|5|Steel scimitar
+T|STRENGTH|Weapon|20|Mithril scimitar
+T|STRENGTH|Weapon|30|Adamant scimitar
+T|STRENGTH|Weapon|40|Rune scimitar
+T|STRENGTH|Weapon|60|Dragon scimitar
+T|STRENGTH|Weapon|70|Abyssal whip
+T|STRENGTH|Weapon|75|Abyssal tentacle
+T|STRENGTH|Weapon|75|=Blade of saeldor
+T|STRENGTH|Weapon|80|Ghrazi rapier
+T|STRENGTH|Weapon|82|Osmumten's fang
+T|DEFENCE|Body|1|Iron platebody
+T|DEFENCE|Body|5|Steel platebody
+T|DEFENCE|Body|20|Mithril platebody
+T|DEFENCE|Body|30|Adamant platebody
+T|DEFENCE|Body|40|Rune platebody
+T|DEFENCE|Body|60|Dragon platebody
+T|DEFENCE|Body|65|Bandos chestplate
+T|DEFENCE|Body|75|Justiciar chestguard
+T|DEFENCE|Body|80|Torva platebody
+T|DEFENCE|Defender|1|Bronze defender
+T|DEFENCE|Defender|5|Iron defender
+T|DEFENCE|Defender|10|Steel defender
+T|DEFENCE|Defender|20|Mithril defender
+T|DEFENCE|Defender|30|Adamant defender
+T|DEFENCE|Defender|40|Rune defender
+T|DEFENCE|Defender|60|Dragon defender
+T|DEFENCE|Defender|70|Avernic defender
+T|RANGED|Weapon|1|Shortbow
+T|RANGED|Weapon|5|Oak shortbow
+T|RANGED|Weapon|20|Willow shortbow
+T|RANGED|Weapon|30|Maple shortbow
+T|RANGED|Weapon|40|Yew shortbow
+T|RANGED|Weapon|50|Magic shortbow
+T|RANGED|Weapon|61|Rune crossbow
+T|RANGED|Weapon|70|Armadyl crossbow
+T|RANGED|Weapon|75|Toxic blowpipe
+T|RANGED|Weapon|75|=Twisted bow
+T|RANGED|Weapon|80|Bow of faerdhinen
+T|MAGIC|Staff|1|Staff of air
+T|MAGIC|Staff|1|=Staff of fire
+T|MAGIC|Staff|30|Smoke battlestaff
+T|MAGIC|Staff|50|Ancient staff
+T|MAGIC|Staff|75|Trident of the seas
+T|MAGIC|Staff|75|Trident of the swamp
+T|MAGIC|Staff|75|=Kodai wand
+T|MAGIC|Staff|82|Sanguinesti staff
+T|MAGIC|Staff|85|Tumeken's shadow
+U|MAGIC|Rune pouch|Carries your spell runes
+U|MAGIC|Tome of fire|Infinite fire runes
+T|SLAYER|Helmet|1|Black mask
+T|SLAYER|Helmet|55|Slayer helmet
+U|SLAYER|Nose peg|Aberrant spectres
+U|SLAYER|Earmuffs|Banshees
+U|SLAYER|Rock hammer|Finishes gargoyles
+U|SLAYER|Leaf-bladed sword|Kurask and turoth
+U|SLAYER|Mirror shield|Basilisks and cockatrices

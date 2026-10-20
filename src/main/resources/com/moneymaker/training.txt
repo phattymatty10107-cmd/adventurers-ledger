@@ -1,0 +1,549 @@
+M|ATTACK|5|Black weapons
+M|ATTACK|10|Mithril weapons
+M|ATTACK|20|Adamant weapons
+M|ATTACK|30|Rune weapons/armour (Def)
+M|ATTACK|40|Rune weapons
+M|ATTACK|50|Granite & ancient staff tier
+M|ATTACK|60|Dragon weapons
+M|ATTACK|65|Barrows/Bandos (Def)
+M|ATTACK|70|Abyssal whip, Barrows gear
+M|ATTACK|75|Godswords, Abyssal tentacle
+M|ATTACK|80|Blade of saeldor, Ghrazi rapier
+M|ATTACK|85|Inquisitor's, Noxious halberd
+M|ATTACK|90|Scythe of vitur
+M|ATTACK|99|Skill cape
+T|ATTACK|Cows, chickens & goblins (F2P)|1|3000|15000|0||1|0|0|0||||Good for the first few levels
+T|ATTACK|Hill & moss giants (F2P)|20|12000|40000|0||1|0|0|0||||Big bones for Prayer too
+T|ATTACK|Sand & rock crabs (AFK)|1|8000|45000|0||1|1|0|0||||Hosidius / Rellekka crabs, very low effort
+T|ATTACK|Ammonite crabs (Fossil Island)|1|12000|55000|0||1|1|0|0|||Bone Voyage|Best AFK crabs
+T|ATTACK|Slayer tasks|1|8000|60000|0||1|1|0|0||||Slower, but trains Slayer and gets loot
+T|ATTACK|Nightmare Zone (Dharok's / obsidian, absorptions)|60|60000|110000|0||1|1|0|0|||Quests for the NMZ bosses|AFK with absorption potions; NMZ points buy herb boxes
+T|ATTACK|Gemstone crab (Cam Torum)|1|10000|50000|0||1|1|0|0|||Perilous Moons access|AFK boss crab, gives gems
+M|STRENGTH|50|Granite maul
+M|STRENGTH|60|Warriors' Guild (Att+Str 130)
+M|STRENGTH|70|Obsidian/Dharok's set bonus
+M|STRENGTH|99|Skill cape
+T|STRENGTH|Cows, chickens & goblins (F2P)|1|3000|15000|0||1|0|0|0||||Good for the first few levels
+T|STRENGTH|Hill & moss giants (F2P)|20|12000|40000|0||1|0|0|0||||Big bones for Prayer too
+T|STRENGTH|Sand & rock crabs (AFK)|1|8000|45000|0||1|1|0|0||||Hosidius / Rellekka crabs, very low effort
+T|STRENGTH|Ammonite crabs (Fossil Island)|1|12000|55000|0||1|1|0|0|||Bone Voyage|Best AFK crabs
+T|STRENGTH|Slayer tasks|1|8000|60000|0||1|1|0|0||||Slower, but trains Slayer and gets loot
+T|STRENGTH|Nightmare Zone (Dharok's / obsidian, absorptions)|60|60000|110000|0||1|1|0|0|||Quests for the NMZ bosses|AFK with absorption potions; NMZ points buy herb boxes
+T|STRENGTH|Gemstone crab (Cam Torum)|1|10000|50000|0||1|1|0|0|||Perilous Moons access|AFK boss crab, gives gems
+M|DEFENCE|1|Iron armour
+M|DEFENCE|20|Mithril armour
+M|DEFENCE|30|Adamant armour
+M|DEFENCE|40|Rune armour
+M|DEFENCE|45|Initiate/ Proselyte
+M|DEFENCE|60|Dragon armour
+M|DEFENCE|65|Bandos armour
+M|DEFENCE|70|Barrows armour, Dragon defender
+M|DEFENCE|75|Torva (80), Justiciar
+M|DEFENCE|80|Torva, Crystal armour (70)
+M|DEFENCE|99|Skill cape
+T|DEFENCE|Cows, chickens & goblins (F2P)|1|3000|15000|0||1|0|0|0||||Good for the first few levels
+T|DEFENCE|Hill & moss giants (F2P)|20|12000|40000|0||1|0|0|0||||Big bones for Prayer too
+T|DEFENCE|Sand & rock crabs (AFK)|1|8000|45000|0||1|1|0|0||||Hosidius / Rellekka crabs, very low effort
+T|DEFENCE|Ammonite crabs (Fossil Island)|1|12000|55000|0||1|1|0|0|||Bone Voyage|Best AFK crabs
+T|DEFENCE|Slayer tasks|1|8000|60000|0||1|1|0|0||||Slower, but trains Slayer and gets loot
+T|DEFENCE|Nightmare Zone (Dharok's / obsidian, absorptions)|60|60000|110000|0||1|1|0|0|||Quests for the NMZ bosses|AFK with absorption potions; NMZ points buy herb boxes
+T|DEFENCE|Gemstone crab (Cam Torum)|1|10000|50000|0||1|1|0|0|||Perilous Moons access|AFK boss crab, gives gems
+M|HITPOINTS|10|Default level
+M|HITPOINTS|50|Fast-healing safety
+M|HITPOINTS|70|Useful for NMZ/bossing
+M|HITPOINTS|99|Skill cape
+T|HITPOINTS|Melee or ranged training (crabs/NMZ/slayer)|10|4000|40000|0||1|1|0|0||||Hitpoints rises by 1.33 xp for every 4 combat xp; train Attack/Strength/Defence/Ranged
+T|HITPOINTS|Nightmare Zone (Dharok's)|60|25000|40000|0||1|1|0|0|||NMZ quests|Comes with your melee xp
+M|RANGED|20|Mithril/adamant arrows
+M|RANGED|30|Green d'hide
+M|RANGED|40|Blue d'hide, rune arrows, magic shortbow (50)
+M|RANGED|50|Magic shortbow, toxic blowpipe (75)
+M|RANGED|60|Black d'hide, dragon arrows (60)
+M|RANGED|61|Rune crossbow
+M|RANGED|65|Black chinchompas
+M|RANGED|70|Armadyl, karil's
+M|RANGED|75|Toxic blowpipe, Armadyl crossbow
+M|RANGED|80|Masori, bowfa (80)
+M|RANGED|85|Zaryte crossbow
+M|RANGED|99|Skill cape
+T|RANGED|Ranging hill/moss giants (F2P)|1|6000|35000|0||1|0|0|0||||
+T|RANGED|Sand & ammonite crabs with arrows/darts|1|10000|45000|0||1|1|0|0||||
+T|RANGED|Cannon + ranged on slayer tasks|40|30000|60000|0||1|1|0|0|||Dwarf Cannon|
+T|RANGED|Nightmare Zone (toxic blowpipe)|75|90000|130000|0||1|1|0|0|||NMZ quests, blowpipe from Zulrah|
+T|RANGED|Chinning grey chinchompas (MM2 monkeys)|45|120000|200000|0||1|1|0|0|Chinchompa*1||Monkey Madness II (or MM1 tunnels)|Hunt chinchompas yourself as an ironman (53 Hunter)
+T|RANGED|Chinning red chinchompas|55|180000|320000|0||1|1|0|0|Red chinchompa*1||Monkey Madness II|Ironmen: catch them at 63 Hunter
+T|RANGED|Chinning black chinchompas|65|250000|450000|0||1|1|0|0|Black chinchompa*1||Monkey Madness II|Ironmen: catch them in the Wilderness at 73 Hunter
+M|MAGIC|13|Fire Strike
+M|MAGIC|25|Varrock Teleport
+M|MAGIC|33|Telekinetic Grab
+M|MAGIC|37|Falador Teleport
+M|MAGIC|45|Camelot Teleport
+M|MAGIC|50|Ancient Magicks (with Desert Treasure)
+M|MAGIC|55|High Level Alchemy
+M|MAGIC|60|God spells (Mage Arena)
+M|MAGIC|66|Vengeance (with Lunars)
+M|MAGIC|70|Ice Burst
+M|MAGIC|75|Trident of the seas
+M|MAGIC|77|Superglass Make, Augury req
+M|MAGIC|82|Ice Blitz, Stun
+M|MAGIC|86|Plank Make
+M|MAGIC|94|Ice Barrage
+M|MAGIC|99|Skill cape
+T|MAGIC|Splashing (Fire Strike, AFK)|13|13000|14000|11.5|cast|1|0|0|0|Mind rune*1;Air rune*2|||Use a fire staff; needs -65 magic attack bonus
+T|MAGIC|Camelot Teleport|45|90000|95000|55.5|cast|1|1|0|0|Law rune*1;Air rune*5|||Use a staff of air
+T|MAGIC|High Level Alchemy|55|78000|78000|65|cast|1|0|0|0|Nature rune*1|||Plus one item to alch each cast; use a fire staff
+T|MAGIC|Superglass Make|77|75000|80000|78|cast|1|1|0|0|Astral rune*2;Bucket of sand*18;Giant seaweed*3|Molten glass*26|Lunar Diplomacy|Smoke battlestaff covers air/fire runes; great for ironman Crafting
+T|MAGIC|Tan Leather (Lunar)|78|70000|75000|81|cast|1|1|0|0|Astral rune*2;Nature rune*1;Green dragonhide*5|Green dragon leather*5|Lunar Diplomacy, 78 Magic|Staff of fire covers fire runes
+T|MAGIC|Plank Make (Lunar)|86|95000|100000|90|cast|1|1|0|0|Astral rune*2;Nature rune*1;Mahogany logs*1|Mahogany plank*1|Dream Mentor|Plus 1,050 coins per mahogany plank
+T|MAGIC|Ice Burst at Maniacal monkeys|70|150000|220000|0||1|1|1|0|||Desert Treasure I, Monkey Madness II|Burst/barrage groups of monkeys; costs runes (chaos, death)
+T|MAGIC|Ice Barrage at Maniacal monkeys|94|300000|330000|0||1|1|1|0|||Desert Treasure I, Monkey Madness II|Costs blood, death and water runes
+M|PRAYER|25|Protect Item
+M|PRAYER|31|Ultimate Strength/Improved Reflexes
+M|PRAYER|37|Protect from Magic
+M|PRAYER|40|Protect from Missiles
+M|PRAYER|43|Protect from Melee
+M|PRAYER|44|Eagle Eye/Mystic Might
+M|PRAYER|52|Smite
+M|PRAYER|60|Chivalry
+M|PRAYER|70|Piety, Rigour/Augury with scrolls (74/77)
+M|PRAYER|74|Rigour
+M|PRAYER|77|Augury
+M|PRAYER|99|Skill cape
+T|PRAYER|Bury bones (F2P)|1|8000|8000|4.5|bone|1|0|0|0|Bones*1|||
+T|PRAYER|Bury big bones (F2P)|1|27000|27000|15|bone|1|0|0|0|Big bones*1|||
+T|PRAYER|Bury dragon bones|1|130000|130000|72|bone|1|1|0|0|Dragon bones*1|||
+T|PRAYER|Gilded altar: big bones|1|60000|60000|52.5|bone|1|1|0|0|Big bones*1||House with a gilded altar (or a friend's)|
+T|PRAYER|Gilded altar: dragon bones|1|280000|280000|252|bone|1|1|0|0|Dragon bones*1||House with a gilded altar (or a friend's)|
+T|PRAYER|Chaos altar (Wilderness): dragon bones|1|350000|350000|504|bone|1|1|0|0|Dragon bones*1|||7x xp with a 50% chance to keep the bone (counted here); dangerous
+T|PRAYER|Gilded altar: superior dragon bones|70|550000|550000|525|bone|1|1|0|0|Superior dragon bones*1||70 Prayer|
+M|RUNECRAFT|5|Earth runes
+M|RUNECRAFT|14|Fire runes
+M|RUNECRAFT|23|Lava runes
+M|RUNECRAFT|27|Guardians of the Rift, Cosmic runes
+M|RUNECRAFT|35|Chaos runes
+M|RUNECRAFT|40|Astral runes
+M|RUNECRAFT|44|Nature runes
+M|RUNECRAFT|54|Law runes
+M|RUNECRAFT|65|Death runes
+M|RUNECRAFT|77|Blood runes
+M|RUNECRAFT|82|Double astrals
+M|RUNECRAFT|90|Soul runes
+M|RUNECRAFT|91|Double natures
+M|RUNECRAFT|95|Wrath runes
+M|RUNECRAFT|99|Skill cape
+T|RUNECRAFT|Air runes (F2P)|1|8000|15000|5|essence|1|0|0|0|Rune essence*1|Air rune*1||
+T|RUNECRAFT|Lava runes (binding necklace + Magic Imbue)|23|45000|85000|10.5|essence|1|1|1|0|Pure essence*1;Earth rune*1|Lava rune*1||Very click-intensive
+T|RUNECRAFT|Guardians of the Rift|27|35000|70000|0||1|1|0|0|||Temple of the Eye|Best ironman method: no essence needed, gives pouches, runes and outfit
+T|RUNECRAFT|Ourania Altar (ZMI)|1|20000|60000|0||1|1|0|0|Pure essence*1|||Random runes; Ourania Teleport needs Lunar Diplomacy
+T|RUNECRAFT|Astral runes|40|30000|50000|8.7|essence|1|1|0|0|Pure essence*1|Astral rune*1|Lunar Diplomacy|
+T|RUNECRAFT|Blood runes (True Blood altar)|77|40000|55000|10.5|essence|1|1|0|0|Pure essence*1|Blood rune*1|Sins of the Father|
+T|RUNECRAFT|Soul runes (Arceuus, dense essence)|90|45000|55000|0||1|1|0|0||||Mine your own dense essence; AFK-ish
+M|CONSTRUCTION|16|Portal to house in Rimmington/Taverley
+M|CONSTRUCTION|33|Oak larder
+M|CONSTRUCTION|40|Lectern tablets
+M|CONSTRUCTION|52|Mahogany table
+M|CONSTRUCTION|65|Restoration pool
+M|CONSTRUCTION|75|Gilded altar
+M|CONSTRUCTION|80|Rejuvenation pool
+M|CONSTRUCTION|82|Spirit tree & fairy ring
+M|CONSTRUCTION|90|Ornate rejuvenation pool, Occult altar
+M|CONSTRUCTION|91|Ornate jewellery box
+M|CONSTRUCTION|99|Skill cape
+T|CONSTRUCTION|Crude wooden chairs → bookshelves|1|20000|30000|58|chair|1|1|0|0|Plank*2;Steel nails*2|||
+T|CONSTRUCTION|Oak chairs|19|60000|80000|120|chair|1|1|0|0|Oak plank*2|||
+T|CONSTRUCTION|Oak larders|33|200000|300000|480|larder|1|1|0|0|Oak plank*8|||Use a demon butler (50) for the fastest rates
+T|CONSTRUCTION|Mythical capes (teak)|47|250000|300000|370|mount|1|1|0|0|Teak plank*3||Dragon Slayer II (mythical cape)|
+T|CONSTRUCTION|Mahogany tables|52|350000|450000|840|table|1|1|0|0|Mahogany plank*6|||
+T|CONSTRUCTION|Oak dungeon doors|74|280000|320000|600|door|1|1|0|0|Oak plank*10|||
+T|CONSTRUCTION|Mahogany Homes contracts|1|20000|120000|0||1|1|0|0||||Ironman favourite: planks and steel bars only; gives Carpenter's outfit
+M|AGILITY|10|Draynor rooftop
+M|AGILITY|20|Al Kharid rooftop
+M|AGILITY|30|Varrock rooftop
+M|AGILITY|40|Canifis rooftop
+M|AGILITY|50|Falador rooftop
+M|AGILITY|52|Wilderness course, Hallowed Sepulchre
+M|AGILITY|60|Seers' rooftop
+M|AGILITY|62|Advanced Colossal Wyrm course
+M|AGILITY|70|Pollnivneach rooftop
+M|AGILITY|75|Prifddinas course
+M|AGILITY|80|Rellekka rooftop
+M|AGILITY|90|Ardougne rooftop
+M|AGILITY|99|Skill cape
+T|AGILITY|Gnome Stronghold course|1|8000|8000|0||1|1|0|0||||
+T|AGILITY|Draynor rooftop|10|9000|10000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Al Kharid rooftop|20|12000|13000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Varrock rooftop|30|13000|14000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Canifis rooftop|40|18000|19000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Falador rooftop|50|27000|28000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Colossal Wyrm course|50|30000|45000|0||1|1|0|0|||Children of the Sun|
+T|AGILITY|Wilderness Agility Course|52|45000|55000|0||1|1|0|0||||
+T|AGILITY|Hallowed Sepulchre|52|30000|110000|0||1|1|0|0|||Sins of the Father|
+T|AGILITY|Seers' Village rooftop|60|45000|55000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Pollnivneach rooftop|70|52000|54000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Prifddinas course|75|62000|64000|0||1|1|0|0|||Song of the Elves|
+T|AGILITY|Rellekka rooftop|80|55000|56000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+T|AGILITY|Ardougne rooftop|90|62000|63000|0||1|1|0|0||||Marks of grace buy the Graceful outfit
+M|HERBLORE|3|Attack potions (Druidic Ritual)
+M|HERBLORE|22|Restore potions
+M|HERBLORE|38|Prayer potions
+M|HERBLORE|45|Super attack
+M|HERBLORE|55|Super strength
+M|HERBLORE|60|Weapon poison+ / Ranarr
+M|HERBLORE|63|Super restore
+M|HERBLORE|66|Super defence
+M|HERBLORE|69|Antifire
+M|HERBLORE|72|Ranging potion
+M|HERBLORE|78|Zamorak brew
+M|HERBLORE|81|Saradomin brew
+M|HERBLORE|87|Anti-venom
+M|HERBLORE|90|Super combat potion
+M|HERBLORE|94|Anti-venom+
+M|HERBLORE|99|Skill cape
+T|HERBLORE|Make Attack potion(3)|3|55000|60000|25|potion|1|1|0|0|Grimy guam leaf*1;Vial of water*1;Eye of newt*1|Attack potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Antipoison(3)|5|82500|90000|37.5|potion|1|1|0|0|Grimy marrentill*1;Vial of water*1;Unicorn horn dust*1|Antipoison(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Strength potion(3)|12|110000|120000|50|potion|1|1|0|0|Grimy tarromin*1;Vial of water*1;Limpwurt root*1|Strength potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Restore potion(3)|22|137500|150000|62.5|potion|1|1|0|0|Grimy harralander*1;Vial of water*1;Red spiders' eggs*1|Restore potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Energy potion(3)|26|148500|162000|67.5|potion|1|1|0|0|Grimy harralander*1;Vial of water*1;Chocolate dust*1|Energy potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Prayer potion(3)|38|192500|210000|87.5|potion|1|1|0|0|Grimy ranarr weed*1;Vial of water*1;Snape grass*1|Prayer potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Super attack(3)|45|220000|240000|100|potion|1|1|0|0|Grimy irit leaf*1;Vial of water*1;Eye of newt*1|Super attack(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Superantipoison(3)|48|233860|255120|106.3|potion|1|1|0|0|Grimy irit leaf*1;Vial of water*1;Unicorn horn dust*1|Superantipoison(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Super energy(3)|52|258500|282000|117.5|potion|1|1|0|0|Grimy avantoe*1;Vial of water*1;Mort myre fungus*1|Super energy(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Super strength(3)|55|275000|300000|125|potion|1|1|0|0|Grimy kwuarm*1;Vial of water*1;Limpwurt root*1|Super strength(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Super restore(3)|63|313500|342000|142.5|potion|1|1|0|0|Grimy snapdragon*1;Vial of water*1;Red spiders' eggs*1|Super restore(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Super defence(3)|66|330000|360000|150|potion|1|1|0|0|Grimy cadantine*1;Vial of water*1;White berries*1|Super defence(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Antifire potion(3)|69|346500|378000|157.5|potion|1|1|0|0|Grimy lantadyme*1;Vial of water*1;Dragon scale dust*1|Antifire potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Ranging potion(3)|72|357500|390000|162.5|potion|1|1|0|0|Grimy dwarf weed*1;Vial of water*1;Wine of zamorak*1|Ranging potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Magic potion(3)|76|379500|414000|172.5|potion|1|1|0|0|Grimy lantadyme*1;Vial of water*1;Potato cactus*1|Magic potion(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+T|HERBLORE|Make Saradomin brew(3)|81|396000|432000|180|potion|1|1|0|0|Grimy toadflax*1;Vial of water*1;Crushed nest*1|Saradomin brew(3)*1|Druidic Ritual|Clean the herb, make the unfinished potion, add the secondary
+M|THIEVING|5|Cake stalls
+M|THIEVING|21|Pyramid Plunder
+M|THIEVING|25|Fruit stalls
+M|THIEVING|38|Master farmers
+M|THIEVING|45|Blackjacking
+M|THIEVING|55|Knights of Ardougne
+M|THIEVING|70|Paladins
+M|THIEVING|80|Heroes
+M|THIEVING|82|Vyres
+M|THIEVING|85|Elves
+M|THIEVING|99|Skill cape
+T|THIEVING|Pickpocketing men & women|1|5000|8000|0||1|1|0|0||||
+T|THIEVING|Fruit stalls (Hosidius)|25|35000|45000|0||1|1|0|0||||Food for ironmen; easy
+T|THIEVING|Pyramid Plunder|21|20000|250000|0||1|1|0|0|||Icthlarin's Little Helper|Gets much better at 71/81/91
+T|THIEVING|Master farmers (seeds)|38|40000|70000|0||1|1|0|0||||Great ironman seed source
+T|THIEVING|Blackjacking (Pollnivneach)|45|90000|200000|0||1|1|1|0|||The Feud|
+T|THIEVING|Knights of Ardougne|55|60000|150000|0||1|1|0|0||||Ardougne diary + Rogue outfit boost loot
+T|THIEVING|Pickpocketing vyres|82|200000|260000|0||1|1|0|0|||Sins of the Father|
+T|THIEVING|Pickpocketing elves|85|200000|270000|0||1|1|0|0|||Song of the Elves|Enhanced crystal teleport seeds
+M|CRAFTING|7|Gold rings/necklaces
+M|CRAFTING|20|Cut sapphires
+M|CRAFTING|27|Cut emeralds
+M|CRAFTING|34|Cut rubies
+M|CRAFTING|43|Cut diamonds
+M|CRAFTING|46|Unpowered orbs
+M|CRAFTING|55|Cut dragonstones
+M|CRAFTING|63|Green d'hide bodies
+M|CRAFTING|66|Air battlestaves
+M|CRAFTING|71|Blue d'hide bodies
+M|CRAFTING|77|Red d'hide bodies
+M|CRAFTING|84|Black d'hide bodies
+M|CRAFTING|87|Light orbs
+M|CRAFTING|89|Cut zenytes
+M|CRAFTING|99|Skill cape
+T|CRAFTING|Leather items (gloves → chaps)|1|20000|30000|13.8|leather|1|0|0|0|Leather*1|||
+T|CRAFTING|Gold amulets (u) at a furnace|8|35000|40000|30|amulet|1|0|0|0|Gold bar*1|||
+T|CRAFTING|Cut sapphires|20|125000|130000|50|gem|1|0|0|0|Uncut sapphire*1|Sapphire*1||
+T|CRAFTING|Cut emeralds|27|168750|175500|67.5|gem|1|0|0|0|Uncut emerald*1|Emerald*1||
+T|CRAFTING|Cut rubys|34|212500|221000|85|gem|1|0|0|0|Uncut ruby*1|Ruby*1||
+T|CRAFTING|Cut diamonds|43|268750|279500|107.5|gem|1|0|0|0|Uncut diamond*1|Diamond*1||
+T|CRAFTING|Cut dragonstones|55|343750|357500|137.5|gem|1|1|0|0|Uncut dragonstone*1|Dragonstone*1||
+T|CRAFTING|Glassblowing unpowered orbs|46|80000|85000|52.5|orb|1|1|0|0|Molten glass*1|Unpowered orb*1||Ironmen: make glass with Superglass Make
+T|CRAFTING|Glassblowing light orbs|87|105000|110000|70|orb|1|1|0|0|Molten glass*1|||
+T|CRAFTING|Green d'hide bodies|63|316200|325500|186|body|1|1|0|0|Green dragon leather*3|Green d'hide body*1||
+T|CRAFTING|Blue d'hide bodies|71|357000|367500|210|body|1|1|0|0|Blue dragon leather*3|Blue d'hide body*1||
+T|CRAFTING|Red d'hide bodies|77|397800|409500|234|body|1|1|0|0|Red dragon leather*3|Red d'hide body*1||
+T|CRAFTING|Black d'hide bodies|84|438600|451500|258|body|1|1|0|0|Black dragon leather*3|Black d'hide body*1||
+T|CRAFTING|Air battlestaves|66|330000|345000|137.5|staff|1|1|0|0|Battlestaff*1;Air orb*1|Air battlestaff*1||Ironmen: battlestaves from Zaff, orbs from Charge Air Orb
+M|FLETCHING|10|Bronze darts
+M|FLETCHING|20|Oak shortbows
+M|FLETCHING|22|Iron darts
+M|FLETCHING|25|Oak longbows
+M|FLETCHING|37|Steel darts
+M|FLETCHING|40|Willow longbows
+M|FLETCHING|52|Mithril darts
+M|FLETCHING|55|Maple longbows
+M|FLETCHING|67|Adamant darts
+M|FLETCHING|70|Yew longbows
+M|FLETCHING|81|Rune darts
+M|FLETCHING|85|Magic longbows
+M|FLETCHING|95|Dragon darts
+M|FLETCHING|99|Skill cape
+T|FLETCHING|Arrow shafts|1|8000|10000|5|log|1|0|0|0|Logs*1|Arrow shaft*15||
+T|FLETCHING|Headless arrows|1|25000|30000|15|set of 15|1|0|0|0|Arrow shaft*15;Feather*15|Headless arrow*15||
+T|FLETCHING|Cut oak longbows (u)|25|42500|43750|25|bow|1|0|0|0|Oak logs*1|Oak longbow (u)*1||
+T|FLETCHING|String oak longbows|25|60000|62500|25|bow|1|1|0|0|Oak longbow (u)*1;Bow string*1|Oak longbow*1||
+T|FLETCHING|Cut willow longbows (u)|40|70550|72625|41.5|bow|1|0|0|0|Willow logs*1|Willow longbow (u)*1||
+T|FLETCHING|String willow longbows|40|99600|103750|41.5|bow|1|1|0|0|Willow longbow (u)*1;Bow string*1|Willow longbow*1||
+T|FLETCHING|Cut maple longbows (u)|55|99110|102025|58.3|bow|1|0|0|0|Maple logs*1|Maple longbow (u)*1||
+T|FLETCHING|String maple longbows|55|139920|145750|58.3|bow|1|1|0|0|Maple longbow (u)*1;Bow string*1|Maple longbow*1||
+T|FLETCHING|Cut yew longbows (u)|70|127500|131250|75|bow|1|0|0|0|Yew logs*1|Yew longbow (u)*1||
+T|FLETCHING|String yew longbows|70|180000|187500|75|bow|1|1|0|0|Yew longbow (u)*1;Bow string*1|Yew longbow*1||
+T|FLETCHING|Cut magic longbows (u)|85|155550|160125|91.5|bow|1|1|0|0|Magic logs*1|Magic longbow (u)*1||
+T|FLETCHING|String magic longbows|85|219600|228750|91.5|bow|1|1|0|0|Magic longbow (u)*1;Bow string*1|Magic longbow*1||
+T|FLETCHING|Steel darts|37|150000|157500|75|10 darts|1|1|0|0|Steel dart tip*10;Feather*10|Steel dart*10|The Tourist Trap|Very fast; just click. Ironmen smith their own dart tips
+T|FLETCHING|Mithril darts|52|224000|235200|112|10 darts|1|1|0|0|Mithril dart tip*10;Feather*10|Mithril dart*10|The Tourist Trap|Very fast; just click. Ironmen smith their own dart tips
+T|FLETCHING|Adamant darts|67|300000|315000|150|10 darts|1|1|0|0|Adamant dart tip*10;Feather*10|Adamant dart*10|The Tourist Trap|Very fast; just click. Ironmen smith their own dart tips
+T|FLETCHING|Rune darts|81|376000|394800|188|10 darts|1|1|0|0|Rune dart tip*10;Feather*10|Rune dart*10|The Tourist Trap|Very fast; just click. Ironmen smith their own dart tips
+T|FLETCHING|Dragon darts|95|500000|525000|250|10 darts|1|1|0|0|Dragon dart tip*10;Feather*10|Dragon dart*10|The Tourist Trap|Very fast; just click. Ironmen smith their own dart tips
+M|SLAYER|5|Cave crawlers
+M|SLAYER|15|Banshees (Morytania Legs/earmuffs)
+M|SLAYER|55|Turoth
+M|SLAYER|58|Cave horrors
+M|SLAYER|62|Wyrms
+M|SLAYER|65|Dust devils
+M|SLAYER|70|Kurask
+M|SLAYER|72|Skeletal wyverns
+M|SLAYER|75|Gargoyles
+M|SLAYER|80|Nechryael
+M|SLAYER|84|Drakes
+M|SLAYER|85|Abyssal demons
+M|SLAYER|87|Kraken
+M|SLAYER|91|Cerberus
+M|SLAYER|93|Smoke devil boss
+M|SLAYER|95|Alchemical Hydra
+M|SLAYER|99|Skill cape
+T|SLAYER|Turael / Spria tasks|1|3000|6000|0||1|1|0|0||||Only for the first levels
+T|SLAYER|Vannaka / Chaeldar tasks|20|12000|30000|0||1|1|0|0||||Needs combat level 40 / 70
+T|SLAYER|Nieve / Duradel / Konar tasks|50|30000|60000|0||1|1|0|0||||Needs combat level 85+ for Nieve, 100 for Duradel
+T|SLAYER|Bursting & barraging tasks (Nieve/Duradel)|70|60000|110000|0||1|1|1|0|||Desert Treasure I, 70/94 Magic|Burst dust devils, nechryael, smoke devils...
+M|FARMING|15|Oak trees
+M|FARMING|27|Apple trees
+M|FARMING|30|Willow trees
+M|FARMING|32|Ranarr weed
+M|FARMING|34|Tithe Farm
+M|FARMING|45|Maple trees
+M|FARMING|51|Pineapple trees
+M|FARMING|55|Mahogany trees
+M|FARMING|57|Papaya trees
+M|FARMING|60|Yew trees
+M|FARMING|65|Farming Guild
+M|FARMING|68|Palm trees
+M|FARMING|72|Calquat trees
+M|FARMING|75|Magic trees
+M|FARMING|81|Dragonfruit trees
+M|FARMING|83|Spirit trees
+M|FARMING|85|Celastrus, Torstol (85)
+M|FARMING|90|Redwood trees
+M|FARMING|99|Skill cape
+T|FARMING|Tithe Farm|34|30000|100000|0||1|1|0|0||||Gets faster at 54 and 74; gives the Farmer's outfit and seed box
+M|FIREMAKING|15|Oak logs
+M|FIREMAKING|30|Willow logs
+M|FIREMAKING|45|Maple logs
+M|FIREMAKING|50|Wintertodt
+M|FIREMAKING|60|Yew logs
+M|FIREMAKING|75|Magic logs
+M|FIREMAKING|90|Redwood logs
+M|FIREMAKING|99|Skill cape
+T|FIREMAKING|Burn logs|1|44000|46000|40|log|1|0|0|0|Logs*1|||
+T|FIREMAKING|Burn oak logs|15|66000|69000|60|log|1|0|0|0|Oak logs*1|||
+T|FIREMAKING|Burn willow logs|30|99000|103500|90|log|1|0|0|0|Willow logs*1|||
+T|FIREMAKING|Burn teak logs|35|115500|120750|105|log|1|1|0|0|Teak logs*1|||
+T|FIREMAKING|Burn maple logs|45|148500|155250|135|log|1|0|0|0|Maple logs*1|||
+T|FIREMAKING|Burn yew logs|60|222750|232875|202.5|log|1|0|0|0|Yew logs*1|||
+T|FIREMAKING|Burn magic logs|75|334180|349370|303.8|log|1|1|0|0|Magic logs*1|||
+T|FIREMAKING|Burn redwood logs|90|385000|402500|350|log|1|1|0|0|Redwood logs*1|||
+T|FIREMAKING|Wintertodt|50|120000|300000|0||1|1|0|0||||Best ironman method: supply crates with seeds, ores, logs and herbs
+M|WOODCUTTING|15|Oak trees
+M|WOODCUTTING|30|Willow trees
+M|WOODCUTTING|35|Teak trees
+M|WOODCUTTING|41|Rune axe
+M|WOODCUTTING|45|Maple trees
+M|WOODCUTTING|50|Mahogany trees
+M|WOODCUTTING|60|Yew trees, Woodcutting Guild, Dragon axe (61)
+M|WOODCUTTING|65|Sulliuscep
+M|WOODCUTTING|75|Magic trees
+M|WOODCUTTING|90|Redwood trees
+M|WOODCUTTING|99|Skill cape
+T|WOODCUTTING|Normal trees|1|6000|12000|25|log|1|0|0|0||Logs*1||Powerchop (drop logs) for faster xp
+T|WOODCUTTING|Oak trees|15|15000|40000|37.5|log|1|0|0|0||Oak logs*1||Powerchop (drop logs) for faster xp
+T|WOODCUTTING|Willow trees|30|30000|60000|67.5|log|1|0|0|0||Willow logs*1||Powerchop (drop logs) for faster xp
+T|WOODCUTTING|Teak trees|35|40000|90000|85|log|1|1|0|0||Teak logs*1||Powerchop (drop logs) for faster xp
+T|WOODCUTTING|Maple trees|45|30000|50000|100|log|1|0|0|0||Maple logs*1||
+T|WOODCUTTING|Mahogany trees|50|25000|45000|125|log|1|1|0|0||Mahogany logs*1||
+T|WOODCUTTING|Yew trees|60|30000|45000|175|log|1|0|0|0||Yew logs*1||
+T|WOODCUTTING|Magic trees|75|28000|40000|250|log|1|1|0|0||Magic logs*1||
+T|WOODCUTTING|Redwood trees|90|65000|75000|380|log|1|1|0|0||Redwood logs*1||
+M|MINING|15|Iron ore
+M|MINING|20|Silver ore
+M|MINING|30|Coal, Motherlode Mine
+M|MINING|40|Gold ore
+M|MINING|41|Rune pickaxe
+M|MINING|45|Granite
+M|MINING|50|Volcanic Mine
+M|MINING|55|Mithril ore
+M|MINING|60|Mining Guild
+M|MINING|61|Dragon pickaxe
+M|MINING|70|Adamantite ore
+M|MINING|72|Motherlode upper level
+M|MINING|85|Runite ore
+M|MINING|92|Amethyst
+M|MINING|99|Skill cape
+T|MINING|Copper & tin ore|1|8000|20000|17.5|ore|1|0|0|0||Copper ore*1||Mine at Lumbridge Swamp or Varrock
+T|MINING|Iron ore (powermine)|15|25000|70000|35|ore|1|0|0|0||Iron ore*1||Drop the ore for the best xp; Al Kharid or Mining Guild
+T|MINING|Coal|30|15000|40000|50|ore|1|0|0|0||Coal*1||
+T|MINING|Gold ore|40|20000|35000|65|ore|1|0|0|0||Gold ore*1||Crafting Guild has gold rocks
+T|MINING|Mithril ore|55|15000|30000|80|ore|1|0|0|0||Mithril ore*1||
+T|MINING|Adamantite ore|70|15000|25000|95|ore|1|0|0|0||Adamantite ore*1||
+T|MINING|Runite ore|85|8000|12000|125|ore|1|0|0|0||Runite ore*1||Few rocks and slow respawns
+T|MINING|Amethyst|92|20000|25000|240|ore|1|1|0|0||Amethyst*1||Mining Guild; AFK
+T|MINING|Motherlode Mine|30|20000|50000|0||1|1|0|0||||AFK; gives coal, gold, mithril, adamantite, runite and the Prospector kit
+T|MINING|Shooting stars|10|15000|50000|0||1|0|0|0||||AFK, works in F2P; stardust buys useful rewards
+T|MINING|Granite (desert quarry)|45|50000|100000|0||1|1|0|0||||Bring waterskins; 3-tick for more (intense)
+T|MINING|Volcanic Mine|50|40000|110000|0||1|1|0|0|||Bone Voyage|Team activity on Fossil Island
+M|SMITHING|15|Iron bars
+M|SMITHING|30|Steel bars
+M|SMITHING|35|Cannonballs
+M|SMITHING|40|Gold bars (Blast Furnace)
+M|SMITHING|50|Mithril bars
+M|SMITHING|60|Blast Furnace without fee
+M|SMITHING|68|Mithril platebodies
+M|SMITHING|70|Adamant bars
+M|SMITHING|85|Runite bars
+M|SMITHING|88|Adamant platebodies
+M|SMITHING|99|Rune platebodies, skill cape
+T|SMITHING|Bronze items (F2P)|1|8000|12000|0||1|0|0|0||||Smelt bronze bars and smith daggers → platebodies
+T|SMITHING|Iron platebodies|33|100000|102500|125|platebody|1|0|0|0|Iron bar*5|Iron platebody*1||
+T|SMITHING|Steel platebodies|48|150000|153750|187.5|platebody|1|0|0|0|Steel bar*5|Steel platebody*1||
+T|SMITHING|Mithril platebodies|68|200000|205000|250|platebody|1|0|0|0|Mithril bar*5|Mithril platebody*1||
+T|SMITHING|Adamant platebodies|88|250000|256250|312.5|platebody|1|0|0|0|Adamantite bar*5|Adamant platebody*1||
+T|SMITHING|Rune platebodies|99|300000|307500|375|platebody|1|0|0|0|Runite bar*5|Rune platebody*1||
+T|SMITHING|Gold bars at Blast Furnace (goldsmith gauntlets)|40|280000|320000|56.2|bar|1|1|0|0|Gold ore*1|Gold bar*1|Family Crest (gauntlets)|Pay 72k/hour below 60 Smithing
+T|SMITHING|Giants' Foundry|15|30000|100000|0||1|1|0|0|||Sleeping Giants|Ironman favourite; uses mithril/adamant bars
+T|SMITHING|Cannonballs (AFK)|35|15000|18000|25.6|bar|1|1|0|0|Steel bar*1|Steel cannonball*4|Dwarf Cannon|
+M|FISHING|20|Fly fishing trout
+M|FISHING|35|Tempoross, tuna
+M|FISHING|40|Lobsters
+M|FISHING|43|Aerial fishing
+M|FISHING|48|Barbarian fishing
+M|FISHING|50|Swordfish
+M|FISHING|62|Monkfish
+M|FISHING|65|Karambwans
+M|FISHING|68|Fishing Guild
+M|FISHING|76|Sharks
+M|FISHING|80|Infernal eels
+M|FISHING|82|Anglerfish, minnows
+M|FISHING|85|Dark crabs
+M|FISHING|99|Skill cape
+T|FISHING|Shrimps & anchovies|1|5000|8000|10|fish|1|0|0|0||Raw shrimps*1||
+T|FISHING|Fly fishing trout & salmon (powerfish)|20|25000|50000|50|fish|1|0|0|0|Feather*1|Raw trout*1||
+T|FISHING|Lobsters|40|15000|25000|90|fish|1|0|0|0||Raw lobster*1||
+T|FISHING|Tempoross|35|30000|70000|0||1|1|0|0||||Fishing outfit, fish barrel and tackle box
+T|FISHING|Aerial fishing|43|30000|45000|0||1|1|0|0|||35 Hunter|Also trains Hunter; gives angler outfit
+T|FISHING|Barbarian fishing|48|40000|80000|0||1|1|0|0|||15 Agility & Strength, Barbarian Training|Also trains Agility and Strength
+T|FISHING|Monkfish|62|25000|35000|120|fish|1|1|0|0||Raw monkfish*1|Swan Song|
+T|FISHING|Karambwans|65|30000|50000|50|fish|1|1|0|0|Raw karambwanji*1|Raw karambwan*1|Tai Bwo Wannai Trio|
+T|FISHING|Sharks|76|20000|25000|110|fish|1|1|0|0||Raw shark*1||
+T|FISHING|Minnows|82|40000|50000|0||1|1|0|0|||Angler outfit|
+T|FISHING|Anglerfish|82|15000|20000|120|fish|1|1|0|0|Sandworms*1|Raw anglerfish*1|Partial Kourend favour|
+M|COOKING|15|Trout
+M|COOKING|30|Karambwans
+M|COOKING|35|Wine
+M|COOKING|40|Lobsters
+M|COOKING|45|Swordfish
+M|COOKING|62|Monkfish
+M|COOKING|68|Never burn wine
+M|COOKING|80|Sharks
+M|COOKING|84|Anglerfish
+M|COOKING|90|Dark crabs
+M|COOKING|99|Skill cape
+T|COOKING|Cook shrimps|1|39000|40500|30|fish|1|0|0|0|Raw shrimps*1|Shrimps*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook trout|15|91000|94500|70|fish|1|0|0|0|Raw trout*1|Trout*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook salmon|25|117000|121500|90|fish|1|0|0|0|Raw salmon*1|Salmon*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook tuna|30|130000|135000|100|fish|1|0|0|0|Raw tuna*1|Tuna*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook lobster|40|156000|162000|120|fish|1|0|0|0|Raw lobster*1|Lobster*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook swordfish|45|182000|189000|140|fish|1|0|0|0|Raw swordfish*1|Swordfish*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook monkfish|62|195000|202500|150|fish|1|1|0|0|Raw monkfish*1|Monkfish*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook shark|80|273000|283500|210|fish|1|1|0|0|Raw shark*1|Shark*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook anglerfish|84|299000|310500|230|fish|1|1|0|0|Raw anglerfish*1|Anglerfish*1||Burns less as you level; use the Hosidius range
+T|COOKING|Cook karambwans|30|247000|256500|190|fish|1|1|0|0|Raw karambwan*1|Cooked karambwan*1||1-tick cooking is ~4x faster but intense
+T|COOKING|Make jugs of wine|35|450000|480000|200|wine|1|1|0|0|Grapes*1;Jug of water*1|Jug of wine*1||Ironmen: buy grapes at the Culinaromancer's chest or farm them
+M|HUNTER|9|Birdhouses (wood)
+M|HUNTER|19|Tropical wagtails
+M|HUNTER|29|Swamp lizards
+M|HUNTER|43|Falconry
+M|HUNTER|46|Hunters' Rumours
+M|HUNTER|47|Orange salamanders
+M|HUNTER|53|Chinchompas
+M|HUNTER|59|Red salamanders
+M|HUNTER|63|Red chinchompas
+M|HUNTER|67|Black salamanders
+M|HUNTER|73|Black chinchompas
+M|HUNTER|80|Herbiboar
+M|HUNTER|99|Skill cape
+T|HUNTER|Bird snaring|1|5000|15000|0||1|1|0|0||||
+T|HUNTER|Swamp lizards|29|25000|35000|152|lizard|1|1|0|0||Swamp lizard*1||
+T|HUNTER|Falconry (spotted/dark kebbits)|43|50000|70000|0||1|1|0|0||||
+T|HUNTER|Hunters' Rumours (Varlamore)|46|40000|110000|0||1|1|0|0|||Children of the Sun|Ironman favourite
+T|HUNTER|Orange salamanders|47|45000|55000|224|salamander|1|1|0|0||Orange salamander*1||
+T|HUNTER|Red salamanders|59|55000|65000|272|salamander|1|1|0|0||Red salamander*1||
+T|HUNTER|Red chinchompas|63|100000|150000|265|chinchompa|1|1|0|0||Red chinchompa*1|Eagles' Peak|Feldip Hills; catch your own Ranged ammo
+T|HUNTER|Black salamanders|67|65000|75000|319.5|salamander|1|1|0|0||Black salamander*1||
+T|HUNTER|Black chinchompas (Wilderness)|73|120000|200000|315|chinchompa|1|1|0|0||Black chinchompa*1||Dangerous
+T|HUNTER|Herbiboar|80|100000|130000|0||1|1|0|0|||Bone Voyage|Gives herbs - great for ironmen
+M|SAILING|12|Prying Times
+M|SAILING|15|Shipwreck salvaging
+M|SAILING|22|Current Affairs
+M|SAILING|30|The Tempor Tantrum
+M|SAILING|42|Salvaging station
+M|SAILING|45|Troubled Tortugans
+M|SAILING|55|The Jubbly Jive
+M|SAILING|62|Rellekka courier route
+M|SAILING|70|Prifddinas route
+M|SAILING|72|The Gwenith Glide, bluefin trawling
+M|SAILING|76|Lunar Isle route
+M|SAILING|78|All sea charting, marlin trawling
+M|SAILING|80|All bounty tasks
+M|SAILING|93|Rosewood hull
+M|SAILING|99|Skill cape
+T|SAILING|Sea charting + courier tasks|1|5000|12000|0||1|1|0|0|||Pandemonium|Do the Sailing quests as you unlock them
+T|SAILING|The Tempor Tantrum (Barracuda Trials)|30|19000|25000|0||1|1|0|0|||Pandemonium|
+T|SAILING|Shipwreck salvaging (large)|53|18000|20000|0||1|1|0|0||||Low effort with crewmates
+T|SAILING|The Jubbly Jive (Barracuda Trials)|55|65000|89000|0||1|1|0|0||||
+T|SAILING|Courier tasks: Rellekka route|62|66000|99000|0||1|1|0|0||||~99k once Etceteria is unlocked (65)
+T|SAILING|Courier tasks: Prifddinas route|70|71000|77000|0||1|1|0|0|||Song of the Elves|
+T|SAILING|Deep sea trawling (bluefin)|72|49000|50000|0||1|1|0|0|||87 Fishing|Also trains Fishing
+T|SAILING|The Gwenith Glide (Barracuda Trials)|72|114000|198000|0||1|1|0|0||||Fastest; Marlin rank with a crystal extractor
+T|SAILING|Shipwreck salvaging (mercenary)|73|49000|50000|0||1|1|0|0||||Low effort
+T|SAILING|Courier tasks: Lunar Isle route|76|130000|160000|0||1|1|0|0|||Lunar Diplomacy|
+T|SAILING|Shipwreck salvaging (merchant)|87|60000|60000|0||1|1|0|0||||Low effort
+T|FARMING|Oak tree run|15|21658|21658|2887.8|run|1|1|0|200|Oak sapling*6;Tomatoes(5)*6|||XP per hour is while doing the run; one run every 3.33333h
+T|FARMING|Willow tree run|30|66668|66668|8889|run|1|1|0|280|Willow sapling*6;Apples(5)*6|||XP per hour is while doing the run; one run every 4.66667h
+T|FARMING|Maple tree run|45|155178|155178|20690.4|run|1|1|0|320|Maple sapling*6;Oranges(5)*6|||XP per hour is while doing the run; one run every 5.33333h
+T|FARMING|Yew tree run|60|321790|321790|42905.4|run|1|1|0|400|Yew sapling*6;Cactus spine*60|||XP per hour is while doing the run; one run every 6.66667h
+T|FARMING|Magic tree run|75|626121|626121|83482.8|run|1|1|0|480|Magic sapling*6;Coconut*150|||XP per hour is while doing the run; one run every 8h
+T|FARMING|Apple tree run|27|57262|57262|7635|run|1|1|0|960|Apple sapling*6;Sweetcorn*54|Cooking apple*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Banana tree run|33|82868|82868|11049|run|1|1|0|960|Banana sapling*6;Apples(5)*24|Banana*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Orange tree run|39|116402|116402|15520.2|run|1|1|0|960|Orange sapling*6;Strawberries(5)*18|Orange*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Curry tree run|42|136660|136660|18221.4|run|1|1|0|960|Curry sapling*6;Bananas(5)*30|Curry leaf*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Pineapple tree run|51|215626|215626|28750.2|run|1|1|0|960|Pineapple sapling*6;Watermelon*60|Pineapple*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Papaya tree run|57|287118|287118|38282.4|run|1|1|0|960|Papaya sapling*6;Pineapple*60|Papaya fruit*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Palm tree run|68|472932|472932|63057.6|run|1|1|0|960|Palm sapling*6;Papaya fruit*90|Coconut*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Dragonfruit tree run|81|805275|805275|107370|run|1|1|0|960|Dragonfruit sapling*6;Coconut*90|Dragonfruit*36||XP per hour is while doing the run; one run every 16h
+T|FARMING|Teak tree run|35|329625|329625|21975|run|1|1|0|4480|Teak sapling*3;Limpwurt root*45|||XP per hour is while doing the run; one run every 74.6667h
+T|FARMING|Mahogany tree run|55|710235|710235|47349|run|1|1|0|5120|Mahogany sapling*3;Yanillian hops*75|||XP per hour is while doing the run; one run every 85.3333h
+T|FARMING|Calquat tree run|72|375495|375495|25033|run|1|1|0|1280|Calquat sapling*2;Poison ivy berries*16|Calquat fruit*12||XP per hour is while doing the run; one run every 21.3333h
+T|FARMING|Redwood tree run|90|453600|453600|22680|run|1|1|0|6400|Redwood sapling*1;Dragonfruit*6|||XP per hour is while doing the run; one run every 106.667h
+T|FARMING|Hops run: Yanillian hops|80|19620|19620|1962|run|1|1|0|60|Yanillian seed*20;Ultracompost*5;Tomatoes(5)*5;Teleport card*1;Ring of dueling(8)*0.125;Logs*1;Watchtower teleport (tablet)*1;Camelot teleport (tablet)*1;Salve graveyard teleport (tablet)*1|Yanillian hops*135||XP per hour is while doing the run; one run every 1h
+T|FARMING|Herb run: avantoe|50|37520|37520|3752|run|1|1|0|90|Avantoe seed*10;Ultracompost*10|Grimy avantoe*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: cadantine|67|70980|70980|7098|run|1|1|0|90|Cadantine seed*10;Ultracompost*10|Grimy cadantine*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Hops run: cotton bolls|71|80280|80280|6690|run|1|1|0|100|Cotton seed*15;Ultracompost*2.5;Teleport card*1|Cotton boll*75||XP per hour is while doing the run; one run every 1.66667h
+T|FARMING|Herb run: dwarf weed|79|112165|112165|11216.5|run|1|1|0|90|Dwarf weed seed*10;Ultracompost*10|Grimy dwarf weed*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Hops run: hemp|37|59640|59640|4970|run|1|1|0|80|Hemp seed*15;Ultracompost*2.5;Flax*30;Teleport card*1|Hemp*125||XP per hour is while doing the run; one run every 1.33333h
+T|FARMING|Herb run: huasca|65|19785|19785|1978.5|run|1|1|0|90|Huasca seed*10;Ultracompost*10|Grimy huasca*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: irit leaves|44|30080|30080|3008|run|1|1|0|90|Irit seed*10;Ultracompost*10|Grimy irit leaf*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Hops run: jute fibre|80|26712|26712|2226|run|1|1|0|50|Jute seed*15;Ultracompost*5;Teleport card*1;Ring of dueling(8)*0.125;Logs*1;Watchtower teleport (tablet)*1;Camelot teleport (tablet)*1|Jute fibre*135||XP per hour is while doing the run; one run every 0.833333h
+T|FARMING|Herb run: kwuarm|56|46955|46955|4695.5|run|1|1|0|90|Kwuarm seed*10;Ultracompost*10|Grimy kwuarm*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: lantadyme|73|89000|89000|8900|run|1|1|0|90|Lantadyme seed*10;Ultracompost*10|Grimy lantadyme*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: ranarr weed|32|19785|19785|1978.5|run|1|1|0|90|Ranarr seed*10;Ultracompost*10|Grimy ranarr weed*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: snapdragon|62|58680|58680|5868|run|1|1|0|90|Snapdragon seed*10;Ultracompost*10|Grimy snapdragon*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: toadflax|38|24360|24360|2436|run|1|1|0|90|Toadflax seed*10;Ultracompost*10|Grimy toadflax*88||XP per hour is while doing the run; one run every 1.5h
+T|FARMING|Herb run: torstol|85|130755|130755|13075.5|run|1|1|0|90|Torstol seed*10;Ultracompost*10|Grimy torstol*91.4||XP per hour is while doing the run; one run every 1.5h

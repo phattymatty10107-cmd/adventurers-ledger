@@ -1,0 +1,670 @@
+BOSS|Abyssal Sire|Phase 1 (wiki setup)|https://oldschool.runescape.wiki/w/Abyssal_Sire/Strategies
+SLOT|Head|Slayer helmet (i);Black mask (i)
+SLOT|Cape|Infernal cape;Fire cape;Max cape / Hitpoints cape;Mixed hide cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory
+SLOT|Ammo|Amethyst arrow
+SLOT|Weapon|Scorching bow
+SLOT|Body|Torva platebody;Bandos chestplate;Blood Moon chestplate;Fighter torso
+SLOT|Legs|Torva platelegs;Bandos tassets;Blood Moon tassets;Obsidian platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots;Rune boots
+SLOT|Ring|Lightbearer;Ultor ring;Berserker ring (i)
+BOSS|Alchemical Hydra|Ranged|https://oldschool.runescape.wiki/w/Alchemical_Hydra/Strategies
+SLOT|Head|Slayer helmet (i);Black mask (i)
+SLOT|Cape|Dizana's quiver;Ava's assembler;Max cape / Ranging cape(t);Ava's accumulator / Ranging cape
+SLOT|Neck|Necklace of rupture / Bonecrusher necklace / Dragonbone necklace;Necklace of anguish;Necklace of Fangs;Amulet of fury;Amulet of glory
+SLOT|Ammo|Seeking dragon arrow / Ruby dragon bolts (e);Dragon arrow / Ruby bolts (e);Seeking amethyst arrow;Amethyst arrow;Atlatl dart
+SLOT|Weapon|Twisted bow;Toxic blowpipe / Dragon hunter crossbow;Bow of Faerdhinen;Eclipse atlatl
+SLOT|Body|Masori body (f);Crystal body / Eclipse Moon chestplate;Hueycoatl hide body;Blessed body
+SLOT|Shield|Twisted buckler;Dragonfire ward;Odium ward;Antler guard;Aquanite hopper
+SLOT|Legs|Masori chaps (f);Crystal legs / Eclipse Moon tassets;Hueycoatl hide chaps;Blessed chaps
+SLOT|Hands|Zaryte vambraces;Barrows gloves;Blessed bracers / Hueycoatl hide vambraces;Black d'hide vambraces
+SLOT|Feet|Avernic treads (max);Pegasian boots;Devout boots;Blessed boots / Aranea boots;Boots of Brimstone
+SLOT|Ring|Lightbearer;Venator ring;Ring of the gods (i);Ring of suffering (i);Archers ring (i)
+BOSS|Amoxliatl|Melee|https://oldschool.runescape.wiki/w/Amoxliatl/Strategies
+SLOT|Head|Slayer helmet (i) / Inquisitor's great helm / Torva full helm;Blood Moon helm;Neitiznot faceguard;Zombie helmet / Helm of Neitiznot;Dwarven helmet / Berserker helm
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Ardougne cloak 4 / Mixed hide cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of strength;Amulet of glory
+SLOT|Weapon|Scythe of Vitur;Dual macuahuitl / Inquisitor's mace;Soulreaper axe / Abyssal bludgeon / Ursine chainmace (u) / Zamorakian hasta;Sarachnis cudgel / Glacial temotli / Ghrazi rapier / Saradomin sword;Zombie axe / Dragon mace
+SLOT|Body|Inquisitor's hauberk / Oathplate chest / Torva platebody;Blood Moon chestplate;Bandos chestplate / Fighter torso;Obsidian platebody / Proselyte hauberk;Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Rune defender;Dragonfire shield;Adamant defender / Toktz-ket-xil
+SLOT|Legs|Inquisitor's plateskirt / Oathplate legs / Torva platelegs;Blood Moon tassets;Bandos tassets;Obsidian platelegs / Proselyte cuisse;Monk's robe
+SLOT|Hands|Ferocious gloves;Barrows gloves;Dragon gloves;Rune gloves;Combat bracelet
+SLOT|Feet|Avernic treads (max);Primordial boots;Aranea boots / Dragon boots / Spiked manacles;Echo boots / Guardian boots / Granite boots;Mixed hide boots / Rune boots / Climbing boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Lightbearer;Tyrannical ring (i);Ring of shadows
+BOSS|Araxxor|Melee|https://oldschool.runescape.wiki/w/Araxxor/Strategies
+SLOT|Head|Slayer helmet (i)
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury
+SLOT|Weapon|Scythe of Vitur;Inquisitor's mace / Soulreaper axe;Abyssal bludgeon / Ursine chainmace (u) / Zamorakian hasta;Sarachnis cudgel / Dual macuahuitl / Zombie axe
+SLOT|Body|Inquisitor's hauberk;Torva platebody;Bandos chestplate / Oathplate chest / Blood Moon chestplate / Fighter torso;Sunfire fanatic cuirass
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Inquisitor's plateskirt;Torva platelegs;Bandos tassets / Oathplate legs / Blood Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots / Aranea boots
+SLOT|Ring|Ultor ring;Berserker ring (i)
+BOSS|Artio|Ranged|https://oldschool.runescape.wiki/w/Artio/Strategies
+SLOT|Head|Slayer helmet (i);Crystal helm;Karil's coif;Archer helm;Bloodbark helm / Farseer helm / Mitre
+SLOT|Cape|Ava's assembler;Ava's accumulator;Ava's attractor;Imbued god cape;Ardougne cloak 4;God cape
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Ammo|Atlatl dart / Ruby dragon bolts (e);Moonlight antler bolts;Amethyst arrow / Rune arrow
+SLOT|Weapon|Webweaver bow;Craw's bow;Bow of Faerdhinen;Eclipse atlatl / Dragon crossbow;Hunters' sunlight crossbow;Magic shortbow (i)
+SLOT|Body|Masori body (f);Masori body;Crystal body;Black d'hide body;Mixed hide top
+SLOT|Shield|Twisted buckler;Dragonfire ward / Odium ward;Book of law;Unholy book
+SLOT|Legs|Black d'hide chaps;Crystal legs;Red d'hide chaps
+SLOT|Hands|Barrows gloves;Rune gloves;Black d'hide vambraces;Red d'hide vambraces
+SLOT|Feet|Blessed boots;Mixed hide boots;Bloodbark boots;Mystic boots;Snakeskin boots
+SLOT|Ring|Ring of shadows;Beacon ring / Lunar ring;Explorer's ring 4;Ring of wealth (i)
+BOSS|Barrows|Magic (low level)|https://oldschool.runescape.wiki/w/Barrows/Strategies
+SLOT|Head|Helm of neitiznot;Berserker helm;Rune full helm
+SLOT|Neck|Occult necklace;Amulet of fury;Amulet of glory;Holy symbol
+SLOT|Cape|Imbued god cape;God cape;Fire cape;Ardougne cloak 3
+SLOT|Weapon|Trident of the swamp / Twinflame staff;Smoke battlestaff;Ahrim's staff / Ancient sceptre;Staff of air;Iban's staff (u)
+SLOT|Body|Mystic robe top;Dragon chainbody;Rune platebody / Black d'hide body
+SLOT|Shield|Ghommal's hilt 2;Dragon defender;Rune defender;Rune kiteshield
+SLOT|Legs|Mystic robe bottom;Black d'hide chaps;Rune platelegs
+SLOT|Hands|Barrows gloves;Rune gloves;Chaos gauntlets;Combat bracelet
+SLOT|Feet|Dragon boots;Rune boots;Climbing boots
+SLOT|Ring|Berserker ring (i);Ring of dueling(8)
+BOSS|Brutus|Melee (free-to-play)|https://oldschool.runescape.wiki/w/Brutus/Strategies
+SLOT|Head|Rune full helm;Adamant full helm;Mithril full helm;Steel full helm
+SLOT|Cape|Red cape
+SLOT|Neck|Amulet of strength;Amulet of power;Amulet of accuracy
+SLOT|Weapon|Rune scimitar / Barronite mace;Adamant scimitar;Mithril scimitar;Steel scimitar
+SLOT|Body|Rune chainbody;Adamant chainbody;Mithril chainbody;Steel chainbody
+SLOT|Shield|Mooleta / Rune kiteshield;Adamant kiteshield;Mithril kiteshield;Steel kiteshield
+SLOT|Legs|Rune plateskirt;Adamant plateskirt;Mithril plateskirt;Steel plateskirt
+SLOT|Hands|Gilded d'hide vambraces;Leather gloves;Leather vambraces
+SLOT|Feet|Decorative boots (gold);Decorative boots (white);Decorative boots (red);Fancy boots / Fighting boots / Fancier boots
+BOSS|Bryophyta|Free-to-play melee (from wiki strategy text)|https://oldschool.runescape.wiki/w/Bryophyta
+SLOT|Head|Rune full helm
+SLOT|Neck|Amulet of power
+SLOT|Weapon|Rune scimitar
+SLOT|Body|Green d'hide body
+SLOT|Shield|Rune kiteshield
+SLOT|Legs|Green d'hide chaps
+BOSS|Callisto|Ranged|https://oldschool.runescape.wiki/w/Callisto/Strategies
+SLOT|Head|Slayer helmet (i);Crystal helm;Karil's coif;Archer helm
+SLOT|Cape|Ava's assembler;Ava's accumulator;Ranging cape;Ava's attractor
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Ammo|Ruby dragon bolts (e) / Ruby bolts (e);Amethyst arrow / Rune arrow;Broad bolts / Adamant bolts
+SLOT|Weapon|Webweaver bow / Craw's bow;Bow of Faerdhinen;Zaryte crossbow / Armadyl crossbow / Dragon crossbow;Rune crossbow;Magic shortbow (i)
+SLOT|Body|Masori body (f);Crystal body;Masori body;Black d'hide body
+SLOT|Shield|Twisted buckler;Dragonfire ward / Odium ward;Book of law / Unholy book
+SLOT|Legs|Black d'hide chaps;Crystal legs;Red d'hide chaps
+SLOT|Hands|Barrows gloves;Black d'hide vambraces;Red d'hide vambraces
+SLOT|Feet|Blessed boots;Mixed hide boots;Snakeskin boots
+SLOT|Ring|Ring of shadows;Explorer's ring 4;Ring of wealth (i)
+BOSS|Calvar'ion|Melee|https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies
+SLOT|Head|Helm of Neitiznot / Zombie helmet;Berserker helm;Dwarven helmet;Bearhead
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Mixed hide cape;Ardougne cloak 4
+SLOT|Neck|Salve amulet (e);Salve amulet;Amulet of strength;Amulet of glory;Amulet of power
+SLOT|Weapon|Ursine chainmace;Viggora's chainmace;Soulreaper axe;Inquisitor's mace;Abyssal bludgeon / Zombie axe / Zamorakian hasta;Sarachnis cudgel / Elder maul / Dual macuahuitl;Leaf-bladed battleaxe / Dragon mace
+SLOT|Body|Fighter torso;Black d'hide body / Mixed hide top;Elite black platebody;Proselyte hauberk;Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield;Rune defender / Toktz-ket-xil;Book of war / Falador shield 4
+SLOT|Legs|Black d'hide chaps;Elite black platelegs;Proselyte cuisse / Proselyte tasset;Monk's robe
+SLOT|Hands|Barrows gloves;Rune gloves;Combat bracelet;Spiky vambraces
+SLOT|Feet|Dragon boots;Rune boots;Mixed hide boots;Climbing boots;Fremennik sea boots 4 / Adamant boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Ring of shadows;Ring of wealth (i);Explorer's ring 4
+BOSS|Cerberus|Melee|https://oldschool.runescape.wiki/w/Cerberus/Strategies
+SLOT|Head|Slayer helmet (i);Black mask (i)
+SLOT|Cape|Infernal cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury;Amulet of glory
+SLOT|Weapon|Scythe of Vitur / Emberlight;Soulreaper axe / Inquisitor's mace;Arclight;Osmumten's fang / Abyssal bludgeon;Ghrazi rapier
+SLOT|Body|Inquisitor's hauberk;Torva platebody;Oathplate chest / Bandos chestplate / Blood Moon chestplate;Justiciar chestguard / Fighter torso
+SLOT|Shield|Avernic defender / Spectral spirit shield;Dragon defender;Dragonfire shield
+SLOT|Legs|Inquisitor's plateskirt;Torva platelegs;Oathplate legs / Bandos tassets / Blood Moon tassets;Justiciar legguards
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Echo boots;Guardian boots;Dragon boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Lightbearer;Ring of suffering (i) / Ring of the gods (i)
+BOSS|Chambers of Xeric (raid)|Melee|https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Strategies
+SLOT|Head|Torva full helm / Oathplate helm;Neitiznot faceguard / Inquisitor's great helm;Serpentine helm;Blood Moon helm;Helm of Neitiznot / Eclipse Moon helm / Blue Moon helm
+SLOT|Cape|Infernal cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury / Amulet of fury
+SLOT|Weapon|Scythe of Vitur;Dragon hunter lance;Soulreaper axe;Ghrazi rapier / Blade of Saeldor / Dual macuahuitl;Noxious halberd / Abyssal tentacle;Abyssal whip / Zamorakian hasta
+SLOT|Body|Torva platebody / Oathplate chest;Inquisitor's hauberk / Bandos chestplate / Blood Moon chestplate / Fighter torso;Eclipse Moon chestplate;Blue Moon chestplate
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Torva platelegs / Oathplate legs;Inquisitor's plateskirt;Bandos tassets / Blood Moon tassets;Eclipse Moon tassets / Blue Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Aranea boots;Dragon boots
+SLOT|Ring|Lightbearer;Ultor ring;Berserker ring (i);Brimstone ring
+BOSS|Chaos Elemental|Ranged|https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies
+SLOT|Head|Slayer helmet (i);Blessed coif;Karil's coif;Archer helm;Snakeskin bandana
+SLOT|Cape|Dizana's quiver;Ava's assembler;Ava's accumulator / Ardougne cloak 4;Ranging cape(t);Vestment cloak
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of glory
+SLOT|Ammo|Dragon arrow / Amethyst arrow;Diamond bolts (e);Broad bolts
+SLOT|Weapon|Webweaver bow / Craw's bow;Twisted bow;Bow of Faerdhinen;Toxic blowpipe;Armadyl crossbow
+SLOT|Body|Masori body (f);Crystal body;Blessed body;Black d'hide body;Red d'hide body
+SLOT|Shield|Book of law;Unholy book;Black d'hide shield;Book of balance
+SLOT|Legs|Blessed chaps;Crystal legs;Black d'hide chaps
+SLOT|Hands|Barrows gloves;Blessed vambraces;Black d'hide vambraces
+SLOT|Feet|Mixed hide boots;Snakeskin boots;Fremennik sea boots 4
+SLOT|Ring|Ring of suffering (i);Ring of shadows;Ring of wealth (i) / Explorer's ring 4
+BOSS|Chaos Fanatic|Ranged|https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies
+SLOT|Head|Slayer helmet (i);Blessed coif;Archer helm;Karil's coif;Snakeskin bandana
+SLOT|Cape|Dizana's quiver / Ava's assembler / Ava's accumulator;Mixed hide cape / Ardougne cloak 4;Ranging cape
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of glory / Dragonbone necklace;Necklace of fangs;Amulet of power
+SLOT|Ammo|Dragon arrow / Amethyst arrow / Rune arrow
+SLOT|Weapon|Webweaver bow / Craw's bow;Twisted bow;Bow of Faerdhinen;Scorching bow;Magic shortbow (i) / Crystal bow
+SLOT|Body|Masori body (f);Crystal body;Blessed body;Black d'hide body
+SLOT|Legs|Black d'hide chaps / Masori chaps;Crystal legs
+SLOT|Hands|Barrows gloves;Blessed vambraces;Black d'hide vambraces;Rune gloves / Adamant gloves
+SLOT|Feet|Mixed hide boots;Shayzien boots (5);Snakeskin boots;Bloodbark boots
+SLOT|Ring|Ring of shadows;Explorer's ring 4
+BOSS|Commander Zilyana|Magic|https://oldschool.runescape.wiki/w/Commander_Zilyana/Strategies
+SLOT|Head|Ancestral hat / Slayer helmet (i);Virtus mask
+SLOT|Cape|Imbued Saradomin cape;Max cape
+SLOT|Neck|Occult necklace
+SLOT|Weapon|Tumeken's shadow;Eye of Ayak
+SLOT|Body|Ancestral robe top;Virtus robe top
+SLOT|Shield|Elidinis' ward (f);Arcane spirit shield / Elidinis' ward;Ancient wyvern shield / Mage's book / Malediction ward
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom
+SLOT|Hands|Confliction gauntlets;Tormented bracelet
+SLOT|Feet|Avernic treads (max);Eternal boots;Infinity boots / Aranea boots
+SLOT|Ring|Magus ring;Lightbearer
+BOSS|Corporeal Beast|Stat draining|https://oldschool.runescape.wiki/w/Corporeal_Beast/Strategies
+SLOT|Head|Torva full helm;Inquisitor's great helm / Neitiznot faceguard;Serpentine helm;Void melee helm;Helm of Neitiznot
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury
+SLOT|Weapon|Noxious halberd;Zamorakian spear;Osmumten's fang
+SLOT|Body|Masori body (f);Blood Moon chestplate;Karil's leathertop;Elite void top / Void knight top;Blessed body
+SLOT|Legs|Masori chaps (f);Blood Moon tassets;Karil's leatherskirt;Elite void robe / Void knight robe;Blessed chaps
+SLOT|Hands|Ferocious gloves;Barrows gloves / Void knight gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots;Echo boots
+BOSS|Crazy archaeologist|Magic|https://oldschool.runescape.wiki/w/Crazy_archaeologist/Strategies
+SLOT|Head|Slayer helmet (i);Bloodbark helm;Mitre;Mystic hat;Xerician hat / Fremennik hat
+SLOT|Cape|Imbued god cape;God cape;Ardougne cloak 4;Ardougne cloak 3;Ardougne cloak 2
+SLOT|Neck|Occult necklace;Amulet of fury;Amulet of glory;Amulet of magic;Amulet of power
+SLOT|Weapon|Accursed sceptre / Thammaron's sceptre;Eye of Ayak;Sanguinesti staff;Trident of the Swamp;Trident of the Seas;Warped sceptre / Iban's staff (u)
+SLOT|Body|Bloodbark body;Mystic robe top;Xerician top;Zamorak monk top;Monk's robe top
+SLOT|Shield|Elidinis' ward (f) / Elidinis' ward;Book of Darkness;Unholy book;Tome of Fire;Broodoo shield
+SLOT|Legs|Bloodbark legs;Mystic robe bottom;Xerician robe;Zamorak monk bottom;Monk's robe
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Barrows gloves;Dragon gloves;Rune gloves
+SLOT|Feet|Mystic boots;Ghostly boots;Splitbark boots;Moonclan boots
+SLOT|Ring|Ring of shadows;Explorer's ring 4;Beacon ring / Lunar ring;Ring of wealth (i)
+BOSS|Dagannoth Kings|Tribrid (all kings)|https://oldschool.runescape.wiki/w/Dagannoth_Kings/Strategies
+SLOT|Head|Slayer helmet (i);Torva full helm / Serpentine helm;Neitiznot faceguard;Crystal helm;Helm of Neitiznot
+SLOT|Cape|Infernal cape / Blessed Dizana's quiver;Fire cape / Ava's assembler;Max cape;Ranging cape(t)
+SLOT|Neck|Amulet of rancour / Occult necklace / Necklace of rupture;Amulet of blood fury / Amulet of fury;Bonecrusher necklace / Dragonbone necklace;Amulet of glory
+SLOT|Ammo|Seeking dragon arrow / Moonlight antler bolts;Amethyst arrow
+SLOT|Weapon|Scythe of Vitur / Eye of Ayak / Twisted bow;Inquisitor's mace / Ghrazi rapier / Blade of Saeldor / Noxious halberd / Tumeken's shadow / Sanguinesti staff / Bow of Faerdhinen;Osmumten's fang / Abyssal tentacle / Trident of the Swamp / Toxic blowpipe;Abyssal whip / Trident of the Seas / Eclipse atlatl / Hunters' sunlight crossbow;Zombie axe / Belle's folly / Warped sceptre / Iban's staff / Crystal bow / Magic shortbow (i)
+SLOT|Body|Torva platebody / Masori body (f);Bandos chestplate / Masori body;Crystal body / Eclipse Moon chestplate;Blessed body
+SLOT|Shield|Spectral spirit shield;Avernic defender;Dragon defender;Dragonfire shield;Crystal shield / Toktz-ket-xil
+SLOT|Legs|Torva platelegs / Masori chaps (f);Masori chaps;Crystal legs / Eclipse Moon tassets;Blessed chaps
+SLOT|Hands|Ferocious gloves / Confliction gauntlets / Zaryte vambraces;Tormented bracelet / Barrows gloves;Regen bracelet;Combat bracelet
+SLOT|Feet|Avernic treads (max);Primordial boots;Echo boots / Guardian boots;Dragon boots
+SLOT|Ring|Lightbearer;Ring of the gods (i);Brimstone ring;Ring of suffering (i) / Granite ring (i);Berserker ring (i)
+BOSS|Deranged archaeologist|Magic|https://oldschool.runescape.wiki/w/Deranged_archaeologist/Strategies
+SLOT|Head|Ancestral hat;Virtus mask;Mitre;Helm of Neitiznot;Farseer helm
+SLOT|Cape|Imbued god cape;Soul cape;Ardougne cloak 4;Ardougne cloak 2;Ardougne cloak 1
+SLOT|Neck|Occult necklace;Dragonbone necklace / Bonecrusher necklace;Amulet of fury;Amulet of glory;Holy symbol
+SLOT|Weapon|Tumeken's shadow / Eye of Ayak;Harmonised Nightmare staff;Sanguinesti staff;Trident of the Swamp;Trident of the Seas;Warped sceptre;Iban's staff
+SLOT|Body|Ancestral robe top;Virtus robe top;Zealot's robe top;Vestment robe top;Monk's robe top
+SLOT|Shield|Tome of Fire / Elidinis' ward (f);Arcane spirit shield;Elidinis' ward;Malediction ward;Book of Darkness
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom;Zealot's robe bottom;Vestment robe legs;Monk's robe
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Holy wraps;Barrows gloves;Dragon gloves / Rune gloves
+SLOT|Feet|Avernic treads (max);Devout boots;Holy sandals;Eternal boots;Aranea boots
+SLOT|Ring|Magus ring;Ring of the gods (i);Ring of suffering (i);Brimstone ring / Ring of shadows;Explorer's ring 4
+BOSS|Doom of Mokhaiotl|Ranged|https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl/Strategies
+SLOT|Head|Masori mask (f) / Void ranger helm;Masori mask
+SLOT|Cape|Dizana's quiver;Ava's assembler
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury
+SLOT|Ammo|Seeking dragon arrow;Amethyst arrow
+SLOT|Weapon|Twisted bow;Scorching bow
+SLOT|Body|Masori body (f) / Elite void top;Masori body
+SLOT|Legs|Masori chaps (f) / Elite void robe;Masori chaps
+SLOT|Hands|Zaryte vambraces / Void knight gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Pegasian boots / Aranea boots;Blessed boots / Mixed hide boots
+SLOT|Ring|Lightbearer;Venator ring;Ring of suffering (i)
+BOSS|Duke Sucellus|Melee|https://oldschool.runescape.wiki/w/Duke_Sucellus/Strategies
+SLOT|Head|Slayer helmet (i) / Oathplate helm / Serpentine helm;Torva full helm / Neitiznot faceguard;Void melee helm;Blood Moon helm;Helm of Neitiznot
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Mixed hide cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury;Amulet of glory / Amulet of strength
+SLOT|Weapon|Scythe of Vitur;Emberlight / Soulreaper axe;Noxious halberd / Blade of Saeldor;Arclight / Zombie axe / Abyssal whip
+SLOT|Body|Oathplate chest;Torva platebody;Bandos chestplate / Fighter torso / Blood Moon chestplate;Elite void top / Void knight top
+SLOT|Shield|Avernic defender;Dragon defender / Dragonfire shield
+SLOT|Legs|Oathplate legs;Torva platelegs;Bandos tassets / Blood Moon tassets;Elite void robe / Void knight robe;Obsidian platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves / Void knight gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Echo boots;Dragon boots
+SLOT|Ring|Bellator ring / Lightbearer;Ultor ring;Berserker ring (i);Ring of suffering (ri);Ring of shadows
+BOSS|General Graardor|Melee (solo)|https://oldschool.runescape.wiki/w/General_Graardor/Strategies
+SLOT|Head|Torva full helm;Justiciar faceguard;Serpentine helm;Neitiznot faceguard;Guthan's helm / Verac's helm / Helm of neitiznot
+SLOT|Cape|Infernal cape;Fire cape;Obsidian cape
+SLOT|Neck|Amulet of blood fury;Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory
+SLOT|Weapon|Osmumten's fang;Inquisitor's mace / Ghrazi rapier / Blade of saeldor (c);Abyssal tentacle;Zamorakian hasta;Abyssal whip / Zombie axe
+SLOT|Body|Torva platebody / Masori body (f);Justiciar chestguard;Bandos chestplate;Karil's leathertop / Zamorak d'hide body
+SLOT|Shield|Elysian spirit shield;Dragonfire shield;Avernic defender;Spectral spirit shield;Toktz-ket-xil / Crystal shield
+SLOT|Legs|Torva platelegs;Justiciar legguards;Bandos tassets
+SLOT|Hands|Barrows gloves;Ferocious gloves;Regen bracelet
+SLOT|Feet|Echo boots / Guardian boots;Primordial boots;Dragon boots
+SLOT|Ring|Lightbearer;Ring of suffering (ri);Berserker ring (i);Ring of the gods (i);Ring of life
+BOSS|Giant Mole|Melee|https://oldschool.runescape.wiki/w/Giant_Mole/Strategies
+SLOT|Head|Torva full helm / Slayer helmet (i);Neitiznot faceguard / Serpentine helm;Void melee helm;Helm of neitiznot
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory;Amulet of strength
+SLOT|Cape|Infernal cape;Fire cape;Ardougne cloak 4;Ardougne cloak 3;Ardougne cloak 2
+SLOT|Weapon|Osmumten's fang;Noxious halberd / Ghrazi rapier;Zamorakian hasta;Zombie axe;Abyssal dagger
+SLOT|Body|Torva platebody;Bandos chestplate / Oathplate chest;Elite void top;Fighter torso;Proselyte hauberk
+SLOT|Shield|Avernic defender;Dragon defender;Rune defender
+SLOT|Legs|Torva platelegs;Bandos tassets / Oathplate legs;Elite void robe;Proselyte cuisse
+SLOT|Hands|Ferocious gloves;Barrows gloves;Void knight gloves;Dragon gloves
+SLOT|Feet|Primordial boots;Dragon boots;Spiked manacles
+SLOT|Ring|Ultor ring;Lightbearer / Berserker ring (i);Brimstone ring;Ring of the gods (i);Ring of suffering (i)
+BOSS|Giant Mole|Ranged|https://oldschool.runescape.wiki/w/Giant_Mole/Strategies
+SLOT|Head|Masori mask (f) / Slayer helmet (i);Void ranger helm;Crystal helm;Robin hood hat;Blessed coif
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury;Amulet of glory
+SLOT|Cape|Dizana's quiver;Ava's assembler
+SLOT|Weapon|Twisted bow;Bow of faerdhinen;Crystal bow;Zaryte crossbow;Armadyl crossbow
+SLOT|Ammo|Dragon arrow / Diamond dragon bolts (e);Diamond bolts (e);Amethyst arrow;Rune arrow
+SLOT|Body|Masori body (f);Elite void top;Crystal body;Blessed body;Black d'hide body
+SLOT|Legs|Masori chaps (f);Elite void robe;Crystal legs;Blessed chaps;Black d'hide chaps
+SLOT|Hands|Zaryte vambraces;Void knight gloves;Barrows gloves;Blessed vambraces;Black d'hide vambraces
+SLOT|Feet|Pegasian boots;Ranger boots / Devout boots;Blessed boots;Aranea boots
+SLOT|Ring|Venator ring;Lightbearer;Ring of the gods (i) / Archers ring (i);Ring of shadows / Brimstone ring;Ring of endurance
+BOSS|Grotesque Guardians|Melee|https://oldschool.runescape.wiki/w/Grotesque_Guardians/Strategies
+SLOT|Head|Slayer helmet (i)
+SLOT|Cape|Infernal cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury / Amulet of blood fury;Amulet of glory;Amulet of strength
+SLOT|Weapon|Scythe of Vitur;Granite hammer / Soulreaper axe;Inquisitor's mace / Ghrazi rapier / Blade of Saeldor / Noxious halberd / Abyssal tentacle;Osmumten's fang / Abyssal whip;Zamorakian hasta / Dual macuahuitl / Dragon scimitar
+SLOT|Body|Oathplate chest / Torva platebody;Bandos chestplate;Blood Moon chestplate / Fighter torso;Obsidian platebody / Eclipse Moon chestplate;Black d'hide body
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield
+SLOT|Legs|Torva platelegs / Oathplate legs;Bandos tassets / Blood Moon tassets;Obsidian platelegs / Eclipse Moon tassets;Verac's plateskirt;Dragon platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves;Dragon gloves;Rune gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots / Aranea boots;Echo boots / Guardian boots;Rune boots / Mixed hide boots
+SLOT|Ring|Ultor ring;Bellator ring / Berserker ring (i) / Lightbearer;Brimstone ring / Ring of shadows;Ring of suffering (ri) / Archers ring (i);Treasonous ring (i) / Warrior ring (i) / Tyrannical ring (i)
+BOSS|Hespori|Entry level|https://oldschool.runescape.wiki/w/Hespori/Strategies
+SLOT|Head|Helm of Neitiznot;Berserker helm
+SLOT|Cape|Fire cape;Mixed hide cape
+SLOT|Neck|Amulet of fury;Amulet of strength;Amulet of glory
+SLOT|Weapon|Zombie axe;Dragon scimitar
+SLOT|Body|Blood Moon chestplate / Fighter torso / Bandos chestplate;Black d'hide body
+SLOT|Shield|Dragon defender;Rune defender
+SLOT|Legs|Blood Moon tassets / Bandos tassets;Black d'hide chaps
+SLOT|Hands|Barrows gloves;Combat bracelet
+SLOT|Feet|Dragon boots;Mixed hide boots;Climbing boots
+SLOT|Ring|Berserker ring (i);Warrior ring (i)
+BOSS|The Hueycoatl|Melee|https://oldschool.runescape.wiki/w/The_Hueycoatl/Strategies
+SLOT|Head|Inquisitor's great helm;Torva full helm;Neitiznot faceguard;Serpentine helm / Blood Moon helm;Helm of Neitiznot / Obsidian helmet / Zombie helmet;Proselyte sallet / Initiate sallet
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Ardougne cloak 4
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Weapon|Scythe of Vitur;Dragon hunter lance;Inquisitor's mace;Soulreaper axe;Dual macuahuitl;Abyssal bludgeon / Zamorakian hasta / Ursine chainmace (u);Glacial temotli;Sarachnis cudgel / Zombie axe / Dragon mace
+SLOT|Body|Inquisitor's hauberk;Torva platebody;Bandos chestplate / Blood Moon chestplate / Fighter torso;Obsidian platebody / Mixed hide top;Proselyte hauberk;Initiate hauberk / Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Rune defender
+SLOT|Legs|Inquisitor's plateskirt;Torva platelegs;Bandos tassets / Blood Moon tassets;Obsidian platelegs / Fremennik kilt;Proselyte cuisse;Initiate cuisse / Monk's robe
+SLOT|Hands|Ferocious gloves;Barrows gloves;Rune gloves;Regen bracelet;Combat bracelet
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots;Aranea boots;Rune boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Lightbearer;Ring of shadows;Explorer's ring 4
+BOSS|K'ril Tsutsaroth|Ranged|https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth/Strategies
+SLOT|Head|Slayer helmet (i);Masori mask (f);Armadyl helmet;Crystal helm;Void ranger helm
+SLOT|Cape|Dizana's quiver;Ava's assembler;Max cape;Ava's accumulator;Ranging cape
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury;Amulet of glory
+SLOT|Ammo|Seeking dragon arrow;Dragon arrow;Amethyst arrow
+SLOT|Weapon|Scorching bow;Twisted bow;Bow of Faerdhinen
+SLOT|Body|Masori body (f);Armadyl chestplate;Crystal body;Karil's leathertop / Hueycoatl hide body;Eclipse Moon chestplate / Elite void top
+SLOT|Legs|Masori chaps (f);Armadyl chainskirt;Crystal legs;Karil's leatherskirt / Hueycoatl hide chaps;Eclipse Moon tassets / Elite void robe
+SLOT|Hands|Zaryte vambraces;Barrows gloves;Zamorak bracers / Black spiky vambraces;Void knight gloves
+SLOT|Feet|Avernic treads (max);Pegasian boots;Echo boots;Ranger boots;Blessed boots
+SLOT|Ring|Lightbearer;Venator ring;Archers ring (i);Ring of suffering (ri)
+BOSS|Kalphite Queen|High level melee|https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies
+SLOT|Head|Slayer helmet (i);Inquisitor's great helm / Torva full helm;Neitiznot faceguard / Serpentine helm;Blood Moon helm / Helm of Neitiznot
+SLOT|Cape|Infernal cape;Mythical cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury / Amulet of blood fury
+SLOT|Weapon|Keris partisan of breaching;Inquisitor's mace;Scythe of Vitur / Soulreaper axe;Keris partisan
+SLOT|Body|Inquisitor's hauberk / Torva platebody;Bandos chestplate;Fighter torso / Blood Moon chestplate
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Inquisitor's plateskirt / Torva platelegs;Bandos tassets;Blood Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Echo boots;Dragon boots
+SLOT|Ring|Ring of suffering (ri) / Lightbearer;Ultor ring / Berserker ring (i)
+BOSS|King Black Dragon|4-item melee|https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies
+SLOT|Head|Slayer helmet (i) / Helm of Neitiznot;Berserker helm
+SLOT|Cape|Infernal cape / Fire cape;Ardougne cloak;Mythical cape;Cape of accomplishment
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Weapon|Dragon hunter lance / Osmumten's fang;Ghrazi rapier;Noxious halberd;Zamorakian hasta;Abyssal dagger (p++)
+SLOT|Body|Mixed hide top;Proselyte hauberk;Initiate hauberk / Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield / Antler guard;Anti-dragon shield
+SLOT|Legs|Mixed hide legs;Proselyte cuisse;Initiate cuisse / Monk's robe
+SLOT|Hands|Barrows gloves;Dragon gloves;Rune gloves;Adamant gloves;Combat bracelet
+SLOT|Feet|Dragon boots;Rune boots / Climbing boots / Mixed hide boots;Fremennik sea boots 4
+SLOT|Ring|Ultor ring;Ring of shadows / Treasonous ring (i);Berserker ring (i);Brimstone ring
+BOSS|Kraken|Magic|https://oldschool.runescape.wiki/w/Kraken/Strategies
+SLOT|Head|Slayer helmet (i);Black mask (i)
+SLOT|Cape|Imbued god cape;God cape;Infernal cape / Fire cape;Ardougne cloak
+SLOT|Neck|Occult necklace / Elemental amulet;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Weapon|Eye of Ayak / Tumeken's shadow;Harmonised Nightmare staff / Sanguinesti staff;Trident of the Swamp / Staff of the Dead;Twinflame staff / Trident of the Seas;Warped sceptre / Slayer's staff (e)
+SLOT|Body|Ancestral robe top;Virtus robe top;Masori body (f);Hueycoatl hide body / Karil's leathertop / Blessed body / Elite void top;Ahrim's robetop / Blue Moon chestplate
+SLOT|Shield|Elidinis' ward (f) / Tome of Earth;Elidinis' ward / Arcane spirit shield;Ancient wyvern shield / Mage's book / Malediction ward;Elysian spirit shield / Spectral spirit shield;Dragonfire ward
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom;Masori chaps (f);Hueycoatl hide chaps / Karil's leatherskirt / Elite void robe / Blessed chaps;Blue Moon tassets / Ahrim's robeskirt
+SLOT|Hands|Confliction gauntlets / Bracelet of slaughter;Tormented bracelet;Regen bracelet;Barrows gloves
+SLOT|Feet|Avernic treads (max);Eternal boots;Infinity boots / Aranea boots;Boots of Brimstone
+SLOT|Ring|Magus ring;Ring of suffering (i);Seers ring (i) / Lightbearer;Brimstone ring;Ring of shadows
+BOSS|Kree'arra|Magic|https://oldschool.runescape.wiki/w/Kree%27arra/Strategies
+SLOT|Head|Slayer helmet (i);Ancestral hat;Virtus mask
+SLOT|Cape|Imbued Zamorak cape
+SLOT|Neck|Occult necklace
+SLOT|Weapon|Tumeken's shadow
+SLOT|Body|Ancestral robe top;Virtus robe top
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom
+SLOT|Hands|Confliction gauntlets;Tormented bracelet
+SLOT|Feet|Avernic treads (max);Eternal boots
+SLOT|Ring|Magus ring / Lightbearer;Ring of suffering (ri);Seers ring (i)
+BOSS|The Leviathan|Ranged|https://oldschool.runescape.wiki/w/The_Leviathan/Strategies
+SLOT|Head|Slayer helmet (i) / Masori mask (f) / Masori mask;Crystal helm;Void ranger helm;Hueycoatl hide coif / Karil's coif / Blessed coif
+SLOT|Cape|Dizana's quiver;Ava's assembler;Ava's accumulator / Ranging cape(t)
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Dragonbone necklace / Bonecrusher necklace;Amulet of fury / Amulet of glory
+SLOT|Ammo|Ruby dragon bolts (e);Ruby bolts (e)
+SLOT|Weapon|Zaryte crossbow / Toxic blowpipe;Armadyl crossbow / Dragon crossbow;Twisted bow / Bow of Faerdhinen;Rune crossbow
+SLOT|Body|Masori body (f) / Masori body;Crystal body;Elite void top;Karil's leathertop / Hueycoatl hide body / Blessed body;Black d'hide body
+SLOT|Shield|Twisted buckler;Dragonfire ward;Odium ward;Antler guard
+SLOT|Legs|Masori chaps (f) / Masori chaps;Crystal legs;Elite void robe;Karil's leatherskirt / Hueycoatl hide chaps / Blessed chaps;Black d'hide chaps
+SLOT|Hands|Zaryte vambraces;Barrows gloves;Void knight gloves;Hueycoatl hide vambraces / Blessed vambraces
+SLOT|Feet|Avernic treads (max);Devout boots / Pegasian boots;Ranger boots;Blessed boots / Aranea boots
+SLOT|Ring|Lightbearer;Ring of the gods (i) / Venator ring;Ring of suffering (i);Archers ring (i);Ring of shadows
+BOSS|Moons of Peril|Melee|https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies
+SLOT|Head|Torva full helm / Oathplate helm;Justiciar faceguard / Serpentine helm;Neitiznot faceguard;Blood Moon helm;Helm of Neitiznot / Berserker helm
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Obsidian cape
+SLOT|Neck|Amulet of rancour;Amulet of torture / Amulet of fury;Amulet of strength;Amulet of glory;Amulet of power
+SLOT|Weapon|Soulreaper axe / Scythe of Vitur;Zamorakian hasta
+SLOT|Body|Torva platebody / Oathplate chest;Justiciar chestguard;Bandos chestplate;Dharok's platebody / Guthan's platebody / Torag's platebody;Fighter torso;Verac's brassard;Dragon chainbody
+SLOT|Shield|Avernic defender / Dragonfire shield;Dragon defender;Toktz-ket-xil;Rune defender / Blessed spirit shield / Dragon sq shield / Crystal shield;Rune kiteshield
+SLOT|Legs|Torva platelegs / Oathplate legs;Justiciar legguards;Bandos tassets;Dragon platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves;Dragon gloves;Rune gloves;Regen bracelet / Granite gloves
+SLOT|Feet|Avernic treads (max);Primordial boots / Echo boots;Dragon boots;Guardian boots;Granite boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Ring of suffering (ri) / Steel ring;Lightbearer;Brimstone ring;Warrior ring (i)
+BOSS|Nex|Ranged|https://oldschool.runescape.wiki/w/Nex/Strategies
+SLOT|Head|Masori mask (f);Armadyl helmet;Slayer helmet (i) / Ancient coif
+SLOT|Cape|Dizana's quiver;Ava's assembler;Max cape / Ranging cape(t)
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Amulet of fury
+SLOT|Ammo|Ruby dragon bolts (e) + Seeking dragon arrow;Ruby bolts (e)
+SLOT|Weapon|Zaryte crossbow + Twisted bow;Armadyl crossbow + Toxic blowpipe;Dragon hunter crossbow / Dragon crossbow
+SLOT|Body|Masori body (f);Armadyl chestplate;Eclipse Moon chestplate / Karil's leathertop / Ancient d'hide body
+SLOT|Shield|Twisted buckler;Dragonfire ward;Odium ward
+SLOT|Legs|Masori chaps (f);Armadyl chainskirt;Eclipse Moon tassets / Karil's leatherskirt / Ancient chaps
+SLOT|Hands|Zaryte vambraces;Barrows gloves;Ancient bracers
+SLOT|Feet|Avernic treads (max);Pegasian boots;Ancient d'hide boots
+SLOT|Ring|Lightbearer;Venator ring;Archers ring (i)
+BOSS|The Nightmare|Melee|https://oldschool.runescape.wiki/w/The_Nightmare/Strategies
+SLOT|Head|Inquisitor's great helm;Torva full helm;Neitiznot faceguard;Serpentine helm / Blood Moon helm;Helm of Neitiznot / Zombie helmet
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Obsidian cape
+SLOT|Neck|Amulet of rancour;Amulet of blood fury;Amulet of torture;Amulet of fury;Amulet of glory
+SLOT|Weapon|Scythe of Vitur;Inquisitor's mace;Soulreaper axe;Abyssal bludgeon;Dual macuahuitl / Ursine chainmace (u) / Sarachnis cudgel;Zombie axe / Zamorakian hasta / Osmumten's fang
+SLOT|Body|Inquisitor's hauberk;Torva platebody;Bandos chestplate;Blood Moon chestplate;Fighter torso
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Inquisitor's plateskirt;Torva platelegs;Bandos tassets;Blood Moon tassets;Obsidian platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves;Granite gloves;Combat bracelet
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots;Echo boots;Guardian boots
+SLOT|Ring|Ultor ring;Berserker ring (i)
+BOSS|Obor|Melee (from wiki strategy text)|https://oldschool.runescape.wiki/w/Obor
+SLOT|Head|Rune full helm
+SLOT|Neck|Amulet of power
+SLOT|Weapon|Abyssal whip;Dragon scimitar;Rune scimitar
+SLOT|Body|Rune chainbody
+SLOT|Shield|Rune kiteshield
+SLOT|Legs|Rune platelegs
+BOSS|Phantom Muspah|Magic|https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies
+SLOT|Head|Slayer helmet (i) / Ancestral hat;Virtus mask;Ahrim's hood / Blue Moon helm / Dagon'hai hat / Bloodbark helm / Infinity hat
+SLOT|Cape|Imbued god cape
+SLOT|Neck|Occult necklace / Elemental amulet;Amulet of fury / Amulet of glory
+SLOT|Weapon|Tumeken's shadow;Harmonised Nightmare staff / Eye of Ayak / Sanguinesti staff;Mystic smoke staff / Twinflame staff;Trident of the Swamp / Trident of the Seas
+SLOT|Body|Ancestral robe top;Virtus robe top;Ahrim's robetop / Blue Moon chestplate / Dagon'hai robe top / Bloodbark body / Infinity top
+SLOT|Shield|Elidinis' ward (f);Arcane spirit shield;Ancient wyvern shield / Elidinis' ward;Mage's book / Malediction ward;Book of the Dead
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom;Ahrim's robeskirt / Blue Moon tassets / Dagon'hai robe bottom / Bloodbark legs / Infinity bottoms
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Barrows gloves
+SLOT|Feet|Avernic treads (max);Eternal boots;Aranea boots / Infinity boots
+SLOT|Ring|Lightbearer;Magus ring;Ring of suffering (i);Ring of shadows
+BOSS|Phosani's Nightmare|Melee|https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare/Strategies
+SLOT|Head|Inquisitor's great helm;Torva full helm;Neitiznot faceguard / Zombie helmet;Blood Moon helm
+SLOT|Cape|Infernal cape;Fire cape / Mythical cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury
+SLOT|Weapon|Scythe of Vitur;Inquisitor's mace;Soulreaper axe;Abyssal bludgeon;Dual macuahuitl
+SLOT|Body|Inquisitor's hauberk;Torva platebody;Bandos chestplate / Blood Moon chestplate / Fighter torso
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Inquisitor's plateskirt;Torva platelegs;Bandos tassets / Blood Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots
+SLOT|Ring|Ultor ring;Lightbearer;Berserker ring (i);Brimstone ring;Berserker ring
+BOSS|Royal Titans|Low level (melee armour, magic weapon)|https://oldschool.runescape.wiki/w/Royal_Titans/Strategies
+SLOT|Head|Slayer helmet (i);Blood Moon helm;Helm of Neitiznot / Eclipse Moon helm
+SLOT|Cape|Fire cape;Mythical cape
+SLOT|Neck|Amulet of fury / Amulet of strength;Amulet of glory
+SLOT|Weapon|Twinflame staff;Purging staff;Blue Moon spear;Ancient sceptre / Master wand;Ancient staff / Mystic steam staff
+SLOT|Body|Blood Moon chestplate;Fighter torso;Eclipse Moon chestplate / Blue Moon chestplate
+SLOT|Shield|Dragon defender / Antler guard
+SLOT|Legs|Blood Moon tassets;Eclipse Moon tassets / Blue Moon tassets
+SLOT|Hands|Barrows gloves;Combat bracelet
+SLOT|Feet|Aranea boots;Dragon boots;Climbing boots
+SLOT|Ring|Berserker ring (i);Lightbearer
+BOSS|Sarachnis|Melee (low level)|https://oldschool.runescape.wiki/w/Sarachnis/Strategies
+SLOT|Head|Slayer helmet (i);Helm of neitiznot / Blood Moon helm
+SLOT|Cape|Fire cape;Mythical cape;Imbued god cape;God cape
+SLOT|Neck|Amulet of fury;Amulet of glory
+SLOT|Weapon|Dual macuahuitl;Zamorakian hasta / Sarachnis cudgel / Zombie axe;Abyssal tentacle / Saradomin sword;Colossal blade;Dragon mace
+SLOT|Body|Blood Moon chestplate / Eclipse moon chestplate;Karil's leathertop;Elite void top / Blessed body;Black d'hide body
+SLOT|Shield|Dragon defender;Rune defender / Toktz-ket-xil;Adamant defender
+SLOT|Legs|Blood Moon tassets / Eclipse moon tassets / Blue Moon tassets;Karil's leatherskirt;Elite void robe / Blessed chaps;Black d'hide chaps
+SLOT|Hands|Barrows gloves;Dragon gloves;Rune gloves;Regen bracelet
+SLOT|Feet|Aranea boots;Dragon boots;Guardian boots;Mixed hide boots;Rune boots
+SLOT|Ring|Berserker ring (i);Brimstone ring;Warrior ring (i) / Tyrannical ring (i)
+BOSS|Scorpia|Magic|https://oldschool.runescape.wiki/w/Scorpia/Strategies
+SLOT|Head|Slayer helmet (i);Bloodbark helm;Mitre;Farseer helm;Mystic hat
+SLOT|Cape|Imbued god cape;Ardougne cloak 4;God cape;Vestment cloak
+SLOT|Neck|Occult necklace;God stole;Amulet of glory;Amulet of power;Unholy symbol
+SLOT|Weapon|Accursed sceptre / Thammaron's sceptre;Eye of Ayak;Sanguinesti staff / Trident of the Swamp;Trident of the Seas;Warped sceptre
+SLOT|Body|Bloodbark body;Monk's robe top;Zamorak monk top;Mystic robe top;Xerician top
+SLOT|Shield|Elidinis' ward (f);Elidinis' ward / Malediction ward / Ancient wyvern shield;Book of Darkness;Broodoo shield
+SLOT|Legs|Bloodbark legs;Monk's robe;Zamorak monk bottom;Mystic robe bottom;Xerician robe
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Barrows gloves / Dragon gloves;Rune gloves / Adamant gloves;Combat bracelet
+SLOT|Feet|Bloodbark boots / Mystic boots;Ghostly boots;Splitbark boots;Moonclan boots;Fremennik sea boots 4
+SLOT|Ring|Ring of shadows;Explorer's ring 4;Beacon ring / Lunar ring;Ring of recoil;Ring of wealth (i)
+BOSS|Scurrius|Melee (mid level)|https://oldschool.runescape.wiki/w/Scurrius/Strategies
+SLOT|Head|Void melee helm;Helm of Neitiznot / Blood Moon helm;Berserker helm;Rune full helm
+SLOT|Cape|Fire cape
+SLOT|Neck|Amulet of fury;Amulet of glory;Amulet of strength
+SLOT|Weapon|Bone mace;Abyssal tentacle;Abyssal whip / Zombie axe;Sarachnis cudgel;Dragon scimitar / Arkan blade;Granite hammer;Rune scimitar
+SLOT|Body|Void knight top;Fighter torso;Proselyte hauberk;Rune platebody
+SLOT|Shield|Dragon defender;Rune defender;Toktz-ket-xil
+SLOT|Legs|Void knight robe;Dragon platelegs;Proselyte cuisse;Rune plateskirt
+SLOT|Hands|Void knight gloves;Barrows gloves;Rune gloves;Regen bracelet;Combat bracelet
+SLOT|Feet|Dragon boots;Rune boots;Spiked manacles;Mixed hide boots / Climbing boots
+SLOT|Ring|Berserker ring (i);Lightbearer;Steel ring
+BOSS|Shellbane gryphon|Melee|https://oldschool.runescape.wiki/w/Shellbane_gryphon/Strategies
+SLOT|Head|Black mask;Slayer helmet (i);Gold helmet;Granite helm / Obsidian helmet;Adamant full helm
+SLOT|Cape|Tortugan shield
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of strength
+SLOT|Weapon|Scythe of Vitur;Soulreaper axe;Ghrazi rapier;Noxious halberd / Osmumten's fang / Blade of Saeldor;Abyssal tentacle;Zamorakian hasta;Abyssal whip / Abyssal dagger;Zombie axe / Belle's folly;Dragon sword;Arkan blade / Colossal blade;Dragon scimitar
+SLOT|Body|Torva platebody / Oathplate chest;Bandos chestplate;Granite body;Obsidian platebody;Adamant platebody
+SLOT|Shield|Avernic defender / Dragonfire shield;Dragon defender;Rune defender / Toktz-ket-xil;Granite shield;Adamant kiteshield;Green d'hide shield
+SLOT|Legs|Torva platelegs / Oathplate legs;Bandos tassets;Granite legs / Obsidian platelegs;Adamant platelegs
+SLOT|Hands|Ferocious gloves / Bracelet of slaughter;Barrows gloves;Granite gloves;Combat bracelet;Elven gloves / Rock-shell gloves
+SLOT|Feet|Avernic treads (max);Echo boots;Guardian boots;Primordial boots;Spiked manacles;Dragon boots;Boots of brimstone / Granite boots;Mixed hide boots;Climbing boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Granite ring (i);Steel ring;Explorer's ring 4
+BOSS|Skotizo|Melee|https://oldschool.runescape.wiki/w/Skotizo/Strategies
+SLOT|Head|Slayer helmet (i) / Oathplate helm;Torva full helm;Neitiznot faceguard;Serpentine helm;Blood Moon helm;Helm of Neitiznot;Zombie helmet;Dwarven helmet
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Ardougne cloak 4
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of fury;Amulet of glory;Amulet of power
+SLOT|Weapon|Emberlight;Arclight
+SLOT|Body|Oathplate chest / Masori body (f);Torva platebody / Karil's leathertop;Bandos chestplate / Fighter torso / Blood Moon chestplate;Obsidian platebody / Blessed body;Elite void top / Void knight top;Black d'hide body
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield;Rune defender
+SLOT|Legs|Oathplate legs;Torva platelegs;Bandos tassets / Blood Moon tassets;Obsidian platelegs;Elite void robe / Void knight robe;Karil's leatherskirt / Blessed chaps / Black d'hide chaps
+SLOT|Hands|Ferocious gloves;Barrows gloves;Rune gloves;Regen bracelet;Combat bracelet
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots / Spiked manacles;Guardian boots;Mixed hide boots / Rune boots / Climbing boots
+SLOT|Ring|Ultor ring;Bellator ring;Berserker ring (i);Brimstone ring;Ring of shadows
+BOSS|Sol Heredit (Fortis Colosseum)|Hybrid (melee + magic + ranged switches)|https://oldschool.runescape.wiki/w/Sol_Heredit/Strategies
+SLOT|Head|Torva full helm / Masori mask (f);Oathplate helm / Crystal helm;Neitiznot faceguard / Serpentine helm
+SLOT|Cape|Infernal cape + Dizana's quiver;Fire cape + Ava's assembler
+SLOT|Neck|Amulet of blood fury / Amulet of rancour;Amulet of torture
+SLOT|Ammo|Seeking dragon arrow;Dragon arrow
+SLOT|Weapon|Scythe of Vitur + Tumeken's shadow + Twisted bow;Soulreaper axe + Eye of Ayak + Bow of Faerdhinen;Noxious halberd + Sanguinesti staff + Bow of Faerdhinen
+SLOT|Body|Torva platebody + Masori body (f);Oathplate chest + Masori body (f);Bandos chestplate + Crystal body;Blood Moon chestplate + Crystal body
+SLOT|Shield|Elysian spirit shield / Avernic defender;Crystal shield / Dragon defender
+SLOT|Legs|Torva platelegs + Masori chaps (f);Oathplate legs + Crystal legs;Bandos tassets + Crystal legs
+SLOT|Hands|Ferocious gloves + Zaryte vambraces;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Aranea boots;Echo boots
+SLOT|Ring|Ultor ring / Lightbearer;Bellator ring;Berserker ring (i)
+BOSS|Spindel|Melee|https://oldschool.runescape.wiki/w/Spindel/Strategies
+SLOT|Head|Slayer helmet (i);Helm of Neitiznot / Zombie helmet / Dwarven helmet;Proselyte sallet
+SLOT|Cape|Infernal cape;Fire cape / Mythical cape;Mixed hide cape;Ardougne cloak 4;Cape of legends
+SLOT|Neck|Amulet of rancour;Amulet of strength;Amulet of glory;Amulet of power
+SLOT|Weapon|Ursine chainmace / Viggora's chainmace;Inquisitor's mace;Soulreaper axe / Abyssal bludgeon;Zombie axe / Zamorakian hasta;Sarachnis cudgel / Dragon mace
+SLOT|Body|Fighter torso;Mixed hide top / Black d'hide body;Proselyte hauberk;Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield;Rune defender / Toktz-ket-xil;Book of war / Falador shield 4
+SLOT|Legs|Black d'hide chaps;Proselyte cuisse / Proselyte tasset;Monk's robe
+SLOT|Hands|Barrows gloves;Rune gloves;Adamant gloves / Combat bracelet
+SLOT|Feet|Dragon boots / Aranea boots;Mixed hide boots;Rune boots;Climbing boots;Fremennik sea boots 4 / Adamant boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Ring of shadows;Tyrannical ring (i);Ring of wealth (i)
+BOSS|Theatre of Blood (raid)|Normal mode melee|https://oldschool.runescape.wiki/w/Theatre_of_Blood/Strategies
+SLOT|Head|Torva full helm / Oathplate helm;Neitiznot faceguard / Serpentine helm;Blood Moon helm / Helm of Neitiznot;Void melee helm
+SLOT|Cape|Infernal cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury
+SLOT|Weapon|Scythe of Vitur;Soulreaper axe / Blade of Saeldor / Osmumten's fang;Abyssal tentacle / Noxious halberd;Abyssal whip
+SLOT|Body|Torva platebody / Oathplate chest;Bandos chestplate / Blood Moon chestplate;Fighter torso;Elite void top
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Torva platelegs / Oathplate legs;Bandos tassets / Blood Moon tassets;Obsidian platelegs;Elite void robe
+SLOT|Hands|Ferocious gloves;Barrows gloves;Void knight gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Aranea boots;Dragon boots
+SLOT|Ring|Ultor ring;Bellator ring;Berserker ring (i)
+BOSS|Thermonuclear smoke devil|Magic|https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil/Strategies
+SLOT|Head|Slayer helmet (i);Facemask
+SLOT|Cape|Imbued god cape;God cape;Ardougne cloak 4;Ardougne cloak 3;Ardougne cloak 2
+SLOT|Neck|Occult necklace;Amulet of fury;Amulet of glory;Amulet of magic
+SLOT|Weapon|Tumeken's shadow;Eye of Ayak;Harmonised Nightmare staff;Sanguinesti staff / Trident of the Swamp;Kodai wand / Nightmare staff
+SLOT|Body|Virtus robe top;Ancestral robe top;Ahrim's robetop;Dagon'hai robe top;Infinity top
+SLOT|Shield|Elidinis' ward (f);Arcane spirit shield / Elidinis' ward;Ancient wyvern shield;Malediction ward / Mage's book;Book of Darkness
+SLOT|Legs|Virtus robe bottom;Ancestral robe bottom;Ahrim's robeskirt;Dagon'hai robe bottom;Infinity bottoms
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Barrows gloves;Infinity gloves;Rune gloves
+SLOT|Feet|Avernic treads (max);Eternal boots;Infinity boots / Aranea boots;Wizard boots / Bloodbark boots;Boots of Brimstone
+SLOT|Ring|Magus ring;Ring of suffering (ri);Brimstone ring;Seers ring (i);Ring of shadows
+BOSS|Tombs of Amascut (raid)|Melee switch|https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies
+SLOT|Head|Torva full helm;Neitiznot faceguard / Oathplate helm;Serpentine helm;Blood Moon helm;Helm of Neitiznot / Eclipse Moon helm / Blue Moon helm
+SLOT|Cape|Infernal cape;Fire cape;Ardougne cloak 4
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of fury;Amulet of glory
+SLOT|Weapon|Osmumten's fang;Keris partisan of breaching / Ghrazi rapier;Blade of Saeldor / Zamorakian hasta;Voidwaker / Abyssal dagger / Belle's folly;Dragon sword / Arkan blade
+SLOT|Body|Torva platebody;Bandos chestplate / Blood Moon chestplate / Fighter torso / Oathplate chest;Eclipse Moon chestplate;Mixed hide top / Blue Moon chestplate;Obsidian platebody
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Torva platelegs;Bandos tassets / Blood Moon tassets / Oathplate legs;Eclipse Moon tassets;Mixed hide legs / Blue Moon tassets;Obsidian platelegs
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots / Aranea boots / Spiked manacles;Mixed hide boots
+SLOT|Ring|Lightbearer + Ultor ring;Berserker ring (i)
+BOSS|TzKal-Zuk (Inferno)|First cape (ranged + magic switches)|https://oldschool.runescape.wiki/w/Inferno/Strategies
+SLOT|Head|Justiciar faceguard;Masori mask (f) / Crystal helm;Verac's helm
+SLOT|Cape|Dizana's quiver;Ava's assembler;Max cape;Ranging cape(t)
+SLOT|Neck|Necklace of rupture + Occult necklace;Necklace of anguish + Occult necklace;Amulet of fury
+SLOT|Ammo|Seeking dragon arrow;Dragon arrow;Amethyst arrow;Ruby dragon bolts (e) / Diamond dragon bolts (e)
+SLOT|Weapon|Toxic blowpipe + Kodai wand + Twisted bow;Toxic blowpipe + Blood ancient sceptre + Bow of Faerdhinen;Toxic blowpipe + Ancient sceptre + Armadyl crossbow;Toxic blowpipe + Master wand + Dragon crossbow
+SLOT|Body|Masori body (f) + Virtus robe top;Crystal body + Ancestral robe top;Hueycoatl hide body + Ahrim's robetop;Blessed body + Bloodbark body
+SLOT|Shield|Elysian spirit shield;Crystal shield
+SLOT|Legs|Masori chaps (f) + Virtus robe bottom;Crystal legs + Ancestral robe bottom;Hueycoatl hide chaps + Ahrim's robeskirt;Blessed chaps + Bloodbark legs
+SLOT|Hands|Zaryte vambraces + Confliction gauntlets;Barrows gloves + Tormented bracelet
+SLOT|Feet|Avernic treads (max);Echo boots;Pegasian boots / Devout boots / Guardian boots;Blessed boots
+SLOT|Ring|Ring of suffering (ri);Lightbearer;Ring of the gods (i)
+BOSS|TzTok-Jad (Fight Caves)|Ranged|https://oldschool.runescape.wiki/w/TzHaar_Fight_Cave/Strategies
+SLOT|Head|Slayer helmet (i);Masori mask (f) / Masori mask;Crystal helm;Hueycoatl hide coif / Blessed coif / Archer helm;Neitiznot faceguard / Helm of Neitiznot
+SLOT|Cape|Dizana's quiver;Ava's assembler;Ranging cape(t)
+SLOT|Neck|Necklace of rupture;Necklace of anguish;Dragonbone necklace / Bonecrusher necklace;Amulet of fury / Necklace of fangs;Amulet of glory
+SLOT|Ammo|Seeking dragon arrow;Dragon arrow;Diamond dragon bolts (e) / Moonlight antler bolts;Diamond bolts (e) / Broad bolts / Rune arrow
+SLOT|Weapon|Twisted bow + Toxic blowpipe;Toxic blowpipe;Bow of Faerdhinen;Zaryte crossbow / Hunters' sunlight crossbow;Dragon crossbow / Karil's crossbow / Rune crossbow;Magic shortbow (i) / Crystal bow
+SLOT|Body|Masori body (f) / Masori body;Crystal body;Hueycoatl hide body / Blessed body;Karil's leathertop;Black d'hide body
+SLOT|Shield|Twisted buckler;Dragonfire ward;Odium ward;Crystal shield / Granite shield
+SLOT|Legs|Masori chaps (f) / Masori chaps;Crystal legs;Hueycoatl hide chaps / Blessed chaps;Karil's leatherskirt;Black d'hide chaps
+SLOT|Hands|Zaryte vambraces;Barrows gloves;Blessed vambraces;Regen bracelet
+SLOT|Feet|Avernic treads (max);Pegasian boots;Blessed boots;Aranea boots;Mixed hide boots / Shayzien boots (5)
+SLOT|Ring|Venator ring / Lightbearer;Ring of the gods (i);Ring of suffering (i) / Granite ring (i);Ring of shadows / Explorer's ring 4
+BOSS|Vardorvis|Melee|https://oldschool.runescape.wiki/w/Vardorvis/Strategies
+SLOT|Head|Slayer helmet (i) / Oathplate helm;Torva full helm;Neitiznot faceguard / Serpentine helm / Justiciar faceguard
+SLOT|Cape|Infernal cape;Fire cape;Mythical cape;Mixed hide cape
+SLOT|Neck|Amulet of rancour / Amulet of blood fury;Amulet of torture;Amulet of fury
+SLOT|Weapon|Soulreaper axe / Scythe of Vitur;Blade of Saeldor / Noxious halberd;Abyssal tentacle;Abyssal whip / Zombie axe
+SLOT|Body|Oathplate chest;Torva platebody;Bandos chestplate / Fighter torso / Blood Moon chestplate / Justiciar chestguard
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Oathplate legs;Torva platelegs;Bandos tassets / Blood Moon tassets / Justiciar legguards
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max) / Echo boots;Primordial boots;Dragon boots / Guardian boots
+SLOT|Ring|Bellator ring / Ultor ring;Berserker ring (i);Ring of suffering (ri);Lightbearer
+BOSS|Venenatis|Melee|https://oldschool.runescape.wiki/w/Venenatis/Strategies
+SLOT|Head|Slayer helmet (i);Helm of Neitiznot / Zombie helmet / Dwarven helmet;Proselyte sallet
+SLOT|Cape|Infernal cape;Fire cape / Mythical cape;Mixed hide cape;Ardougne cloak 4;Cape of legends
+SLOT|Neck|Amulet of rancour;Amulet of strength;Amulet of glory;Amulet of power
+SLOT|Weapon|Ursine chainmace / Viggora's chainmace;Inquisitor's mace / Elder maul;Soulreaper axe / Abyssal bludgeon;Zombie axe / Zamorakian hasta;Sarachnis cudgel
+SLOT|Body|Fighter torso;Mixed hide top / Black d'hide body;Proselyte hauberk;Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield;Rune defender / Toktz-ket-xil;Book of war / Falador shield 4
+SLOT|Legs|Black d'hide chaps;Proselyte cuisse / Proselyte tasset;Monk's robe
+SLOT|Hands|Barrows gloves;Rune gloves;Adamant gloves / Combat bracelet
+SLOT|Feet|Dragon boots;Mixed hide boots;Rune boots;Climbing boots;Fremennik sea boots 4 / Adamant boots
+SLOT|Ring|Ultor ring;Berserker ring (i);Ring of shadows;Tyrannical ring (i);Ring of wealth (i)
+BOSS|Vet'ion|Melee|https://oldschool.runescape.wiki/w/Vet%27ion/Strategies
+SLOT|Head|Helm of Neitiznot / Berserker helm;Dwarven helmet
+SLOT|Cape|Infernal cape;Mythical cape / Fire cape;Mixed hide cape;Ardougne cloak 4
+SLOT|Neck|Salve amulet (e);Salve amulet;Amulet of strength;Amulet of glory;Amulet of power
+SLOT|Weapon|Ursine chainmace / Viggora's chainmace;Soulreaper axe / Inquisitor's mace;Abyssal bludgeon / Zamorakian hasta / Zombie axe;Sarachnis cudgel / Elder maul / Dual macuahuitl;Leaf-bladed battleaxe / Dragon mace
+SLOT|Body|Fighter torso;Black d'hide body / Mixed hide top;Proselyte hauberk;Monk's robe top
+SLOT|Shield|Avernic defender;Dragon defender;Dragonfire shield;Rune defender / Toktz-ket-xil;Book of war / Falador shield 4
+SLOT|Legs|Black d'hide chaps;Proselyte cuisse / Proselyte tasset;Monk's robe
+SLOT|Hands|Barrows gloves;Rune gloves;Combat bracelet
+SLOT|Feet|Dragon boots;Mixed hide boots / Rune boots;Climbing boots;Fremennik sea boots 4
+SLOT|Ring|Ultor ring;Berserker ring (i);Ring of shadows;Ring of wealth (i)
+BOSS|Vorkath|Melee (dragon hunter lance)|https://oldschool.runescape.wiki/w/Vorkath/Strategies
+SLOT|Head|Torva full helm / Slayer helmet (i);Neitiznot faceguard / Serpentine helm;Justiciar faceguard / Blood Moon helm;Helm of neitiznot
+SLOT|Neck|Amulet of rancour / Salve amulet (e);Amulet of torture
+SLOT|Cape|Infernal cape;Fire cape;Ardougne cloak 4
+SLOT|Weapon|Dragon hunter lance;Osmumten's fang;Ghrazi rapier;Zamorakian hasta
+SLOT|Body|Torva platebody;Bandos chestplate / Oathplate chest;Justiciar chestguard / Blood Moon chestplate;Fighter torso
+SLOT|Shield|Avernic defender;Dragonfire shield / Dragon defender
+SLOT|Legs|Torva platelegs;Bandos tassets / Oathplate legs;Justiciar legguards / Blood Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Primordial boots / Echo boots;Dragon boots / Guardian boots;Rune boots
+SLOT|Ring|Ultor ring;Berserker ring (i) / Lightbearer
+BOSS|Vorkath|Ranged (dragon hunter crossbow)|https://oldschool.runescape.wiki/w/Vorkath/Strategies
+SLOT|Head|Masori mask (f) / Void ranger helm;Masori mask / Serpentine helm;Crystal helm;Karil's coif / Blessed coif;Archer helm
+SLOT|Neck|Salve amulet(ei)
+SLOT|Cape|Dizana's quiver;Ava's assembler;Ava's accumulator / Ranging cape
+SLOT|Weapon|Dragon hunter crossbow;Toxic blowpipe;Bow of faerdhinen;Armadyl crossbow / Dragon crossbow;Rune crossbow
+SLOT|Body|Masori body (f) / Elite void top;Masori body / Void knight top;Crystal body;Karil's leathertop / Blessed body;Black d'hide body
+SLOT|Shield|Dragonfire ward / Twisted buckler;Anti-dragon shield
+SLOT|Legs|Masori chaps (f) / Elite void robe;Masori chaps / Void knight robe;Crystal legs;Karil's leatherskirt / Blessed chaps;Black d'hide chaps
+SLOT|Ammo|Ruby dragon bolts (e) / Diamond dragon bolts (e);Ruby bolts (e) / Diamond bolts (e)
+SLOT|Hands|Zaryte vambraces / Void knight gloves;Barrows gloves
+SLOT|Feet|Pegasian boots;Ranger boots;Blessed boots / Aranea boots;Mixed hide boots
+SLOT|Ring|Venator ring / Lightbearer;Archers ring (i) / Ring of the gods (i);Ring of suffering (ri);Ring of shadows
+BOSS|The Whisperer|Magic|https://oldschool.runescape.wiki/w/The_Whisperer/Strategies
+SLOT|Head|Slayer helmet (i) / Ancestral hat;Virtus mask;Ahrim's hood / Blue Moon helm / Bloodbark helm;Void mage helm
+SLOT|Cape|Imbued god cape
+SLOT|Neck|Occult necklace;Elemental amulet
+SLOT|Weapon|Tumeken's shadow;Harmonised Nightmare staff / Eye of Ayak;Sanguinesti staff;Twinflame staff / Mystic smoke staff;Trident of the Swamp
+SLOT|Body|Ancestral robe top;Virtus robe top;Ahrim's robetop / Blue Moon chestplate / Bloodbark body;Elite void top
+SLOT|Shield|Tome of Earth / Elidinis' ward (f);Arcane spirit shield / Elidinis' ward;Ancient wyvern shield / Malediction ward / Mage's book;Book of Darkness
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom;Ahrim's robeskirt / Blue Moon tassets / Bloodbark legs;Elite void robe
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Void knight gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Eternal boots;Infinity boots / Aranea boots
+SLOT|Ring|Magus ring;Lightbearer;Ring of the gods (i);Ring of suffering (i);Seers ring (i)
+BOSS|Yama|Melee|https://oldschool.runescape.wiki/w/Yama/Strategies
+SLOT|Head|Torva full helm;Oathplate helm;Neitiznot faceguard / Serpentine helm;Blood Moon helm;Helm of Neitiznot / Blue Moon helm
+SLOT|Cape|Infernal cape;Fire cape
+SLOT|Neck|Amulet of rancour;Amulet of torture;Amulet of blood fury;Amulet of strength;Amulet of fury
+SLOT|Weapon|Emberlight;Arclight;Scythe of Vitur
+SLOT|Body|Torva platebody / Oathplate chest;Bandos chestplate;Blood Moon chestplate / Fighter torso;Blue Moon chestplate
+SLOT|Shield|Avernic defender;Dragon defender
+SLOT|Legs|Torva platelegs / Oathplate legs;Bandos tassets;Blood Moon tassets;Blue Moon tassets
+SLOT|Hands|Ferocious gloves;Barrows gloves
+SLOT|Feet|Avernic treads (max);Primordial boots;Dragon boots / Echo boots / Aranea boots
+SLOT|Ring|Ultor ring;Bellator ring / Berserker ring (i);Lightbearer
+BOSS|Zulrah|Magic (switch with ranged)|https://oldschool.runescape.wiki/w/Zulrah/Strategies
+SLOT|Head|Ancestral hat;Virtus mask;Serpentine helm / Ahrim's hood / Blue Moon helm;Dagon'hai hat / Infinity hat / Bloodbark helm;Mystic hat
+SLOT|Cape|Imbued god cape
+SLOT|Neck|Occult necklace;Elemental amulet / Amulet of fire;Amulet of fury;Amulet of glory
+SLOT|Weapon|Tumeken's shadow;Harmonised nightmare staff;Sanguinesti staff / Twinflame staff / Staff of the dead;Trident of the swamp / Smoke battlestaff
+SLOT|Body|Ancestral robe top;Virtus robe top;Ahrim's robetop / Blue Moon chestplate;Dagon'hai robe top / Infinity top / Bloodbark body;Mystic robe top
+SLOT|Shield|Tome of fire / Elidinis' ward (f);Arcane spirit shield;Elidinis' ward / Mage's book;Ancient wyvern shield / Malediction ward;Book of darkness
+SLOT|Legs|Ancestral robe bottom;Virtus robe bottom;Ahrim's robeskirt / Blue Moon tassets;Dagon'hai robe bottom / Infinity bottoms / Bloodbark legs;Mystic robe bottom
+SLOT|Hands|Confliction gauntlets;Tormented bracelet;Barrows gloves
+SLOT|Feet|Eternal boots / Echo boots;Infinity boots / Aranea boots
+SLOT|Ring|Magus ring;Ring of suffering (ri);Ring of recoil
+BOSS|Zulrah|Ranged (switch with magic)|https://oldschool.runescape.wiki/w/Zulrah/Strategies
+SLOT|Head|Masori mask (f);Crystal helm / Masori mask;Serpentine helm;Blessed coif / Karil's coif
+SLOT|Cape|Dizana's quiver;Ava's assembler;Ava's accumulator
+SLOT|Neck|Necklace of anguish;Amulet of fury;Amulet of glory
+SLOT|Weapon|Twisted bow / Toxic blowpipe;Bow of faerdhinen;Karil's crossbow;Rune crossbow;Magic shortbow (i)
+SLOT|Ammo|Dragon arrow;Amethyst arrow;Ruby bolts (e)
+SLOT|Body|Masori body (f);Crystal body / Masori body;Hueycoatl hide body;Blessed body / Karil's leathertop;Black d'hide body
+SLOT|Legs|Masori chaps (f);Crystal legs / Masori chaps;Hueycoatl hide chaps;Blessed chaps / Karil's leatherskirt;Black d'hide chaps
+SLOT|Hands|Zaryte vambraces;Barrows gloves
+SLOT|Feet|Pegasian boots;Blessed boots;Aranea boots
+SLOT|Ring|Ring of suffering (ri) / Venator ring;Ring of recoil
