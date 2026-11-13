@@ -1,6 +1,6 @@
 # Adventurer's Ledger: a RuneLite plugin
 
-A side panel with four tabs (Jobs, Train, Bosses and Farm), priced live from the OSRS Wiki real-time prices API.
+A side panel with five tabs (Jobs, Train, Boss, Farm and Goal), priced live from the OSRS Wiki real-time prices API.
 
 ## Jobs
 
@@ -31,7 +31,9 @@ Jobs you don't have the levels for are marked in red (or hidden with "only jobs 
 
 The best farm runs at live prices: herbs, hops, trees, fruit trees, hardwood, calquat and redwood, plus bird houses, coral, Miscellania and daily shop buys. Each run shows profit per run, XP, cash needed and growth time; sort by profit per run, profit per real hour, XP or what's ready soonest.
 
-Click a run when you've planted it to start its **timer**. You get a notification when it's ready (turn it off with "Farm run alerts" in the settings), and timers are saved so they survive closing RuneLite.
+Click a run when you've planted it to start its **timer**. You get a notification when it's ready (turn it off with "Farm run alerts" in the settings), and timers are saved so they survive closing RuneLite. Each account has its own timers.
+
+Click a run and choose **Show route** to see the patches in the order to visit them, how to get to each one and anything you need for it (a level, quest or diary). Click a stop to tick it off as you go.
 
 ## Train (and Ironman mode)
 
@@ -51,12 +53,24 @@ Gear set-ups from the OSRS Wiki strategy pages. Each slot lists gear from starte
 
 Set-ups included: 61 set-ups for 58 bosses, including all three raids, Fight Caves, Inferno and Colosseum (from each boss's OSRS Wiki strategy page).
 
+**Can you fight it?** When you're logged in, the top of the tab checks the levels the boss needs (Slayer, God Wars entry and so on) against yours, whether you've done the quests, and how many gear slots you already own something for, with what it would cost to fill the rest. Gear you own is marked with where it is.
+
+**Quests needed:** bosses that need a quest show the whole quest line in order, with a tick for each one you've done. Click a quest to open its OSRS Wiki guide.
+
+## Goal
+
+Pick something you want and see how to pay for it:
+
+- **Buy an item**: search the Grand Exchange, pick the item, and see what it costs, the coins you already have (bag and bank) and the fastest money makers you have the levels for, with how long each takes. On the Boss tab, click any gear and choose **Plan how to afford this**.
+- **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that.
+
 ## Run it
 
 Open this folder in IntelliJ, then open `src/test/java/com/moneymaker/MoneyMakerPluginTest.java` and click ▶ next to `main`.
 
 ## Notes
 
+- **Outside connection:** this plugin downloads item prices from the OSRS Wiki real-time prices API (prices.runescape.wiki). It only asks for prices; nothing about you or your account is sent.
 - Rates are estimates (from the OSRS Wiki money making guides where available). Adjust "Your speed" to match how you play.
 - Money making data comes from the [OSRS Wiki](https://oldschool.runescape.wiki/w/Money_making_guide) (CC BY-NC-SA 3.0). `tools/gen_wiki_jobs.py` rebuilds it from a snapshot of the guides.
 - The data lives in `src/main/resources/com/moneymaker/`:

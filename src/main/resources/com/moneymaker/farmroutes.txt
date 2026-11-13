@@ -1,0 +1,52 @@
+# The order to visit patches on each run, and how to get to each one.
+# route|stop|how to get there|what you need (blank if nothing)
+# "route" is a run's exact name (e.g. Redwood tree run) or, failing that, its group (e.g. Herb runs).
+# Stops are shown in the order listed here. Locations and transport are from the OSRS Wiki's
+# Farming/Patch locations page (checked November 2026).
+
+Herb runs|Falador (south)|Explorer's ring 2+, or spirit tree to Port Sarim, or Draynor Manor teleport|
+Herb runs|Catherby|Catherby teleport, or Camelot teleport and run east|
+Herb runs|Ardougne (north)|Ardougne cloak 2+, or Fishing Guild teleport (skills necklace), or fairy ring BLR|
+Herb runs|Port Phasmatys (west)|Ectophial, or fairy ring ALQ|
+Herb runs|Hosidius (south-west)|Xeric's talisman, or Hosidius house teleport, or Tithe Farm minigame teleport|
+Herb runs|Farming Guild|Skills necklace, Farming cape, or fairy ring CIR|65 Farming
+Herb runs|Ortus Farm (Varlamore)|Quetzal whistle to the Hunter Guild and run north, or fairy ring AJP|
+Herb runs|Troll Stronghold roof|Stony basalt, or Trollheim teleport and head west|My Arm's Big Adventure
+Herb runs|Weiss|Icy basalt, or fairy ring DKS then Larry's boat|Making Friends with My Arm (Fire of Nourishment built)
+Herb runs|Harmony Island|Harmony Island teleport|Elite Morytania Diary
+
+Tree runs|Lumbridge (west of the castle)|Lumbridge teleport|
+Tree runs|Varrock Castle courtyard|Varrock teleport, or ring of wealth to the Grand Exchange|
+Tree runs|Falador Park|Ring of wealth, or Falador teleport|
+Tree runs|Taverley|Taverley teleport, or games necklace to Burthorpe, or balloon|
+Tree runs|Gnome Stronghold|Spirit tree, slayer ring, or gnome glider|
+Tree runs|Farming Guild|Skills necklace, Farming cape, or fairy ring CIR|65 Farming
+Tree runs|Nemus Retreat (Varlamore)|Quetzal to Quetzacalli Gorge, Pendant of Ates, or fairy ring AIS|Extra 7th patch (profit above counts 6)
+
+Fruit tree runs|Gnome Stronghold|Spirit tree, royal seed pod, slayer ring, or gnome glider|
+Fruit tree runs|Tree Gnome Village (west of the maze)|Spirit tree to Tree Gnome Village and follow Elkoy out, or fairy ring CIQ|
+Fruit tree runs|Catherby (east)|Catherby teleport, or Camelot teleport and run east|
+Fruit tree runs|Brimhaven (north)|Brimhaven house teleport, or Ardougne teleport then the boat, or Karamja gloves 3+ then the cart|
+Fruit tree runs|Lletya|Teleport crystal|Mourning's End Part I started
+Fruit tree runs|Farming Guild|Skills necklace, Farming cape, or fairy ring CIR|85 Farming
+Fruit tree runs|Kastori (Varlamore)|Quetzal to Kastori, or Pendant of Ates and run south-west|Extra 7th patch (profit above counts 6)
+
+Hardwood runs|Fossil Island Mushroom Forest (3 patches)|Digsite pendant to the House on the Hill, then cross the bridge and follow the path|Bone Voyage
+Hardwood runs|Locus Oasis (Varlamore)|Quetzal whistle to the Colossal Wyrm Remains and run north, or fairy ring AJP and run south-east|Extra patch: The Ribbiting Tale of a Lily Pad Labour Dispute
+Hardwood runs|Anglers' Retreat|Rowboat from Corsair Cove, then sail south-west|Extra patch: 51 Sailing
+
+Calquat tree run|Tai Bwo Wannai (north)|Tai Bwo Wannai teleport, Brimhaven house teleport, or fairy ring CKR|
+Calquat tree run|Kastori (Varlamore)|Quetzal whistle to Kastori and run north-east, or Pendant of Ates and run south|
+Calquat tree run|The Summer Shore|Fairy ring CJQ and run south-west|Extra patch: Troubled Tortugans (part)
+
+Redwood tree run|Farming Guild (west wing)|Skills necklace, Farming cape, or fairy ring CIR|85 Farming
+Planting Celastrus sapling|Farming Guild (west wing)|Skills necklace, Farming cape, or fairy ring CIR|85 Farming
+
+Hops|Lumbridge (north of the farm)|Lumbridge teleport, Chronicle, or combat bracelet to the Champions' Guild|
+Hops|McGrubor's Wood (north)|Camelot teleport, combat bracelet to the Ranging Guild, or fairy ring ALS|
+Hops|Yanille|Watchtower teleport, Yanille house teleport, or fairy ring CIQ|
+Hops|Entrana|Explorer's ring 2+ and run south to the monks, or amulet of glory to Draynor|No weapons or armour on Entrana
+Hops|Aldarin (Varlamore)|Fairy ring CKQ, Quetzal, or Pendant of Ates|
+
+Bird house run|Verdant Valley (2 houses)|Digsite pendant to the House on the Hill, then the Mushtree to Verdant Valley|Bone Voyage
+Bird house run|Mushroom Meadow (2 houses)|Mushtree to Mushroom Meadow|

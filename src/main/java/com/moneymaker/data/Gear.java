@@ -245,7 +245,17 @@ public class Gear
 				SkillGear g = map.computeIfAbsent(f[1], k -> new SkillGear());
 				if ("T".equals(f[0]) && f.length >= 5)
 				{
-					g.tools.computeIfAbsent(f[2], k -> new ArrayList<>()).add(new Tier(Integer.parseInt(f[3]), f[4]));
+					int level;
+					try
+					{
+						level = Integer.parseInt(f[3]);
+					}
+					catch (NumberFormatException e)
+					{
+						org.slf4j.LoggerFactory.getLogger(Gear.class).warn("Skipping a gear.txt line that couldn't be read: {}", line);
+						continue;
+					}
+					g.tools.computeIfAbsent(f[2], k -> new ArrayList<>()).add(new Tier(level, f[4]));
 				}
 				else if ("O".equals(f[0]) && f.length >= 5)
 				{

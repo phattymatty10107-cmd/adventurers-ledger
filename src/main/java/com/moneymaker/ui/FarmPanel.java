@@ -2,19 +2,25 @@ package com.moneymaker.ui;
 
 import com.moneymaker.MoneyMakerConfig;
 import com.moneymaker.MoneyMakerPlugin;
+import com.moneymaker.data.FarmRoute;
 import com.moneymaker.data.FarmRun;
 import com.moneymaker.data.JobResult;
 import com.moneymaker.data.PriceBook;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.GridLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeSet;
+import javax.swing.BoxLayout;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -30,6 +36,8 @@ class FarmPanel extends JPanel
 	private static final String ALL = "All runs";
 	private static final String[] SORTS = {"Profit per run", "Profit per hour", "XP per run", "Ready soonest"};
 	private static final Color WAITING = new Color(255, 200, 70);
+	/** Width the route text wraps at, in HTML pixels (the side panel is narrow). */
+	private static final int ROUTE_TEXT_WIDTH = 140;
 
 	private final MoneyMakerPlugin plugin;
 	private final ItemManager itemManager;
@@ -37,6 +45,11 @@ class FarmPanel extends JPanel
 	private final JComboBox<String> sort = new JComboBox<>(SORTS);
 	private final JLabel status = UiUtil.label(" ", UiUtil.MUTED, false);
 	private final JPanel list = UiUtil.verticalList();
+	private final Timer tick;
+	/** Runs whose route is open under their row (by run id). */
+	private final Set<String> openRoutes = new java.util.HashSet<>();
+	/** Stops you've ticked off on each run (by run id), until you start its timer. */
+	private final Map<String, Set<Integer>> visited = new HashMap<>();
 	/** Rows on screen, so the timers can tick without rebuilding the list. */
 	private final Map<FarmRun, ItemRow> rows = new HashMap<>();
 
@@ -73,7 +86,7 @@ class FarmPanel extends JPanel
 		add(UiUtil.scroll(list), BorderLayout.CENTER);
 
 		// tick the countdowns while the panel is open
-		Timer tick = new Timer(15_000, e ->
+		tick = new Timer(15_000, e ->
 		{
 			if (isShowing())
 			{
@@ -131,14 +144,23 @@ class FarmPanel extends JPanel
 			ItemRow row = row(p);
 			rows.put(p.getRun(), row);
 			UiUtil.addRow(list, row);
+			if (openRoutes.contains(p.getRun().getId()))
+			{
+				UiUtil.addRow(list, routePanel(p.getRun()));
+			}
 		}
-		status.setText(runs.size() + " runs · " + timers + " timer" + (timers == 1 ? "" : "s") + " · click a run to start its timer");
+		status.setText(runs.size() + " runs · " + timers + " timer" + (timers == 1 ? "" : "s") + " · click a run for its timer and route");
 		if (runs.isEmpty())
 		{
 			list.add(UiUtil.emptyState("No runs match."));
 		}
 		refreshTimers();
 		repaintList();
+	}
+
+	void stop()
+	{
+		tick.stop();
 	}
 
 	/** Update the countdown line on each row. */
@@ -205,7 +227,25 @@ class FarmPanel extends JPanel
 			+ "cost " + UiUtil.compact(Math.max(0, p.getCost())) + " · " + grow(r.getGrowMinutes());
 		ItemRow row = new ItemRow(itemManager, icon, r.getName(), UiUtil.signedGp(profit), UiUtil.profitColor(profit),
 			line2, " ", tooltip(p));
-		row.action("Start timer (planted now)", () -> plugin.startFarmTimer(r));
+		List<FarmRoute.Stop> stops = plugin.getFarmRoute().stopsFor(r);
+		if (!stops.isEmpty())
+		{
+			boolean open = openRoutes.contains(r.getId());
+			row.action(open ? "Hide route" : "Show route (" + stops.size() + " stops)", () ->
+			{
+				if (!openRoutes.remove(r.getId()))
+				{
+					openRoutes.add(r.getId());
+				}
+				refresh();
+			});
+		}
+		row.action("Start timer (planted now)", () ->
+		{
+			// run done: clear the ticks ready for next time
+			visited.remove(r.getId());
+			plugin.startFarmTimer(r);
+		});
 		if (plugin.getPlanted(r) != 0)
 		{
 			row.action("Clear timer", () -> plugin.clearFarmTimer(r));
@@ -256,12 +296,86 @@ class FarmPanel extends JPanel
 		sb.append("<br>Cash needed: ").append(UiUtil.gp(Math.max(0, p.getCost())));
 		sb.append("<br>Profit per run after 2% tax: <b>").append(UiUtil.signedGp(p.getProfit())).append("</b>");
 		sb.append("<br>= ").append(UiUtil.signedGp(p.getProfitPerHour())).append(" per real hour if you do it every time it's ready");
+		List<FarmRoute.Stop> stops = plugin.getFarmRoute().stopsFor(r);
+		if (!stops.isEmpty())
+		{
+			sb.append("<br><br><b>Route</b> (click the run to open it)");
+			for (int i = 0; i < stops.size(); i++)
+			{
+				sb.append("<br>").append(i + 1).append(". ").append(esc(stops.get(i).getName()));
+			}
+		}
 		if (!r.getNote().isEmpty())
 		{
 			sb.append("<br><br><i>").append(esc(r.getNote())).append("</i>");
 		}
-		sb.append("<br><br>Click to start a timer when you've planted.</html>");
+		sb.append("<br><br>Click for the timer and the route.</html>");
 		return sb.toString();
+	}
+
+	/** The stops for a run, in order. Click a stop to tick it off as you go. */
+	private JPanel routePanel(FarmRun run)
+	{
+		List<FarmRoute.Stop> stops = plugin.getFarmRoute().stopsFor(run);
+		Set<Integer> done = visited.computeIfAbsent(run.getId(), k -> new java.util.HashSet<>());
+
+		JPanel box = new JPanel();
+		box.setLayout(new BoxLayout(box, BoxLayout.Y_AXIS));
+		box.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		box.setBorder(new EmptyBorder(4, 8, 6, 6));
+
+		JLabel title = UiUtil.label(done.size() + " of " + stops.size() + " done · click a stop to tick it off", UiUtil.MUTED, false);
+		title.setAlignmentX(LEFT_ALIGNMENT);
+		title.setBorder(new EmptyBorder(0, 0, 4, 0));
+		box.add(title);
+
+		for (int i = 0; i < stops.size(); i++)
+		{
+			final int index = i;
+			FarmRoute.Stop s = stops.get(i);
+			boolean ticked = done.contains(i);
+
+			// a fixed width makes the text wrap inside the side panel instead of running off the edge
+			StringBuilder sb = new StringBuilder("<html><div style='width:")
+				.append(ROUTE_TEXT_WIDTH).append("px'><b>")
+				.append(ticked ? "&#10003; " : (i + 1) + ". ").append(esc(s.getName())).append("</b>");
+			if (!ticked)
+			{
+				if (!s.getTravel().isEmpty())
+				{
+					sb.append("<br>").append(esc(s.getTravel()));
+				}
+				if (!s.getNeeds().isEmpty())
+				{
+					sb.append("<br><i>Needs: ").append(esc(s.getNeeds())).append("</i>");
+				}
+			}
+			sb.append("</div></html>");
+
+			JLabel stop = UiUtil.label(sb.toString(), ticked ? UiUtil.PROFIT : Color.WHITE, false);
+			stop.setAlignmentX(LEFT_ALIGNMENT);
+			stop.setBorder(new EmptyBorder(3, 0, 3, 0));
+			stop.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			stop.setToolTipText(ticked ? "Click to untick" : "Click when you've done this stop");
+			stop.addMouseListener(new MouseAdapter()
+			{
+				@Override
+				public void mousePressed(MouseEvent e)
+				{
+					if (e.getButton() != MouseEvent.BUTTON1)
+					{
+						return;
+					}
+					if (!done.remove(index))
+					{
+						done.add(index);
+					}
+					refresh();
+				}
+			});
+			box.add(stop);
+		}
+		return box;
 	}
 
 	private static String left(long ms)

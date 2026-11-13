@@ -1,0 +1,18 @@
+# Everything you need to have done before a quest, in an order you can do them.
+# quest|quest needed first;quest needed first;...
+# Names must match RuneLite's quest names exactly (the tests check this). From each quest's
+# requirements on the OSRS Wiki (checked November 2026).
+
+Dragon Slayer II|X Marks the Spot;Client of Kourend;The Dig Site;Bone Voyage;Ghosts Ahoy;The Restless Ghost;Priest in Peril;Ernest the Chicken;Animal Magnetism;Gertrude's Cat;Icthlarin's Little Helper;A Tail of Two Cats;Death Plateau;Troll Stronghold;Druidic Ritual;Eadgar's Ruse;Jungle Potion;Shilo Village;Rune Mysteries;The Fremennik Trials;Lunar Diplomacy;Dream Mentor;Waterfall Quest;Plague City;Biohazard;Underground Pass;Dragon Slayer I;Merlin's Crystal;Lost City;Shield of Arrav;Heroes' Quest;Family Crest;Legends' Quest
+Desert Treasure II - The Fallen Empire|Priest in Peril;His Faithful Servants;Below Ice Mountain;The Garden of Death;Rune Mysteries;Enter the Abyss;Temple of the Eye;Enakhra's Lament;Hazeel Cult;Doric's Quest;Death Plateau;Troll Stronghold;Goblin Diplomacy;The Lost Tribe;Druidic Ritual;Black Knights' Fortress;Recruitment Drive;Wanted!;Devious Minds;Fight Arena;Curse of the Empty Lord;The General's Shadow;Romeo & Juliet;Cold War;The Restless Ghost;Creature of Fenkenstrain;Garden of Tranquillity;Shilo Village;One Small Favour;Swan Song;Jungle Potion;The Feud;Eadgar's Ruse;My Arm's Big Adventure;Making Friends with My Arm;Secrets of the North;Waterfall Quest;The Tourist Trap;Temple of Ikov;The Dig Site;Desert Treasure I
+Secrets of the North|Hazeel Cult;Enter the Abyss;Doric's Quest;Death Plateau;Troll Stronghold;Priest in Peril;Rune Mysteries;Goblin Diplomacy;The Lost Tribe;Druidic Ritual;Black Knights' Fortress;Recruitment Drive;Wanted!;Devious Minds;Fight Arena;Curse of the Empty Lord;The General's Shadow;Romeo & Juliet;Cold War;The Restless Ghost;Creature of Fenkenstrain;Garden of Tranquillity;Shilo Village;One Small Favour;Swan Song;Jungle Potion;The Feud;Eadgar's Ruse;My Arm's Big Adventure;Making Friends with My Arm
+The Frozen Door|Waterfall Quest;Priest in Peril;Death Plateau;Troll Stronghold;The Tourist Trap;Temple of Ikov;The Dig Site;Desert Treasure I
+A Kingdom Divided|X Marks the Spot;Client of Kourend;The Depths of Despair;The Queen of Thieves;The Ascent of Arceuus;The Forsaken Tower;Tale of the Righteous
+The Final Dawn|Children of the Sun;Twilight's Promise;Perilous Moons;The Heart of Darkness
+Perilous Moons|Children of the Sun;Twilight's Promise
+The Heart of Darkness|Children of the Sun;Twilight's Promise
+Beneath Cursed Sands|Gertrude's Cat;Icthlarin's Little Helper;Prince Ali Rescue;Contact!
+Regicide|Plague City;Biohazard;Underground Pass
+Troll Stronghold|Death Plateau
+Bone Voyage|The Dig Site
+Troubled Tortugans|Pandemonium

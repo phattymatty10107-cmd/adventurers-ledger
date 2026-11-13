@@ -20,6 +20,8 @@ class ItemRow extends JPanel
 {
 	private final JPopupMenu menu = new JPopupMenu();
 	private JLabel line3Label;
+	/** What a left click does, instead of opening the menu. Null for the menu. */
+	private Runnable click;
 
 	ItemRow(ItemManager itemManager, int itemId, String title, String value, Color valueColor,
 		String line2, String line3, String tooltip)
@@ -79,7 +81,11 @@ class ItemRow extends JPanel
 			@Override
 			public void mousePressed(MouseEvent e)
 			{
-				if (e.isPopupTrigger() || e.getButton() == MouseEvent.BUTTON1)
+				if (e.getButton() == MouseEvent.BUTTON1 && click != null)
+				{
+					click.run();
+				}
+				else if (e.isPopupTrigger() || e.getButton() == MouseEvent.BUTTON1)
 				{
 					showMenu(e);
 				}
@@ -110,6 +116,13 @@ class ItemRow extends JPanel
 		{
 			line3Label.setForeground(color);
 		}
+	}
+
+	/** Make a left click do this straight away rather than opening the menu. */
+	ItemRow onClick(Runnable action)
+	{
+		click = action;
+		return this;
 	}
 
 	ItemRow action(String text, Runnable action)

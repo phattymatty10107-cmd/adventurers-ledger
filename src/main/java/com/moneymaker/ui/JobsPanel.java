@@ -40,6 +40,8 @@ class JobsPanel extends JPanel
 	private final JComboBox<String> sort = new JComboBox<>(SORTS);
 	private final JLabel status = UiUtil.label(" ", UiUtil.MUTED, false);
 	private final JPanel list = UiUtil.verticalList();
+	/** Rebuild the list a moment after the last keystroke rather than on every one. */
+	private final javax.swing.Timer searchDelay = new javax.swing.Timer(250, e -> refresh());
 
 	JobsPanel(MoneyMakerPlugin plugin, ItemManager itemManager)
 	{
@@ -62,21 +64,22 @@ class JobsPanel extends JPanel
 			@Override
 			public void insertUpdate(DocumentEvent e)
 			{
-				refresh();
+				searchDelay.restart();
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e)
 			{
-				refresh();
+				searchDelay.restart();
 			}
 
 			@Override
 			public void changedUpdate(DocumentEvent e)
 			{
-				refresh();
+				searchDelay.restart();
 			}
 		});
+		searchDelay.setRepeats(false);
 		controls.add(search);
 
 		Set<String> cats = new java.util.TreeSet<>();
@@ -161,7 +164,7 @@ class JobsPanel extends JPanel
 
 			JobResult res = JobResult.evaluate(r, prices, config.priceMode(), config.speed(),
 				canDo ? level : 0, canDo ? xp : -1, MoneyMakerPlugin.xpForNextLevel(level));
-			if (res == null || (config.hideLowVolume() && res.isLowVolume()))
+			if (res == null || (config.hideLowVolume() && (res.isLowVolume() || res.isStale())))
 			{
 				continue;
 			}
@@ -218,7 +221,7 @@ class JobsPanel extends JPanel
 		long gpHr = r.getGpPerHour();
 
 		String line2 = UiUtil.signedGp(r.getProfitEach()) + "/" + unit(rec, 1) + " · " + UiUtil.compact(Math.round(r.getActionsPerHour())) + "/hr"
-			+ (r.isLimitCapped() ? " (limit)" : "");
+			+ (r.isLimitCapped() ? " (limit)" : "") + (r.isStale() ? " (old price)" : "");
 
 		String line3;
 		Color line3Color = UiUtil.MUTED;
@@ -311,6 +314,10 @@ class JobsPanel extends JPanel
 		if (r.isLowVolume())
 		{
 			sb.append("<br><i>Low trade volume: selling may take a while</i>");
+		}
+		if (r.isStale())
+		{
+			sb.append("<br><i>Old price: ").append(esc(r.getStaleItem())).append(" hasn't traded in over a day, so this gp/hr may be wrong</i>");
 		}
 
 		JobResult.NextLevel n = r.getNext();

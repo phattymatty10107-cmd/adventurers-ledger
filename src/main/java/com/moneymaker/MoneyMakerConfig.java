@@ -62,7 +62,7 @@ public interface MoneyMakerConfig extends Config
 	@ConfigItem(
 		keyName = "hideLowVolume",
 		name = "Hide low-volume jobs",
-		description = "Hide jobs whose product trades less per hour than you'd make",
+		description = "Hide jobs whose product trades less per hour than you'd make, or whose price is over a day old",
 		position = 4
 	)
 	default boolean hideLowVolume()
@@ -75,7 +75,8 @@ public interface MoneyMakerConfig extends Config
 	@ConfigItem(
 		keyName = "refreshMinutes",
 		name = "Price refresh",
-		description = "How often to pull prices from the OSRS Wiki",
+		description = "How often to download prices from the OSRS Wiki price API (prices.runescape.wiki). "
+			+ "Only price requests are sent, nothing about your account",
 		position = 5
 	)
 	default int refreshMinutes()

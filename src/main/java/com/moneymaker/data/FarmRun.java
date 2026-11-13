@@ -213,7 +213,7 @@ public class FarmRun
 				return null;
 			}
 			long each = p.sellPrice(mode);
-			revenue += (each - GeTax.perItem(p.getId(), each)) * s.getQty();
+			revenue += (each - GeTax.perItem(p.getId(), p.getName(), each)) * s.getQty();
 			sell.add(new JobResult.Line(p.getName(), s.getQty(), each, p.getId()));
 		}
 		return new Priced(this, Math.round(cost), Math.round(revenue), buy, sell);
@@ -238,9 +238,16 @@ public class FarmRun
 				{
 					continue;
 				}
-				list.add(new FarmRun(f[0], f[1], f[2], Integer.parseInt(f[3]), "1".equals(f[4]),
-					Double.parseDouble(f[5]), Double.parseDouble(f[6]), Integer.parseInt(f[7]),
-					Recipe.stacks(f[8]), Recipe.stacks(f[9]), Double.parseDouble(f[10]), Double.parseDouble(f[11]), f[12], f[13]));
+				try
+				{
+					list.add(new FarmRun(f[0], f[1], f[2], Integer.parseInt(f[3]), "1".equals(f[4]),
+						Double.parseDouble(f[5]), Double.parseDouble(f[6]), Integer.parseInt(f[7]),
+						Recipe.stacks(f[8]), Recipe.stacks(f[9]), Double.parseDouble(f[10]), Double.parseDouble(f[11]), f[12], f[13]));
+				}
+				catch (RuntimeException e)
+				{
+					org.slf4j.LoggerFactory.getLogger(FarmRun.class).warn("Skipping a farmruns.txt line that couldn't be read: {}", line, e);
+				}
 			}
 		}
 		return Collections.unmodifiableList(list);

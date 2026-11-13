@@ -1,7 +1,10 @@
 package com.moneymaker;
 
 import com.google.inject.Provides;
+import com.moneymaker.data.BossCheck;
+import com.moneymaker.data.BossQuests;
 import com.moneymaker.data.BossSetup;
+import com.moneymaker.data.FarmRoute;
 import com.moneymaker.data.FarmRun;
 import com.moneymaker.data.Gear;
 import com.moneymaker.data.Training;
@@ -22,6 +25,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -33,9 +37,14 @@ import net.runelite.api.Experience;
 import net.runelite.api.GameState;
 import net.runelite.api.Item;
 import net.runelite.api.ItemContainer;
+import net.runelite.api.Quest;
+import net.runelite.api.QuestState;
 import net.runelite.api.Skill;
+import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.events.ItemContainerChanged;
+import net.runelite.api.gameval.InventoryID;
+import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.Notifier;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
@@ -78,7 +87,19 @@ public class MoneyMakerPlugin extends Plugin
 	private NavigationButton navButton;
 	private ScheduledFuture<?> priceTask;
 	private ScheduledFuture<?> farmTask;
+	/** Bank save waiting to be written, so a busy bank session writes once, not on every change. */
+	private ScheduledFuture<?> bankSaveTask;
+	private volatile Runnable pendingBankSave;
+	/** Account the farm timers belong to (the last one logged in). 0 until an account has been seen. */
+	private volatile long farmAccount;
 	private volatile List<FarmRun> farmRuns = Collections.emptyList();
+	private volatile FarmRoute farmRoute = FarmRoute.empty();
+	private volatile BossQuests bossQuests = BossQuests.empty();
+	private volatile BossCheck bossCheck = BossCheck.empty();
+	/** Quest name to how far you are with it, for the quests bosses need. Empty when logged out. */
+	private volatile Map<String, QuestState> questStates = Collections.emptyMap();
+	/** Game ticks until quest progress is checked again. */
+	private int questCheckIn;
 	private volatile Training training = Training.empty();
 	private volatile Gear gear = Gear.empty();
 	/** Item id -> quantity in your inventory, worn equipment and bank (unnoted ids). */
@@ -109,19 +130,23 @@ public class MoneyMakerPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
-		try
+		// each file loads on its own, so a problem in one doesn't take the others down with it
+		recipes = load("recipes.txt", Recipe::load, Collections.emptyList());
+		bosses = load("bosses.txt", BossSetup::load, Collections.emptyList());
+		gearPricer = load("aliases.txt", GearPricer::load, new GearPricer(Collections.emptyMap()));
+		farmRuns = load("farmruns.txt", FarmRun::load, Collections.emptyList());
+		farmRoute = load("farmroutes.txt", FarmRoute::load, FarmRoute.empty());
+		bossQuests = load("bossquests.txt", in ->
 		{
-			recipes = Recipe.load(resource("recipes.txt"));
-			bosses = BossSetup.load(resource("bosses.txt"));
-			gearPricer = GearPricer.load(resource("aliases.txt"));
-			farmRuns = FarmRun.load(resource("farmruns.txt"));
-			training = Training.load(resource("training.txt"));
-			gear = Gear.load(resource("gear.txt"));
-		}
-		catch (IOException | RuntimeException e)
-		{
-			log.error("Adventurer's Ledger couldn't load its data files", e);
-		}
+			try (InputStream lines = resource("questlines.txt"))
+			{
+				return BossQuests.load(in, lines);
+			}
+		}, BossQuests.empty());
+		training = load("training.txt", Training::load, Training.empty());
+		gear = load("gear.txt", Gear::load, Gear.empty());
+		bossCheck = load("bossskills.txt", BossCheck::load, BossCheck.empty());
+		farmAccount = savedFarmAccount();
 
 		panel = new MoneyMakerPanel(this, itemManager);
 		navButton = NavigationButton.builder()
@@ -146,9 +171,41 @@ public class MoneyMakerPlugin extends Plugin
 		{
 			farmTask.cancel(false);
 		}
+		if (bankSaveTask != null)
+		{
+			bankSaveTask.cancel(false);
+		}
+		Runnable save = pendingBankSave;
+		if (save != null)
+		{
+			save.run();
+		}
 		clientToolbar.removeNavigation(navButton);
+		if (panel != null)
+		{
+			panel.shutDown();
+		}
 		panel = null;
 		skills = Collections.emptyMap();
+	}
+
+	private interface Loader<T>
+	{
+		T load(InputStream in) throws IOException;
+	}
+
+	/** Load one data file, falling back to an empty value (and logging why) if it can't be read. */
+	private <T> T load(String name, Loader<T> loader, T fallback)
+	{
+		try (InputStream in = resource(name))
+		{
+			return loader.load(in);
+		}
+		catch (IOException | RuntimeException e)
+		{
+			log.error("Adventurer's Ledger couldn't load {}", name, e);
+			return fallback;
+		}
 	}
 
 	private InputStream resource(String name) throws IOException
@@ -170,8 +227,10 @@ public class MoneyMakerPlugin extends Plugin
 		{
 			return;
 		}
-		accountType = client.getVarbitValue(ACCOUNT_TYPE_VARBIT);
+		accountType = client.getVarbitValue(VarbitID.IRONMAN);
 		loadSavedBank();
+		claimFarmTimers();
+		checkQuests();
 		resolveNames();
 
 		Map<String, long[]> now = new HashMap<>();
@@ -187,6 +246,114 @@ public class MoneyMakerPlugin extends Plugin
 			skills = Collections.unmodifiableMap(now);
 			updatePanel(MoneyMakerPanel::refreshJobs);
 		}
+	}
+
+	/** Logging out: forget the levels and items of the account that just left. */
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged event)
+	{
+		if (event.getGameState() != GameState.LOGIN_SCREEN || skills.isEmpty())
+		{
+			return;
+		}
+		skills = Collections.emptyMap();
+		questStates = Collections.emptyMap();
+		questCheckIn = 0;
+		accountType = -1;
+		invItems = Collections.emptyMap();
+		wornItems = Collections.emptyMap();
+		updatePanel(MoneyMakerPanel::refreshAll);
+	}
+
+	/** How often to re-read quest progress, in game ticks (about 30 seconds). */
+	private static final int QUEST_CHECK_TICKS = 50;
+
+	/** Read how far you are with the quests bosses need (client thread only). */
+	private void checkQuests()
+	{
+		if (questCheckIn-- > 0)
+		{
+			return;
+		}
+		questCheckIn = QUEST_CHECK_TICKS;
+		Set<String> wanted = bossQuests.allQuests();
+		if (wanted.isEmpty())
+		{
+			return;
+		}
+		Map<String, QuestState> now = new HashMap<>();
+		for (Quest q : Quest.values())
+		{
+			if (wanted.contains(q.getName()))
+			{
+				now.put(q.getName(), q.getState(client));
+			}
+		}
+		if (!now.equals(questStates))
+		{
+			questStates = Collections.unmodifiableMap(now);
+			updatePanel(MoneyMakerPanel::refreshBosses);
+		}
+	}
+
+	/** Skill levels each boss needs. */
+	public BossCheck getBossCheck()
+	{
+		return bossCheck;
+	}
+
+	/** True when you have every level a job needs. Also true when logged out, as there's nothing to check against. */
+	public boolean meetsReqs(Recipe r)
+	{
+		for (Recipe.Req q : r.getReqs())
+		{
+			long[] have = getSkill(q.getSkill());
+			if (have != null && have[0] < q.getLevel())
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/** Open the Goal tab with this item as the thing to save for. */
+	public void planFor(String item)
+	{
+		updatePanel(p -> p.showGoal(item));
+	}
+
+	/** A small value the panel wants remembered between sessions (your goal), or null. */
+	public String getSaved(String key)
+	{
+		return configManager == null ? null : configManager.getConfiguration(MoneyMakerConfig.GROUP, key);
+	}
+
+	/** Remember a value between sessions; null forgets it. */
+	public void save(String key, String value)
+	{
+		if (configManager == null)
+		{
+			return;
+		}
+		if (value == null)
+		{
+			configManager.unsetConfiguration(MoneyMakerConfig.GROUP, key);
+		}
+		else
+		{
+			configManager.setConfiguration(MoneyMakerConfig.GROUP, key, value);
+		}
+	}
+
+	public BossQuests getBossQuests()
+	{
+		return bossQuests;
+	}
+
+	/** How far you are with a quest, or null when logged out or the quest isn't known. */
+	public QuestState getQuestState(String quest)
+	{
+		return questStates.get(quest);
 	}
 
 	private static boolean sameSkills(Map<String, long[]> a, Map<String, long[]> b)
@@ -210,6 +377,13 @@ public class MoneyMakerPlugin extends Plugin
 	public void onConfigChanged(ConfigChanged event)
 	{
 		if (!MoneyMakerConfig.GROUP.equals(event.getGroup()))
+		{
+			return;
+		}
+		// things the plugin saves for itself (goal, timers, bank) aren't settings: nothing to redraw
+		String key = event.getKey();
+		if (key.startsWith("goal") || key.startsWith("farm_") || key.startsWith("farmdone_") || key.equals("farmAccount")
+			|| key.startsWith("bank_"))
 		{
 			return;
 		}
@@ -259,7 +433,8 @@ public class MoneyMakerPlugin extends Plugin
 				byName.put(PriceBook.key(m.name), new ItemPrice(m.id, m.name, m.limit == null ? 0 : m.limit,
 					l == null ? 0 : nz(l.high), l == null ? 0 : nz(l.low),
 					h == null ? 0 : nz(h.avgHighPrice), h == null ? 0 : nz(h.avgLowPrice),
-					h == null ? 0 : nz(h.highPriceVolume) + nz(h.lowPriceVolume)));
+					h == null ? 0 : nz(h.highPriceVolume) + nz(h.lowPriceVolume),
+					l == null ? 0 : Math.max(nz(l.highTime), nz(l.lowTime))));
 			}
 			prices = new PriceBook(Collections.unmodifiableMap(byName), System.currentTimeMillis());
 			priceError = null;
@@ -281,10 +456,10 @@ public class MoneyMakerPlugin extends Plugin
 
 	// ---------------------------------------------------------------- items you own
 
-	private static final int ACCOUNT_TYPE_VARBIT = 1777;
-	private static final int INVENTORY = 93;
-	private static final int EQUIPMENT = 94;
-	private static final int BANK = 95;
+	private static final int INVENTORY = InventoryID.INV;
+	private static final int EQUIPMENT = InventoryID.WORN;
+	private static final int BANK = InventoryID.BANK;
+	private static final int BANK_SAVE_DELAY_SECONDS = 3;
 
 	@Subscribe
 	public void onItemContainerChanged(ItemContainerChanged event)
@@ -330,12 +505,28 @@ public class MoneyMakerPlugin extends Plugin
 	/** Remember the bank between sessions (only item ids and amounts, in your RuneLite profile). */
 	private void saveBank(Map<Integer, Long> items)
 	{
-		StringBuilder sb = new StringBuilder();
-		for (Map.Entry<Integer, Long> e : items.entrySet())
+		long hash = client.getAccountHash();
+		if (hash == -1)
 		{
-			sb.append(sb.length() > 0 ? "," : "").append(e.getKey()).append(':').append(e.getValue());
+			return;
 		}
-		configManager.setConfiguration(MoneyMakerConfig.GROUP, "bank_" + client.getAccountHash(), sb.toString());
+		// the bank changes with every deposit and withdrawal; wait for it to settle, then write once
+		Runnable save = () ->
+		{
+			pendingBankSave = null;
+			StringBuilder sb = new StringBuilder();
+			for (Map.Entry<Integer, Long> e : items.entrySet())
+			{
+				sb.append(sb.length() > 0 ? "," : "").append(e.getKey()).append(':').append(e.getValue());
+			}
+			configManager.setConfiguration(MoneyMakerConfig.GROUP, "bank_" + hash, sb.toString());
+		};
+		if (bankSaveTask != null)
+		{
+			bankSaveTask.cancel(false);
+		}
+		pendingBankSave = save;
+		bankSaveTask = executor.schedule(save, BANK_SAVE_DELAY_SECONDS, TimeUnit.SECONDS);
 	}
 
 	private void loadSavedBank()
@@ -445,6 +636,12 @@ public class MoneyMakerPlugin extends Plugin
 		return training;
 	}
 
+	/** Where to go on each farm run. */
+	public FarmRoute getFarmRoute()
+	{
+		return farmRoute;
+	}
+
 	public List<FarmRun> getFarmRuns()
 	{
 		return farmRuns;
@@ -453,7 +650,7 @@ public class MoneyMakerPlugin extends Plugin
 	/** When this run was planted (epoch ms), or 0 if no timer is running. Saved in your RuneLite profile. */
 	public long getPlanted(FarmRun run)
 	{
-		String v = configManager.getConfiguration(MoneyMakerConfig.GROUP, "farm_" + run.getId());
+		String v = configManager.getConfiguration(MoneyMakerConfig.GROUP, farmKey("farm_", run));
 		try
 		{
 			return v == null ? 0 : Long.parseLong(v);
@@ -473,15 +670,69 @@ public class MoneyMakerPlugin extends Plugin
 
 	public void startFarmTimer(FarmRun run)
 	{
-		configManager.setConfiguration(MoneyMakerConfig.GROUP, "farm_" + run.getId(), String.valueOf(System.currentTimeMillis()));
-		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, "farmdone_" + run.getId());
+		configManager.setConfiguration(MoneyMakerConfig.GROUP, farmKey("farm_", run), String.valueOf(System.currentTimeMillis()));
+		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, farmKey("farmdone_", run));
 		updatePanel(MoneyMakerPanel::refreshFarm);
 	}
 
 	public void clearFarmTimer(FarmRun run)
 	{
-		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, "farm_" + run.getId());
-		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, "farmdone_" + run.getId());
+		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, farmKey("farm_", run));
+		configManager.unsetConfiguration(MoneyMakerConfig.GROUP, farmKey("farmdone_", run));
+		updatePanel(MoneyMakerPanel::refreshFarm);
+	}
+
+	/**
+	 * Config key for a run's timer. Timers belong to the account that was last logged in, so two
+	 * accounts don't share them; they keep counting (and alerting) on the login screen.
+	 */
+	private String farmKey(String prefix, FarmRun run)
+	{
+		long account = farmAccount;
+		return account == 0 ? prefix + run.getId() : prefix + account + "_" + run.getId();
+	}
+
+	private long savedFarmAccount()
+	{
+		String v = configManager.getConfiguration(MoneyMakerConfig.GROUP, "farmAccount");
+		try
+		{
+			return v == null ? 0 : Long.parseLong(v);
+		}
+		catch (NumberFormatException e)
+		{
+			return 0;
+		}
+	}
+
+	/** On login, point the farm timers at this account. Timers set before accounts were tracked move to it. */
+	private void claimFarmTimers()
+	{
+		long hash = client.getAccountHash();
+		if (hash == -1 || hash == 0 || hash == farmAccount)
+		{
+			return;
+		}
+		for (FarmRun run : farmRuns)
+		{
+			for (String prefix : new String[]{"farm_", "farmdone_"})
+			{
+				String oldKey = prefix + run.getId();
+				String newKey = prefix + hash + "_" + run.getId();
+				String old = configManager.getConfiguration(MoneyMakerConfig.GROUP, oldKey);
+				if (old == null)
+				{
+					continue;
+				}
+				if (configManager.getConfiguration(MoneyMakerConfig.GROUP, newKey) == null)
+				{
+					configManager.setConfiguration(MoneyMakerConfig.GROUP, newKey, old);
+				}
+				configManager.unsetConfiguration(MoneyMakerConfig.GROUP, oldKey);
+			}
+		}
+		farmAccount = hash;
+		configManager.setConfiguration(MoneyMakerConfig.GROUP, "farmAccount", String.valueOf(hash));
 		updatePanel(MoneyMakerPanel::refreshFarm);
 	}
 
@@ -495,7 +746,7 @@ public class MoneyMakerPlugin extends Plugin
 			{
 				continue;
 			}
-			String doneKey = "farmdone_" + run.getId();
+			String doneKey = farmKey("farmdone_", run);
 			if (configManager.getConfiguration(MoneyMakerConfig.GROUP, doneKey) == null)
 			{
 				configManager.setConfiguration(MoneyMakerConfig.GROUP, doneKey, "1");

@@ -1,0 +1,35 @@
+# Quests you need before you can fight a boss.
+# boss|quest|note (blank if none)
+# The boss name must match bosses.txt and the quest name must match RuneLite's quest name exactly
+# (the tests check both). A boss can have more than one line. Bosses with no quest aren't listed.
+# From each boss's OSRS Wiki page (checked November 2026).
+
+Amoxliatl|The Heart of Darkness|She is the quest's last fight; you can fight her again afterwards
+Araxxor|Priest in Peril|Opens Morytania
+Barrows|Priest in Peril|Opens Morytania
+Brutus|The Ides of Milk|First fought in the quest; you can fight him again afterwards
+Commander Zilyana|Troll Stronghold|Only as far as beating Dad, to get into the God Wars Dungeon
+General Graardor|Troll Stronghold|Only as far as beating Dad, to get into the God Wars Dungeon
+K'ril Tsutsaroth|Troll Stronghold|Only as far as beating Dad, to get into the God Wars Dungeon
+Kree'arra|Troll Stronghold|Only as far as beating Dad, to get into the God Wars Dungeon
+Nex|Troll Stronghold|Only as far as beating Dad, to get into the God Wars Dungeon
+Nex|The Frozen Door|Miniquest that opens the door to Nex
+Deranged archaeologist|Bone Voyage|Opens Fossil Island
+Doom of Mokhaiotl|The Final Dawn|The Ruins of Mokhaiotl are reached during the quest
+Duke Sucellus|Desert Treasure II - The Fallen Empire|
+The Leviathan|Desert Treasure II - The Fallen Empire|
+The Whisperer|Desert Treasure II - The Fallen Empire|
+Vardorvis|Desert Treasure II - The Fallen Empire|
+Grotesque Guardians|Priest in Peril|Opens Morytania (Slayer Tower)
+The Hueycoatl|Children of the Sun|Opens Varlamore
+Moons of Peril|Perilous Moons|
+The Nightmare|Priest in Peril|Opens Morytania
+Phosani's Nightmare|Priest in Peril|Opens Morytania
+Phantom Muspah|Secrets of the North|
+Shellbane gryphon|Troubled Tortugans|
+Sol Heredit (Fortis Colosseum)|Children of the Sun|Opens Varlamore
+Theatre of Blood (raid)|Priest in Peril|Opens Morytania
+Tombs of Amascut (raid)|Beneath Cursed Sands|
+Vorkath|Dragon Slayer II|Also needs the pyre ship part of Barbarian Training started
+Yama|A Kingdom Divided|
+Zulrah|Regicide|Only as far as reaching Port Tyras

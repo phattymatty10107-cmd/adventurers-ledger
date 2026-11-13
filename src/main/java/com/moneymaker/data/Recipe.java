@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class Recipe
 {
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(Recipe.class);
+
 	private final String category;
 	private final String name;
 	/** RuneLite Skill enum name, or "NONE". This is the skill used for the next-level planner. */
@@ -191,34 +193,46 @@ public class Recipe
 				{
 					continue;
 				}
-				String skill = f[2];
-				int level = Integer.parseInt(f[3]);
-				List<Req> reqs = new ArrayList<>();
-				if (!"NONE".equals(skill))
+				try
 				{
-					reqs.add(new Req(skill, level));
+					list.add(parse(f));
 				}
-				if (f.length > 10)
+				catch (RuntimeException e)
 				{
-					for (String part : f[10].split(";"))
-					{
-						int colon = part.indexOf(':');
-						if (colon > 0)
-						{
-							String s = part.substring(0, colon);
-							if (!s.equals(skill))
-							{
-								reqs.add(new Req(s, Integer.parseInt(part.substring(colon + 1))));
-							}
-						}
-					}
+					log.warn("Skipping a recipes.txt line that couldn't be read: {}", line, e);
 				}
-				list.add(new Recipe(f[0], f[1], skill, level, "1".equals(f[4]),
-					Double.parseDouble(f[5]), Double.parseDouble(f[6]), stacks(f[7]), stacks(f[8]), Double.parseDouble(f[9]),
-					Collections.unmodifiableList(reqs), f.length > 11 ? f[11] : "", f.length > 12 ? f[12] : ""));
 			}
 		}
 		return Collections.unmodifiableList(list);
+	}
+
+	private static Recipe parse(String[] f)
+	{
+		String skill = f[2];
+		int level = Integer.parseInt(f[3]);
+		List<Req> reqs = new ArrayList<>();
+		if (!"NONE".equals(skill))
+		{
+			reqs.add(new Req(skill, level));
+		}
+		if (f.length > 10)
+		{
+			for (String part : f[10].split(";"))
+			{
+				int colon = part.indexOf(':');
+				if (colon > 0)
+				{
+					String s = part.substring(0, colon);
+					if (!s.equals(skill))
+					{
+						reqs.add(new Req(s, Integer.parseInt(part.substring(colon + 1))));
+					}
+				}
+			}
+		}
+		return new Recipe(f[0], f[1], skill, level, "1".equals(f[4]),
+			Double.parseDouble(f[5]), Double.parseDouble(f[6]), stacks(f[7]), stacks(f[8]), Double.parseDouble(f[9]),
+			Collections.unmodifiableList(reqs), f.length > 11 ? f[11] : "", f.length > 12 ? f[12] : "");
 	}
 
 	static List<Stack> stacks(String s)

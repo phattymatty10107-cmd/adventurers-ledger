@@ -14,14 +14,17 @@ public class JobResult
 	private final boolean limitCapped;
 	private final String cappedBy;
 	private final boolean lowVolume;
+	/** An item whose price is over a day old, or null. */
+	private final String staleItem;
 	private final List<Line> inputLines;
 	private final List<Line> outputLines;
 	/** Next-level info; null when there's no skill, no XP, or you're 99. */
 	private final NextLevel next;
 
 	private JobResult(Recipe recipe, double costEach, double revenueEach, double actionsPerHour, boolean limitCapped,
-		String cappedBy, boolean lowVolume, List<Line> inputLines, List<Line> outputLines, NextLevel next)
+		String cappedBy, boolean lowVolume, String staleItem, List<Line> inputLines, List<Line> outputLines, NextLevel next)
 	{
+		this.staleItem = staleItem;
 		this.recipe = recipe;
 		this.costEach = costEach;
 		this.revenueEach = revenueEach;
@@ -77,6 +80,17 @@ public class JobResult
 	public boolean isLowVolume()
 	{
 		return lowVolume;
+	}
+
+	/** True when one of the main items hasn't traded for over a day, so the gp/hr can't be trusted. */
+	public boolean isStale()
+	{
+		return staleItem != null;
+	}
+
+	public String getStaleItem()
+	{
+		return staleItem;
 	}
 
 	public List<Line> getInputLines()
@@ -213,6 +227,8 @@ public class JobResult
 		double rate = r.getPerHour() * Math.max(1, speedPercent) / 100.0;
 		boolean capped = false;
 		String cappedBy = null;
+		String staleItem = null;
+		long now = prices.getUpdatedAt();
 
 		for (Recipe.Stack s : r.getInputs())
 		{
@@ -224,6 +240,10 @@ public class JobResult
 			long each = p.buyPrice(mode);
 			cost += each * s.getQty();
 			ins.add(new Line(p.getName(), s.getQty(), each, p.getId()));
+			if (staleItem == null && p.isStale(now))
+			{
+				staleItem = p.getName();
+			}
 
 			// GE buy limit: you can only buy `limit` every 4 hours
 			if (p.getLimit() > 0 && s.getQty() > 0)
@@ -249,8 +269,13 @@ public class JobResult
 				return null;
 			}
 			long each = p.sellPrice(mode);
-			revenue += (each - GeTax.perItem(p.getId(), each)) * s.getQty();
+			revenue += (each - GeTax.perItem(p.getId(), p.getName(), each)) * s.getQty();
 			outs.add(new Line(p.getName(), s.getQty(), each, p.getId()));
+			// like low volume, only the main products count, not rare drops
+			if (staleItem == null && s.getQty() >= 0.2 && p.isStale(now))
+			{
+				staleItem = p.getName();
+			}
 			// only flag the main products, not rare drops
 			if (s.getQty() >= 0.2 && p.getHourVolume() < rate * s.getQty())
 			{
@@ -280,7 +305,7 @@ public class JobResult
 				Collections.unmodifiableList(shopping), shoppingCost);
 		}
 
-		return new JobResult(r, cost, revenue, rate, capped, cappedBy, lowVolume,
+		return new JobResult(r, cost, revenue, rate, capped, cappedBy, lowVolume, staleItem,
 			Collections.unmodifiableList(ins), Collections.unmodifiableList(outs), next);
 	}
 }

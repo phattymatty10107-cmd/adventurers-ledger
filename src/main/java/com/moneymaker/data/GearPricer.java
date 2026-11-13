@@ -220,7 +220,18 @@ public class GearPricer
 						int star = p.lastIndexOf('*');
 						if (star > 0)
 						{
-							parts.add(new Recipe.Stack(p.substring(0, star).trim(), Integer.parseInt(p.substring(star + 1).trim())));
+							int qty;
+							try
+							{
+								qty = Integer.parseInt(p.substring(star + 1).trim());
+							}
+							catch (NumberFormatException e)
+							{
+								// not a quantity after all (a name with a * in it): treat it as one item
+								parts.add(new Recipe.Stack(p, 1));
+								continue;
+							}
+							parts.add(new Recipe.Stack(p.substring(0, star).trim(), qty));
 						}
 						else
 						{

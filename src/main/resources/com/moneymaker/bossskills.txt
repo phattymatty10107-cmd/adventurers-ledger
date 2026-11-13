@@ -1,0 +1,23 @@
+# Skill levels you must have before you can fight (or damage) a boss.
+# boss|SKILL|level|note (blank if none)
+# The boss name must match bosses.txt and the skill must be a RuneLite skill name (the tests check both).
+# Only hard requirements are listed, not recommended stats. From the OSRS Wiki.
+
+Abyssal Sire|SLAYER|85|
+Alchemical Hydra|SLAYER|95|
+Amoxliatl|SLAYER|48|
+Araxxor|SLAYER|92|
+Cerberus|SLAYER|91|
+Grotesque Guardians|SLAYER|75|
+Kraken|SLAYER|87|
+Thermonuclear smoke devil|SLAYER|93|
+Shellbane gryphon|SLAYER|51|
+Hespori|FARMING|65|To plant the Hespori seed
+General Graardor|STRENGTH|70|To get into Bandos's Stronghold
+Commander Zilyana|AGILITY|70|To get into Saradomin's Encampment
+Kree'arra|RANGED|70|To get into Armadyl's Eyrie
+K'ril Tsutsaroth|HITPOINTS|70|To get into Zamorak's Fortress
+Nex|AGILITY|70|For The Frozen Door
+Nex|HITPOINTS|70|For The Frozen Door
+Nex|RANGED|70|For The Frozen Door
+Nex|STRENGTH|70|For The Frozen Door

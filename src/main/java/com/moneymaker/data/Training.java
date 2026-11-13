@@ -353,13 +353,22 @@ public class Training
 			while ((line = r.readLine()) != null)
 			{
 				String[] f = line.split("\\|", -1);
-				if ("M".equals(f[0]) && f.length >= 4)
+				try
 				{
-					milestones.computeIfAbsent(f[1], k -> new ArrayList<>()).add(new Milestone(Integer.parseInt(f[2]), f[3]));
+					if ("M".equals(f[0]) && f.length >= 4)
+					{
+						Milestone m = new Milestone(Integer.parseInt(f[2]), f[3]);
+						milestones.computeIfAbsent(f[1], k -> new ArrayList<>()).add(m);
+					}
+					else if ("T".equals(f[0]) && f.length >= 16)
+					{
+						Method m = new Method(f);
+						methods.computeIfAbsent(f[1], k -> new ArrayList<>()).add(m);
+					}
 				}
-				else if ("T".equals(f[0]) && f.length >= 16)
+				catch (RuntimeException e)
 				{
-					methods.computeIfAbsent(f[1], k -> new ArrayList<>()).add(new Method(f));
+					org.slf4j.LoggerFactory.getLogger(Training.class).warn("Skipping a training.txt line that couldn't be read: {}", line, e);
 				}
 			}
 		}
