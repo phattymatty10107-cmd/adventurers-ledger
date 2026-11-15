@@ -11,6 +11,7 @@ import com.moneymaker.data.Training;
 import com.moneymaker.data.GearPricer;
 import com.moneymaker.data.ItemPrice;
 import com.moneymaker.data.PriceBook;
+import com.moneymaker.data.RefreshCooldown;
 import com.moneymaker.data.Recipe;
 import com.moneymaker.data.WikiPriceClient;
 import com.moneymaker.ui.MoneyMakerPanel;
@@ -405,13 +406,23 @@ public class MoneyMakerPlugin extends Plugin
 		priceTask = executor.scheduleWithFixedDelay(this::refreshPrices, 0, config.refreshMinutes(), TimeUnit.MINUTES);
 	}
 
-	public void refreshPricesNow()
+	private final RefreshCooldown cooldown = new RefreshCooldown();
+
+	/** Starts a manual refresh unless one ran recently. Returns seconds left to wait, or 0 if it started. */
+	public long refreshPricesNow()
 	{
-		executor.execute(this::refreshPrices);
+		long wait = cooldown.secondsLeft(System.currentTimeMillis());
+		if (wait == 0)
+		{
+			cooldown.markFetch(System.currentTimeMillis());
+			executor.execute(this::refreshPrices);
+		}
+		return wait;
 	}
 
 	private void refreshPrices()
 	{
+		cooldown.markFetch(System.currentTimeMillis());
 		try
 		{
 			if (mapping.isEmpty())
