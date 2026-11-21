@@ -64,6 +64,18 @@ Pick something you want and see how to pay for it:
 - **Buy an item**: search the Grand Exchange, pick the item, and see what it costs, the coins you already have (bag and bank) and the fastest money makers you have the levels for, with how long each takes. On the Boss tab, click any gear and choose **Plan how to afford this**.
 - **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that.
 
+## Routes
+
+The Ledger can show you the way somewhere: a line on the world map, the minimap and the ground, and a list of steps above the tabs ("Varrock tablet, walk 132 tiles").
+
+- **Goal tab → Go somewhere:** the nearest bank, the Grand Exchange, or search for any quest to be taken to where it starts.
+- **Boss tab:** click a quest a boss needs → *Show the way to the start*.
+- **World map:** right-click anywhere → *Route here*. *Clear route* is in the same menu and in the box above the tabs.
+
+It uses doors, stairs, boats, fairy rings, spirit trees and the teleports you can use right now (the level, the quest, and the runes or item in your inventory or worn; your bank isn't checked). Wander off or teleport somewhere else and it works the route out again. Settings are under **Routes**: which teleports to use, staying out of the Wilderness (on by default), where the line is drawn and its colour.
+
+Nothing is sent anywhere for this; the map is inside the plugin.
+
 ## Run it
 
 Open this folder in IntelliJ, then open `src/test/java/com/moneymaker/MoneyMakerPluginTest.java` and click ▶ next to `main`.
@@ -79,3 +91,4 @@ Open this folder in IntelliJ, then open `src/test/java/com/moneymaker/MoneyMaker
   - `aliases.txt`: untradeables and their tradeable parts
 
   Add lines there to add jobs or bosses.
+- The route finder's map and transport data are from the [Shortest Path](https://github.com/Skretzo/shortest-path) plugin, and its quest start points from [RuneLite](https://github.com/runelite/runelite) (both BSD 2-Clause). See `src/main/resources/com/moneymaker/route/THIRD-PARTY-NOTICES.txt`. To update the map after a game update, copy the newer `collision-map.zip` and `transports/*.tsv` from Shortest Path over the ones in that folder.

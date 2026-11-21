@@ -1,0 +1,162 @@
+# Places you can ask for a route to.
+# kind|name|x y plane;x y plane;...|note
+# With more than one tile the route goes to whichever is quickest to reach.
+#
+# Bank tiles are from the Shortest Path plugin's data (github.com/Skretzo/shortest-path, BSD 2-Clause).
+# Quest start points are from RuneLite's world map plugin (BSD 2-Clause). They are only used when the game
+# itself doesn't say where a quest starts, so newer quests don't need adding here.
+
+place|Nearest bank|3269 3164 0;3269 3166 0;3269 3167 0;3269 3168 0;3269 3169 0;1624 3741 0;1635 3741 0;1624 3744 0;1635 3744 0;1624 3746 0;1635 3746 0;1624 3749 0;1635 3749 0;2655 3280 0;2655 3283 0;2655 3286 0;2615 3332 0;2618 3332 0;2619 3332 0;2280 2544 0;2536 3573 0;1479 3857 0;1499 3857 0;1501 3871 0;1478 3873 0;2443 3083 0;2807 3441 0;2809 3441 0;2810 3441 0;2811 3441 0;3333 5194 0;3304 5199 0;3279 5200 0;1745 5476 0;1746 5476 0;1747 5476 0;1748 5476 0;3147 3450 0;3148 3450 0;3420 4058 0;3426 4069 0;1936 2755 0;3092 3242 0;3092 3243 0;3092 3245 0;3094 3489 0;3094 3491 0;3096 3494 0;3098 3494 0;3382 3269 0;3010 3355 0;3011 3355 0;3012 3355 0;3013 3355 0;3014 3355 0;3015 3355 0;2945 3368 0;2946 3368 0;2947 3368 0;2948 3368 0;2949 3368 0;1253 3741 0;3130 3631 0;2586 3418 0;2586 3419 0;2586 3421 0;2586 3422 0;3162 3489 0;3167 3489 0;3162 3490 0;3167 3490 0;1746 3598 0;1748 3598 0;1748 3599 0;1748 3600 0;1674 3615 0;1676 3615 0;1719 3465 0;1809 3566 0;1610 3681 2;1611 3681 2;1612 3681 2;1613 3681 2;1512 3421 0;1522 3738 0;1530 3738 0;1520 3740 0;1522 3740 0;1524 3740 0;1526 3740 0;1528 3740 0;1530 3740 0;1436 3822 0;1438 3822 0;1436 3824 0;1438 3828 0;1436 3832 0;1436 3834 0;1438 3834 0;3208 3220 2;3209 3220 2;3365 3318 1;3013 9718 0;2543 5141 0;2445 5180 0;3760 5666 0;1324 3824 0;1254 3571 0;3427 2889 0;3427 2891 0;3427 2893 0;3427 2894 0;3013 5625 0;2661 3162 0;1796 3790 0;1800 3790 0;1804 3790 0;1808 3790 0;1881 3315 1;1882 3315 1;1883 3315 1;1884 3315 1;3040 4969 1;3156 2835 0;2721 3493 0;2722 3493 0;2724 3493 0;2727 3493 0;2728 3493 0;2729 3493 0;3308 3120 0;1487 3590 0;1488 3592 0;1487 3594 0;1483 3646 0;1486 3646 0;2212 2859 0;2020 5931 0;1478 3856 0;1499 3857 0;1454 3858 0;1501 3871 0;1477 3874 0;3038 3000 0;2445 3424 1;2446 3424 1;2445 3425 1;2446 3427 1;2448 3482 1;2449 3482 1;2450 3482 1;2442 3487 1;2442 3488 1;2442 3489 1;3251 3420 0;3252 3420 0;3253 3420 0;3254 3420 0;3255 3420 0;3256 3420 0;3185 3436 0;3185 3438 0;3185 3440 0;3185 3442 0;3185 3444 0;2665 2653 0;2666 2653 0;2667 2653 0;2668 2653 0;2843 3543 0;1640 3944 0;1592 3476 0;1551 9873 0;2613 3091 0;2613 3092 0;2613 3094 0|
+place|Grand Exchange|3164 3487 0|
+
+quest|Below Ice Mountain|3001 3436 0|
+quest|Black Knights' Fortress|2959 3336 0|
+quest|Cook's Assistant|3209 3215 0|
+quest|The Corsair Curse|3029 3273 0|
+quest|Demon Slayer|3204 3424 0|
+quest|Doric's Quest|2952 3450 0|
+quest|Dragon Slayer I|3190 3362 0|
+quest|Ernest the Chicken|3109 3330 0|
+quest|Goblin Diplomacy|2957 3509 0|
+quest|Imp Catcher|3102 3164 0|
+quest|The Knight's Sword|2976 3342 0|
+quest|Misthalin Mystery|3235 3155 0|
+quest|Pirate's Treasure|3051 3252 0|
+quest|Prince Ali Rescue|3301 3163 0|
+quest|The Restless Ghost|3240 3210 0|
+quest|Romeo & Juliet|3210 3423 0|
+quest|Rune Mysteries|3211 3224 0|
+quest|Sheep Shearer|3187 3272 0|
+quest|Shield of Arrav|3208 3495 0|
+quest|Shield of Arrav|3208 3392 0|
+quest|Vampyre Slayer|3096 3266 0|
+quest|Witch's Potion|2968 3204 0|
+quest|X Marks the Spot|3226 3242 0|
+quest|Animal Magnetism|3094 3360 0|
+quest|Another Slice of H.A.M.|2799 5428 0|
+quest|The Ascent of Arceuus|1699 3742 0|
+quest|Between a Rock...|2823 10168 0|
+quest|Big Chompy Bird Hunting|2629 2981 0|
+quest|Biohazard|2591 3335 0|
+quest|Bone Voyage|3259 3450 0|
+quest|Cabin Fever|3674 3496 0|
+quest|Client of Kourend|1825 3690 0|
+quest|Clock Tower|2568 3249 0|
+quest|Cold War|2593 3265 0|
+quest|Contact!|3280 2770 0|
+quest|Creature of Fenkenstrain|3487 3485 0|
+quest|Darkness of Hallowvale|3493 9588 0|
+quest|Death Plateau|2897 3529 0|
+quest|Death to the Dorgeshuun|3316 9613 0|
+quest|The Depths of Despair|1781 3570 0|
+quest|Devious Minds|3405 3492 0|
+quest|The Dig Site|3363 3341 0|
+quest|Dragon Slayer II|2456 2868 0|
+quest|Dream Mentor|2144 10346 0|
+quest|Druidic Ritual|2916 3484 0|
+quest|Dwarf Cannon|2566 3461 0|
+quest|Eadgar's Ruse|2896 3426 0|
+quest|Eagles' Peak|2605 3264 0|
+quest|Elemental Workshop I|2714 3482 0|
+quest|Elemental Workshop II|3364 3335 0|
+quest|Enakhra's Lament|3190 2926 0|
+quest|Enlightened Journey|2809 3356 0|
+quest|The Eyes of Glouphrie|2405 9817 0|
+quest|Fairytale I - Growing Pains|3075 3259 0|
+quest|Fairytale II - Cure a Queen|3078 3258 0|
+quest|Family Crest|3278 3404 0|
+quest|The Feud|3301 3211 0|
+quest|Fight Arena|2565 3199 0|
+quest|Fishing Contest|2875 3483 0|
+quest|Fishing Contest|2820 3487 0|
+quest|Forgettable Tale...|2826 10215 0|
+quest|The Forsaken Tower|1482 3748 0|
+quest|The Fremennik Isles|2645 3711 0|
+quest|The Fremennik Trials|2658 3667 0|
+quest|The Fremennik Exiles|2656 3669 0|
+quest|Garden of Tranquillity|3227 3477 0|
+quest|Gertrude's Cat|3150 3411 0|
+quest|Getting Ahead|1247 3686 0|
+quest|Ghosts Ahoy|3677 3510 0|
+quest|The Giant Dwarf|2841 10129 0|
+quest|The Golem|3487 3089 0|
+quest|The Grand Tree|2464 3494 0|
+quest|The Great Brain Robbery|3681 2963 0|
+quest|Grim Tales|2890 3454 0|
+quest|The Hand in the Sand|2551 3101 0|
+quest|Haunted Mine|3443 3258 0|
+quest|Hazeel Cult|2565 3271 0|
+quest|Heroes' Quest|2903 3511 0|
+quest|Holy Grail|2763 3513 0|
+quest|Horror from the Deep|2507 3635 0|
+quest|Icthlarin's Little Helper|3314 2849 0|
+quest|In Aid of the Myreque|3505 9839 0|
+quest|In Search of the Myreque|3502 3477 0|
+quest|Jungle Potion|2809 3086 0|
+quest|A Kingdom Divided|1663 3672 0|
+quest|King's Ransom|2741 3554 0|
+quest|Legends' Quest|2725 3367 0|
+quest|Lost City|3149 3205 0|
+quest|The Lost Tribe|3210 3220 0|
+quest|Lunar Diplomacy|2618 3691 0|
+quest|Making Friends with My Arm|2904 10092 0|
+quest|Making History|2435 3346 0|
+quest|Merlin's Crystal|2761 3516 0|
+quest|Monkey Madness I|2465 3498 0|
+quest|Monkey Madness II|2466 3496 0|
+quest|Monk's Friend|2605 3211 0|
+quest|Mountain Daughter|2810 3672 0|
+quest|Mourning's End Part I|2288 3147 0|
+quest|Mourning's End Part II|2352 3172 0|
+quest|Murder Mystery|2740 3562 0|
+quest|My Arm's Big Adventure|2908 10088 0|
+quest|Nature Spirit|3423 9886 0|
+quest|A Night at the Theatre|3672 3224 0|
+quest|Observatory Quest|2438 3185 0|
+quest|Olaf's Quest|2723 3729 0|
+quest|One Small Favour|2834 2985 0|
+quest|Plague City|2568 3332 0|
+quest|A Porcine of Interest|3085 3251 0|
+quest|Priest in Peril|3219 3473 0|
+quest|The Queen of Thieves|1795 3782 0|
+quest|Rag and Bone Man I|3359 3504 0|
+quest|Rag and Bone Man II|3361 3507 0|
+quest|Ratcatchers|3243 9867 0|
+quest|Recipe for Disaster|3206 3213 0|
+quest|Recruitment Drive|2962 3338 0|
+quest|Regicide|2575 3293 0|
+quest|Roving Elves|2287 3144 0|
+quest|Royal Trouble|2497 3857 0|
+quest|Rum Deal|3677 3535 0|
+quest|Scorpion Catcher|2700 3404 0|
+quest|Sea Slug|2715 3302 0|
+quest|Shades of Mort'ton|3463 3308 0|
+quest|Shadow of the Storm|3270 3159 0|
+quest|Sheep Herder|2616 3299 0|
+quest|Shilo Village|2882 2951 0|
+quest|Sins of the Father|3728 3319 0|
+quest|The Slug Menace|2994 3374 0|
+quest|Song of the Elves|2567 3335 0|
+quest|A Soul's Bane|3307 3454 0|
+quest|Spirits of the Elid|3441 2911 0|
+quest|Swan Song|2345 3652 0|
+quest|Tai Bwo Wannai Trio|2779 3087 0|
+quest|A Tail of Two Cats|2917 3557 0|
+quest|Tale of the Righteous|1541 3570 0|
+quest|A Taste of Hope|3668 3216 0|
+quest|Tears of Guthix|3251 9517 0|
+quest|Temple of Ikov|2571 3320 0|
+quest|Throne of Miscellania|2497 3861 0|
+quest|The Tourist Trap|3302 3113 0|
+quest|Tower of Life|2640 3218 0|
+quest|Tree Gnome Village|2541 3169 0|
+quest|Tribal Totem|2790 3182 0|
+quest|Troll Romance|2890 10097 0|
+quest|Troll Stronghold|2893 3528 0|
+quest|Underground Pass|2578 3295 0|
+quest|Wanted!|2998 3372 0|
+quest|Watchtower|2545 3112 0|
+quest|Waterfall Quest|2521 3498 0|
+quest|What Lies Below|3265 3333 0|
+quest|Witch's House|2927 3456 0|
+quest|Zogre Flesh Eaters|2442 3051 0|

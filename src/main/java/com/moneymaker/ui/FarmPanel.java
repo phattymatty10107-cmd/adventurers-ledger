@@ -6,6 +6,7 @@ import com.moneymaker.data.FarmRoute;
 import com.moneymaker.data.FarmRun;
 import com.moneymaker.data.JobResult;
 import com.moneymaker.data.PriceBook;
+import com.moneymaker.route.Places;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -52,6 +53,8 @@ class FarmPanel extends JPanel
 	private final Map<String, Set<Integer>> visited = new HashMap<>();
 	/** Rows on screen, so the timers can tick without rebuilding the list. */
 	private final Map<FarmRun, ItemRow> rows = new HashMap<>();
+	/** Whether the route on the map was a farm run's the last time it changed. */
+	private boolean routeWasFarm;
 
 	FarmPanel(MoneyMakerPlugin plugin, ItemManager itemManager)
 	{
@@ -328,6 +331,7 @@ class FarmPanel extends JPanel
 		title.setAlignmentX(LEFT_ALIGNMENT);
 		title.setBorder(new EmptyBorder(0, 0, 4, 0));
 		box.add(title);
+		addWayLine(box, run, stops, done);
 
 		for (int i = 0; i < stops.size(); i++)
 		{
@@ -370,12 +374,107 @@ class FarmPanel extends JPanel
 					{
 						done.add(index);
 					}
+					// if the route on the map is this run's, move it on to the next stop
+					if (routeTag(run).equals(plugin.getRoutes().getTag()))
+					{
+						if (!routeToNext(run, stops, done))
+						{
+							plugin.clearRoute();
+						}
+					}
 					refresh();
 				}
 			});
 			box.add(stop);
 		}
 		return box;
+	}
+
+	private static String routeTag(FarmRun run)
+	{
+		return "farm:" + run.getId();
+	}
+
+	/** Where a stop is on the map, or null if this copy doesn't know. */
+	private Places.Place placeOf(FarmRun run, FarmRoute.Stop stop)
+	{
+		Places.Place p = plugin.getPlaces().find("farm", run.getName() + ": " + stop.getName());
+		return p != null ? p : plugin.getPlaces().find("farm", run.getGroup() + ": " + stop.getName());
+	}
+
+	/** Start a route to the first stop that isn't ticked. False when there's nowhere left to go. */
+	private boolean routeToNext(FarmRun run, List<FarmRoute.Stop> stops, Set<Integer> done)
+	{
+		for (int i = 0; i < stops.size(); i++)
+		{
+			Places.Place p = done.contains(i) ? null : placeOf(run, stops.get(i));
+			if (p != null)
+			{
+				plugin.getRoutes().routeTo(stops.get(i).getName(), routeTag(run), p.getTiles());
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/** The line under a route's title that starts (or stops) the route on the map. */
+	private void addWayLine(JPanel box, FarmRun run, List<FarmRoute.Stop> stops, Set<Integer> done)
+	{
+		boolean known = false;
+		for (FarmRoute.Stop s : stops)
+		{
+			known |= placeOf(run, s) != null;
+		}
+		String hint = plugin.routePerkHint();
+		if (!known || (!plugin.canRoutePerks() && hint == null))
+		{
+			return;
+		}
+		boolean mine = routeTag(run).equals(plugin.getRoutes().getTag());
+		String text = !plugin.canRoutePerks() ? hint
+			: mine ? "Showing the way · click to stop" : "> Show the way to the next stop";
+		JLabel way = UiUtil.label("<html><div style='width:" + ROUTE_TEXT_WIDTH + "px'>" + esc(text) + "</div></html>",
+			plugin.canRoutePerks() ? new Color(0, 200, 255) : UiUtil.MUTED, false);
+		way.setAlignmentX(LEFT_ALIGNMENT);
+		way.setBorder(new EmptyBorder(0, 0, 4, 0));
+		if (plugin.canRoutePerks())
+		{
+			way.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			way.setToolTipText("Draws the route to each stop in turn. Tick a stop off and it moves on to the next");
+			way.addMouseListener(new MouseAdapter()
+			{
+				@Override
+				public void mousePressed(MouseEvent e)
+				{
+					if (e.getButton() != MouseEvent.BUTTON1)
+					{
+						return;
+					}
+					if (mine)
+					{
+						plugin.clearRoute();
+					}
+					else
+					{
+						routeToNext(run, stops, done);
+					}
+					refresh();
+				}
+			});
+		}
+		box.add(way);
+	}
+
+	/** The route on the map changed: redraw if a run's route is open, as its "showing the way" line may be stale. */
+	void routeChanged()
+	{
+		String tag = plugin.getRoutes().getTag();
+		boolean farmNow = tag != null && tag.startsWith("farm:");
+		if (!openRoutes.isEmpty() && (farmNow || routeWasFarm) && isShowing())
+		{
+			refresh();
+		}
+		routeWasFarm = farmNow;
 	}
 
 	private static String left(long ms)

@@ -13,6 +13,10 @@ import com.moneymaker.data.ItemPrice;
 import com.moneymaker.data.PriceBook;
 import com.moneymaker.data.Recipe;
 import com.moneymaker.data.WikiPriceClient;
+import com.moneymaker.route.Places;
+import com.moneymaker.route.Pos;
+import com.moneymaker.route.RouteOverlays;
+import com.moneymaker.route.RouteService;
 import com.moneymaker.ui.MoneyMakerPanel;
 import java.awt.Color;
 import java.awt.Font;
@@ -42,6 +46,18 @@ import net.runelite.api.QuestState;
 import net.runelite.api.Skill;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.MenuOpened;
+import net.runelite.api.MenuAction;
+import net.runelite.api.coords.WorldPoint;
+import net.runelite.api.gameval.InterfaceID;
+import net.runelite.api.widgets.Widget;
+import net.runelite.api.worldmap.WorldMap;
+import net.runelite.client.callback.ClientThread;
+import net.runelite.client.ui.overlay.Overlay;
+import net.runelite.client.ui.overlay.OverlayManager;
+import net.runelite.client.ui.overlay.worldmap.WorldMapOverlay;
+import net.runelite.client.ui.overlay.worldmap.WorldMapPoint;
+import net.runelite.client.ui.overlay.worldmap.WorldMapPointManager;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.api.gameval.InventoryID;
 import net.runelite.api.gameval.VarbitID;
@@ -59,8 +75,8 @@ import org.slf4j.LoggerFactory;
 
 @PluginDescriptor(
 	name = "Adventurer's Ledger",
-	description = "Money makers, fastest training routes, farm run timers and boss gear at live GE prices",
-	tags = {"money", "gp", "profit", "xp", "training", "ironman", "farming", "timers", "boss", "gear", "ledger"}
+	description = "Money makers, fastest training routes, farm run timers, boss gear at live GE prices and a route finder",
+	tags = {"money", "gp", "profit", "xp", "training", "ironman", "farming", "timers", "boss", "gear", "ledger", "route", "path", "map"}
 )
 public class MoneyMakerPlugin extends Plugin
 {
@@ -82,6 +98,22 @@ public class MoneyMakerPlugin extends Plugin
 	private ConfigManager configManager;
 	@Inject
 	private Notifier notifier;
+	@Inject
+	private ClientThread clientThread;
+	@Inject
+	private OverlayManager overlayManager;
+	@Inject
+	private WorldMapOverlay worldMapOverlay;
+	@Inject
+	private WorldMapPointManager worldMapPointManager;
+
+	/** The route finder: works out and follows the route you've asked for. */
+	private RouteService routes;
+	private volatile Places places = Places.empty();
+	private final List<Overlay> routeOverlays = new java.util.ArrayList<>();
+	/** The flag on the world map where the route ends. Only touched under its own lock. */
+	private WorldMapPoint routeMarker;
+	private final Object routeMarkerLock = new Object();
 
 	private MoneyMakerPanel panel;
 	private NavigationButton navButton;
@@ -147,6 +179,26 @@ public class MoneyMakerPlugin extends Plugin
 		gear = load("gear.txt", Gear::load, Gear.empty());
 		bossCheck = load("bossskills.txt", BossCheck::load, BossCheck.empty());
 		farmAccount = savedFarmAccount();
+		places = loadPlaces();
+		routes = new RouteService(client, clientThread, new RouteService.Settings()
+		{
+			@Override
+			public com.moneymaker.route.PlayerState.Teleports teleports()
+			{
+				return config.routeTeleports();
+			}
+
+			@Override
+			public boolean avoidWilderness()
+			{
+				return config.routeAvoidWilderness();
+			}
+		}, this::routeChanged, RouteService.class);
+		routes.startUp();
+		routeOverlays.add(new RouteOverlays.Scene(client, routes, () -> config.routeGround() ? config.routeColor() : null));
+		routeOverlays.add(new RouteOverlays.Minimap(client, routes, () -> config.routeMinimap() ? config.routeColor() : null));
+		routeOverlays.add(new RouteOverlays.WorldMap(client, routes, worldMapOverlay, config::routeColor));
+		routeOverlays.forEach(overlayManager::add);
 
 		panel = new MoneyMakerPanel(this, itemManager);
 		navButton = NavigationButton.builder()
@@ -180,6 +232,13 @@ public class MoneyMakerPlugin extends Plugin
 		{
 			save.run();
 		}
+		routeOverlays.forEach(overlayManager::remove);
+		routeOverlays.clear();
+		if (routes != null)
+		{
+			routes.shutDown();
+		}
+		setRouteMarker(null, null);
 		clientToolbar.removeNavigation(navButton);
 		if (panel != null)
 		{
@@ -228,6 +287,7 @@ public class MoneyMakerPlugin extends Plugin
 			return;
 		}
 		accountType = client.getVarbitValue(VarbitID.IRONMAN);
+		routes.onGameTick();
 		loadSavedBank();
 		claimFarmTimers();
 		checkQuests();
@@ -382,7 +442,7 @@ public class MoneyMakerPlugin extends Plugin
 		}
 		// things the plugin saves for itself (goal, timers, bank) aren't settings: nothing to redraw
 		String key = event.getKey();
-		if (key.startsWith("goal") || key.startsWith("farm_") || key.startsWith("farmdone_") || key.equals("farmAccount")
+		if (key.startsWith("goal") || key.startsWith("route") || key.startsWith("farm_") || key.startsWith("farmdone_") || key.equals("farmAccount")
 			|| key.startsWith("bank_"))
 		{
 			return;
@@ -392,6 +452,147 @@ public class MoneyMakerPlugin extends Plugin
 			schedulePriceRefresh();
 		}
 		updatePanel(MoneyMakerPanel::refreshAll);
+	}
+
+	// ---------------------------------------------------------------- routes
+
+	private Places loadPlaces()
+	{
+		Places all = Places.empty();
+		for (String file : ROUTE_PLACE_FILES)
+		{
+			try (InputStream in = RouteService.class.getResourceAsStream(file))
+			{
+				if (in != null)
+				{
+					all.add(in);
+				}
+			}
+			catch (IOException | RuntimeException e)
+			{
+				log.error("Adventurer's Ledger couldn't load {}", file, e);
+			}
+		}
+		return all;
+	}
+
+	/** The files of named places, next to the route classes. */
+	private static final String[] ROUTE_PLACE_FILES = {"places.txt"};
+
+	/** Routes to bosses and farm stops aren't part of this version. */
+	public boolean canRoutePerks()
+	{
+		return false;
+	}
+
+	/** A line to show where those routes would be, or null to show nothing. */
+	public String routePerkHint()
+	{
+		return null;
+	}
+
+	/** The route finder. */
+	public RouteService getRoutes()
+	{
+		return routes;
+	}
+
+	/** Named places a route can go to. */
+	public Places getPlaces()
+	{
+		return places;
+	}
+
+	public void routeTo(Places.Place place, String tag)
+	{
+		routes.routeTo(place.getName(), tag, place.getTiles());
+	}
+
+	/** Start a route to where a quest begins. */
+	public void routeToQuest(String quest)
+	{
+		routes.routeToQuest(quest, places);
+	}
+
+	public void clearRoute()
+	{
+		routes.clear();
+	}
+
+	/** The route changed (any thread): move the flag on the world map and redraw the route box. */
+	private void routeChanged()
+	{
+		RouteService r = routes;
+		if (r == null)
+		{
+			return;
+		}
+		setRouteMarker(r.isActive() ? r.getDestination() : null, r.getName());
+		updatePanel(MoneyMakerPanel::refreshRoute);
+	}
+
+	private void setRouteMarker(WorldPoint at, String name)
+	{
+		synchronized (routeMarkerLock)
+		{
+			if (routeMarker != null)
+			{
+				if (at != null && at.equals(routeMarker.getWorldPoint()))
+				{
+					return;
+				}
+				worldMapPointManager.remove(routeMarker);
+				routeMarker = null;
+			}
+			if (at != null)
+			{
+				routeMarker = WorldMapPoint.builder()
+					.worldPoint(at)
+					.image(RouteOverlays.flag(config.routeColor()))
+					.imagePoint(new net.runelite.api.Point(3, 17))
+					.snapToEdge(true)
+					.jumpOnClick(true)
+					.name("Route: " + (name == null ? "destination" : name))
+					.build();
+				worldMapPointManager.add(routeMarker);
+			}
+		}
+	}
+
+	/** Right-click on the world map: "Route here", and "Clear route" while there is one. */
+	@Subscribe
+	public void onMenuOpened(MenuOpened event)
+	{
+		Widget map = client.getWidget(InterfaceID.Worldmap.MAP_CONTAINER);
+		if (map == null || map.isHidden())
+		{
+			return;
+		}
+		net.runelite.api.Point mouse = client.getMouseCanvasPosition();
+		java.awt.Rectangle bounds = map.getBounds();
+		if (!bounds.contains(mouse.getX(), mouse.getY()))
+		{
+			return;
+		}
+		WorldMap worldMap = client.getWorldMap();
+		float zoom = worldMap.getWorldMapZoom();
+		net.runelite.api.Point centre = worldMap.getWorldMapPosition();
+		int dx = (int) ((mouse.getX() - bounds.getCenterX()) / zoom);
+		int dy = (int) ((mouse.getY() - bounds.getCenterY()) / zoom);
+		WorldPoint target = new WorldPoint(centre.getX() + dx, centre.getY() - dy, 0);
+		if (routes.isActive())
+		{
+			client.getMenu().createMenuEntry(-1)
+				.setOption("Clear route")
+				.setTarget("<col=00c8ff>Ledger</col>")
+				.setType(MenuAction.RUNELITE)
+				.onClick(e -> routes.clear());
+		}
+		client.getMenu().createMenuEntry(-1)
+			.setOption("Route here")
+			.setTarget("<col=00c8ff>Ledger</col>")
+			.setType(MenuAction.RUNELITE)
+			.onClick(e -> routes.routeTo("Spot on the map", "map", target));
 	}
 
 	// ---------------------------------------------------------------- prices

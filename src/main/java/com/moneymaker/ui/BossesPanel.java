@@ -3,6 +3,9 @@ package com.moneymaker.ui;
 import com.moneymaker.MoneyMakerPlugin;
 import com.moneymaker.data.BossCheck;
 import com.moneymaker.data.BossQuests;
+import com.moneymaker.route.Places;
+import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 import com.moneymaker.data.BossSetup;
 import com.moneymaker.data.Gear;
 import com.moneymaker.data.GearPricer;
@@ -40,6 +43,7 @@ class BossesPanel extends JPanel
 	private final JLabel best = stat();
 	private final JLabel untradeables = UiUtil.label(" ", UiUtil.MUTED, false);
 	private final JPanel list = UiUtil.verticalList();
+	private final JButton way = new JButton("Show the way there");
 
 	BossesPanel(MoneyMakerPlugin plugin, ItemManager itemManager)
 	{
@@ -78,6 +82,17 @@ class BossesPanel extends JPanel
 			}
 		});
 		top.add(wiki);
+		way.setFocusable(false);
+		way.addActionListener(e ->
+		{
+			BossSetup s = (BossSetup) setups.getSelectedItem();
+			Places.Place p = s == null ? null : plugin.getPlaces().find("boss", s.getBoss());
+			if (p != null && plugin.canRoutePerks())
+			{
+				plugin.routeTo(p, "boss");
+			}
+		});
+		top.add(way);
 		top.setBorder(new EmptyBorder(0, 0, 4, 0));
 
 		add(top, BorderLayout.NORTH);
@@ -89,6 +104,7 @@ class BossesPanel extends JPanel
 	{
 		list.removeAll();
 		BossSetup setup = (BossSetup) setups.getSelectedItem();
+		showWayButton(setup);
 		PriceBook prices = plugin.getPrices();
 		GearPricer pricer = plugin.getGearPricer();
 
@@ -341,6 +357,17 @@ class BossesPanel extends JPanel
 		}
 	}
 
+	/** The "show the way" button: there when this copy does boss routes and knows where the boss is. */
+	private void showWayButton(BossSetup setup)
+	{
+		Places.Place p = setup == null ? null : plugin.getPlaces().find("boss", setup.getBoss());
+		boolean perks = plugin.canRoutePerks();
+		way.setVisible(p != null && (perks || plugin.routePerkHint() != null));
+		way.setEnabled(p != null && perks);
+		way.setToolTipText(p == null ? null : !perks ? plugin.routePerkHint()
+			: p.getNote().isEmpty() ? "Draws the route on the map" : p.getNote());
+	}
+
 	private JLabel questRow(String quest, String note, QuestState state, boolean main, int step)
 	{
 		String mark = state == QuestState.FINISHED ? "&#10003; " : step > 0 ? step + ". " : "";
@@ -361,16 +388,20 @@ class BossesPanel extends JPanel
 		JLabel row = UiUtil.label(sb.toString(), color, false);
 		row.setBorder(new EmptyBorder(1, main ? 2 : 10, 1, 2));
 		row.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		row.setToolTipText("Open the " + quest + " guide on the OSRS Wiki");
+		row.setToolTipText("Click for the route to where " + quest + " starts, or its guide on the OSRS Wiki");
 		row.addMouseListener(new MouseAdapter()
 		{
 			@Override
 			public void mousePressed(MouseEvent e)
 			{
-				if (e.getButton() == MouseEvent.BUTTON1)
-				{
-					LinkBrowser.browse(BossQuests.wikiUrl(quest));
-				}
+				JPopupMenu menu = new JPopupMenu();
+				JMenuItem go = new JMenuItem("Show the way to the start");
+				go.addActionListener(a -> plugin.routeToQuest(quest));
+				menu.add(go);
+				JMenuItem guide = new JMenuItem("Open the wiki guide");
+				guide.addActionListener(a -> LinkBrowser.browse(BossQuests.wikiUrl(quest)));
+				menu.add(guide);
+				menu.show(row, e.getX(), e.getY());
 			}
 		});
 		return row;

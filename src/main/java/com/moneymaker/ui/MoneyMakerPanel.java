@@ -23,6 +23,7 @@ public class MoneyMakerPanel extends PluginPanel
 	private final GoalPanel goal;
 	private final MaterialTabGroup tabs;
 	private final MaterialTab goalTab;
+	private final RouteBar routeBar;
 
 	private static final int JOBS = 1;
 	private static final int TRAIN = 2;
@@ -63,7 +64,13 @@ public class MoneyMakerPanel extends PluginPanel
 		goalTab = tab(tabs, "Goal", "What you want, what it costs and the quickest way to pay for it", goal);
 		tabs.select(plugin.isIronman() ? trainTab : jobsTab);
 
-		add(tabs, BorderLayout.NORTH);
+		// the route box sits above the tabs so it shows whichever tab you're on
+		routeBar = new RouteBar(plugin);
+		JPanel north = new JPanel(new BorderLayout(0, 6));
+		north.setBackground(ColorScheme.DARK_GRAY_COLOR);
+		north.add(routeBar, BorderLayout.NORTH);
+		north.add(tabs, BorderLayout.CENTER);
+		add(north, BorderLayout.NORTH);
 		add(display, BorderLayout.CENTER);
 
 		settle.setRepeats(false);
@@ -118,6 +125,13 @@ public class MoneyMakerPanel extends PluginPanel
 			bosses.refresh();
 			goal.refresh();
 		}
+	}
+
+	/** The route changed, or you moved along it. */
+	public void refreshRoute()
+	{
+		routeBar.refresh();
+		farm.routeChanged();
 	}
 
 	/** Open the Goal tab with this item as the goal. */

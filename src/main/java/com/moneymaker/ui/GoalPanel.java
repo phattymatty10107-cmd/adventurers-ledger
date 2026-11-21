@@ -11,6 +11,7 @@ import com.moneymaker.data.JobResult;
 import com.moneymaker.data.PriceBook;
 import com.moneymaker.data.Recipe;
 import com.moneymaker.data.Training;
+import com.moneymaker.route.Places;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -44,6 +45,7 @@ class GoalPanel extends JPanel
 {
 	private static final String ITEM = "Buy an item";
 	private static final String LEVEL = "Reach a level";
+	private static final String PLACE = "Go somewhere";
 	private static final int MAX_MATCHES = 8;
 	private static final int MAX_EARNERS = 5;
 	/** Width the summary text wraps at, in HTML pixels (the side panel is narrow). */
@@ -51,8 +53,9 @@ class GoalPanel extends JPanel
 
 	private final MoneyMakerPlugin plugin;
 	private final ItemManager itemManager;
-	private final JComboBox<String> mode = new JComboBox<>(new String[]{ITEM, LEVEL});
+	private final JComboBox<String> mode = new JComboBox<>(new String[]{ITEM, LEVEL, PLACE});
 	private final IconTextField search = new IconTextField();
+	private final IconTextField placeSearch = new IconTextField();
 	private final JComboBox<String> skill = new JComboBox<>();
 	private final JSpinner level = new JSpinner(new SpinnerNumberModel(70, 2, 99, 1));
 	private final JPanel inputs = new JPanel(new CardLayout());
@@ -105,6 +108,31 @@ class GoalPanel extends JPanel
 			}
 		});
 		searchDelay.setRepeats(false);
+		placeSearch.setIcon(IconTextField.Icon.SEARCH);
+		placeSearch.setPreferredSize(new Dimension(0, 30));
+		placeSearch.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		placeSearch.setHoverBackgroundColor(ColorScheme.DARK_GRAY_HOVER_COLOR);
+		placeSearch.setToolTipText("Search for a quest or a place");
+		placeSearch.getDocument().addDocumentListener(new DocumentListener()
+		{
+			@Override
+			public void insertUpdate(DocumentEvent e)
+			{
+				searchDelay.restart();
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e)
+			{
+				searchDelay.restart();
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				searchDelay.restart();
+			}
+		});
 
 		JPanel levelRow = new JPanel(new BorderLayout(4, 0));
 		levelRow.setBackground(ColorScheme.DARK_GRAY_COLOR);
@@ -132,6 +160,7 @@ class GoalPanel extends JPanel
 		inputs.setBackground(ColorScheme.DARK_GRAY_COLOR);
 		inputs.add(search, ITEM);
 		inputs.add(levelRow, LEVEL);
+		inputs.add(placeSearch, PLACE);
 		controls.add(inputs);
 
 		add(controls, BorderLayout.NORTH);
@@ -140,9 +169,10 @@ class GoalPanel extends JPanel
 		// pick up where you left off
 		updating = true;
 		goalItem = emptyToNull(plugin.getSaved("goalItem"));
-		if (LEVEL.equals(plugin.getSaved("goalMode")))
+		String savedMode = plugin.getSaved("goalMode");
+		if (LEVEL.equals(savedMode) || PLACE.equals(savedMode))
 		{
-			mode.setSelectedItem(LEVEL);
+			mode.setSelectedItem(savedMode);
 		}
 		String savedSkill = plugin.getSaved("goalSkill");
 		if (savedSkill != null)
@@ -206,6 +236,13 @@ class GoalPanel extends JPanel
 	void refresh()
 	{
 		list.removeAll();
+		if (PLACE.equals(mode.getSelectedItem()))
+		{
+			// routes don't need prices
+			placeGoal();
+			repaintList();
+			return;
+		}
 		PriceBook prices = plugin.getPrices();
 		if (prices.isEmpty())
 		{
@@ -278,11 +315,85 @@ class GoalPanel extends JPanel
 			return;
 		}
 		long need = addMoney(cost, owned);
+		Places.Place ge = plugin.getPlaces().find("place", "Grand Exchange");
+		if (ge != null)
+		{
+			ItemRow way = new ItemRow(itemManager, -1, "Show the way to the GE", null, null,
+				"Draws the route on the map", null, null);
+			way.onClick(() -> plugin.routeTo(ge, "place"));
+			UiUtil.addRow(list, way);
+		}
 		if (need > 0)
 		{
 			addEarners(prices, need, 0);
 		}
 		addClear();
+	}
+
+	// ---------------------------------------------------------------- going somewhere
+
+	private void placeGoal()
+	{
+		String q = placeSearch.getText() == null ? "" : placeSearch.getText().trim();
+		Places places = plugin.getPlaces();
+		boolean perks = plugin.canRoutePerks();
+		if (q.isEmpty())
+		{
+			list.add(UiUtil.header("Quick routes"));
+			for (Places.Place p : places.all())
+			{
+				if ("place".equals(p.getKind()))
+				{
+					addPlace(p);
+				}
+			}
+			list.add(UiUtil.emptyState("Search for a quest to be shown the way to where it starts.<br><br>"
+				+ "Or right-click anywhere on the <b>world map</b> and choose <b>Route here</b>."
+				+ (plugin.routePerkHint() != null ? "<br><br>" + esc(plugin.routePerkHint()) : "")));
+			return;
+		}
+		String lower = q.toLowerCase(Locale.ROOT);
+		list.add(UiUtil.header("Pick where to go"));
+		int shown = 0;
+		for (Places.Place p : places.search(null, q, MAX_MATCHES))
+		{
+			boolean perk = "boss".equals(p.getKind()) || "farm".equals(p.getKind());
+			if ("quest".equals(p.getKind()) || (perk && !perks))
+			{
+				continue;
+			}
+			addPlace(p);
+			shown++;
+		}
+		// every quest in the game, not only the ones in the plugin's own list
+		for (net.runelite.api.Quest quest : net.runelite.api.Quest.values())
+		{
+			if (shown >= MAX_MATCHES)
+			{
+				break;
+			}
+			String name = quest.getName();
+			if (name.toLowerCase(Locale.ROOT).contains(lower))
+			{
+				ItemRow row = new ItemRow(itemManager, -1, name, null, null, "Quest start · click for the route", null, null);
+				row.onClick(() -> plugin.routeToQuest(name));
+				UiUtil.addRow(list, row);
+				shown++;
+			}
+		}
+		if (shown == 0)
+		{
+			list.add(UiUtil.emptyState("No quest or place matches \"" + esc(q) + "\"."));
+		}
+	}
+
+	private void addPlace(Places.Place p)
+	{
+		String kind = "boss".equals(p.getKind()) ? "Boss" : "farm".equals(p.getKind()) ? "Farm patch" : "Place";
+		ItemRow row = new ItemRow(itemManager, -1, p.getName(), null, null, kind + " · click for the route",
+			p.getNote().isEmpty() ? null : p.getNote(), null);
+		row.onClick(() -> plugin.routeTo(p, p.getKind()));
+		UiUtil.addRow(list, row);
 	}
 
 	// ---------------------------------------------------------------- reaching a level

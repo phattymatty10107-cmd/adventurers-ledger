@@ -1,9 +1,12 @@
 package com.moneymaker;
 
 import com.moneymaker.data.PriceMode;
+import com.moneymaker.route.PlayerState;
+import java.awt.Color;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
+import net.runelite.client.config.ConfigSection;
 import net.runelite.client.config.Range;
 import net.runelite.client.config.Units;
 
@@ -105,5 +108,74 @@ public interface MoneyMakerConfig extends Config
 	default IronmanMode ironman()
 	{
 		return IronmanMode.AUTO;
+	}
+
+	@ConfigSection(
+		name = "Routes",
+		description = "The route finder: the path drawn to a quest, a bank or a spot you pick on the world map",
+		position = 20
+	)
+	String ROUTES = "routes";
+
+	@ConfigItem(
+		keyName = "routeTeleports",
+		name = "Teleports to use",
+		description = "None: walking, boats and the like only. Only free ones: teleports that cost nothing "
+			+ "(no runes, tablets or charges). Any I can use now: every teleport you have the level, quest and "
+			+ "items for in your inventory or worn. Your bank isn't checked",
+		position = 21,
+		section = ROUTES
+	)
+	default PlayerState.Teleports routeTeleports()
+	{
+		return PlayerState.Teleports.ALL;
+	}
+
+	@ConfigItem(
+		keyName = "routeAvoidWilderness",
+		name = "Stay out of the Wilderness",
+		description = "Never route through the Wilderness unless you start in it or are going into it",
+		position = 22,
+		section = ROUTES
+	)
+	default boolean routeAvoidWilderness()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "routeGround",
+		name = "Draw on the ground",
+		description = "Draw the route in the game view, with a marked tile wherever you use a door, boat or teleport",
+		position = 23,
+		section = ROUTES
+	)
+	default boolean routeGround()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "routeMinimap",
+		name = "Draw on the minimap",
+		description = "Draw the route on the minimap",
+		position = 24,
+		section = ROUTES
+	)
+	default boolean routeMinimap()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "routeColor",
+		name = "Route colour",
+		description = "The colour of the route line",
+		position = 25,
+		section = ROUTES
+	)
+	default Color routeColor()
+	{
+		return new Color(0, 200, 255);
 	}
 }
