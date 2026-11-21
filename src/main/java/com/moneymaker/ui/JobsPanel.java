@@ -105,8 +105,8 @@ class JobsPanel extends JPanel
 		reload.setFocusable(false);
 		reload.addActionListener(e ->
 		{
-			status.setText("Refreshing...");
-			plugin.refreshPricesNow();
+			long wait = plugin.refreshPricesNow();
+			status.setText(wait > 0 ? "Prices are fresh - try again in " + wait + "s" : "Refreshing...");
 		});
 		sortRow.add(reload, BorderLayout.EAST);
 		controls.add(sortRow);
