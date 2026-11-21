@@ -92,3 +92,7 @@ Open this folder in IntelliJ, then open `src/test/java/com/moneymaker/MoneyMaker
 
   Add lines there to add jobs or bosses.
 - The route finder's map and transport data are from the [Shortest Path](https://github.com/Skretzo/shortest-path) plugin, and its quest start points from [RuneLite](https://github.com/runelite/runelite) (both BSD 2-Clause). See `src/main/resources/com/moneymaker/route/THIRD-PARTY-NOTICES.txt`. To update the map after a game update, copy the newer `collision-map.zip` and `transports/*.tsv` from Shortest Path over the ones in that folder.
+
+## Support
+
+Adventurer's Ledger is free and always will be. If it saves you some time or gp and you'd like to say thanks, you can leave a tip on [Ko-fi](https://ko-fi.com/rabbit10107). There's also a link at the bottom of the plugin's side panel. Tipping doesn't unlock anything.

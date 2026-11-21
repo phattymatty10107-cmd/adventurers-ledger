@@ -2,7 +2,13 @@ package com.moneymaker.ui;
 
 import com.moneymaker.MoneyMakerPlugin;
 import java.awt.BorderLayout;
+import java.awt.Cursor;
 import java.awt.GridLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import net.runelite.client.util.LinkBrowser;
 import java.awt.event.HierarchyEvent;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -72,6 +78,7 @@ public class MoneyMakerPanel extends PluginPanel
 		north.add(tabs, BorderLayout.CENTER);
 		add(north, BorderLayout.NORTH);
 		add(display, BorderLayout.CENTER);
+		add(tipLink(), BorderLayout.SOUTH);
 
 		settle.setRepeats(false);
 		// catch up on anything that changed while the panel was closed
@@ -194,5 +201,41 @@ public class MoneyMakerPanel extends PluginPanel
 	{
 		pending |= JOBS | TRAIN;
 		settle.restart();
+	}
+
+	/** Where the "Buy me a coffee" link goes. The plugin is free; this is only a tip jar. */
+	static final String TIP_URL = "https://ko-fi.com/rabbit10107";
+
+	/** A small link under the tabs to leave a tip on Ko-fi. Opens in your web browser. */
+	private static JLabel tipLink()
+	{
+		JLabel link = new JLabel("Enjoying the Ledger? Leave a tip on Ko-fi");
+		link.setFont(FontManager.getRunescapeSmallFont());
+		link.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
+		link.setHorizontalAlignment(SwingConstants.CENTER);
+		link.setBorder(new EmptyBorder(6, 0, 0, 0));
+		link.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		link.setToolTipText("Opens " + TIP_URL + " in your web browser. The plugin stays free either way.");
+		link.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseEntered(MouseEvent e)
+			{
+				link.setForeground(ColorScheme.BRAND_ORANGE);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e)
+			{
+				link.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{
+				LinkBrowser.browse(TIP_URL);
+			}
+		});
+		return link;
 	}
 }
