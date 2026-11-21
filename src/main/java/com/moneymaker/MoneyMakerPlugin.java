@@ -18,6 +18,7 @@ import com.moneymaker.route.Places;
 import com.moneymaker.route.Pos;
 import com.moneymaker.route.RouteOverlays;
 import com.moneymaker.route.RouteService;
+import com.moneymaker.route.TrainSpots;
 import com.moneymaker.ui.MoneyMakerPanel;
 import java.awt.Color;
 import java.awt.Font;
@@ -111,6 +112,8 @@ public class MoneyMakerPlugin extends Plugin
 	/** The route finder: works out and follows the route you've asked for. */
 	private RouteService routes;
 	private volatile Places places = Places.empty();
+	/** Where to go for each training method on the Train tab. */
+	private volatile TrainSpots trainSpots = TrainSpots.empty();
 	private final List<Overlay> routeOverlays = new java.util.ArrayList<>();
 	/** The flag on the world map where the route ends. Only touched under its own lock. */
 	private WorldMapPoint routeMarker;
@@ -181,6 +184,7 @@ public class MoneyMakerPlugin extends Plugin
 		bossCheck = load("bossskills.txt", BossCheck::load, BossCheck.empty());
 		farmAccount = savedFarmAccount();
 		places = loadPlaces();
+		trainSpots = loadTrainSpots(places);
 		routes = new RouteService(client, clientThread, new RouteService.Settings()
 		{
 			@Override
@@ -475,6 +479,28 @@ public class MoneyMakerPlugin extends Plugin
 			}
 		}
 		return all;
+	}
+
+	private TrainSpots loadTrainSpots(Places places)
+	{
+		try (InputStream in = RouteService.class.getResourceAsStream("trainspots.txt"))
+		{
+			if (in != null)
+			{
+				return TrainSpots.load(in, places);
+			}
+		}
+		catch (IOException | RuntimeException e)
+		{
+			log.error("Adventurer's Ledger couldn't load trainspots.txt", e);
+		}
+		return TrainSpots.empty();
+	}
+
+	/** Where to go for each training method, so the Train tab can show the way. */
+	public TrainSpots getTrainSpots()
+	{
+		return trainSpots;
 	}
 
 	/** The files of named places, next to the route classes. */

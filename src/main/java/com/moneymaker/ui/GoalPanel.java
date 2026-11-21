@@ -66,6 +66,10 @@ class GoalPanel extends JPanel
 	private String goalItem;
 	/** True while the controls are being filled in by code, so that doesn't count as you changing them. */
 	private boolean updating;
+	/** Told about the level goal whenever you pick one, so the Train tab shows its plan. */
+	private java.util.function.BiConsumer<String, Integer> onLevelGoal = (sk, lvl) -> { };
+	/** Opens the Train tab. */
+	private Runnable showTrain = () -> { };
 
 	GoalPanel(MoneyMakerPlugin plugin, ItemManager itemManager)
 	{
@@ -200,6 +204,23 @@ class GoalPanel extends JPanel
 		refresh();
 	}
 
+	/** Picking a level goal sends it here (the Train tab). Sends the current goal straight away. */
+	void setOnLevelGoal(java.util.function.BiConsumer<String, Integer> listener, Runnable openTrain)
+	{
+		onLevelGoal = listener;
+		showTrain = openTrain;
+		sendLevelGoal();
+	}
+
+	private void sendLevelGoal()
+	{
+		String sk = (String) skill.getSelectedItem();
+		if (LEVEL.equals(mode.getSelectedItem()) && sk != null)
+		{
+			onLevelGoal.accept(sk, (Integer) level.getValue());
+		}
+	}
+
 	/** Set the item to save for (used by "Plan how to afford this" on the Boss tab). */
 	void setItem(String name)
 	{
@@ -225,6 +246,7 @@ class GoalPanel extends JPanel
 		plugin.save("goalSkill", (String) skill.getSelectedItem());
 		plugin.save("goalLevel", String.valueOf(level.getValue()));
 		showInputs();
+		sendLevelGoal();
 		refresh();
 	}
 
@@ -433,12 +455,16 @@ class GoalPanel extends JPanel
 		long cost = iron ? 0 : GoalPlan.suppliesCost(steps, prices, config.priceMode());
 
 		StringBuilder sb = new StringBuilder("<b>").append(pretty(sk)).append(' ').append(fromLevel).append(" → ").append(target).append("</b>");
-		sb.append("<br>Training: about ").append(time(trainHours)).append(" on the fastest route (see the Train tab)");
+		sb.append("<br>Training: about ").append(time(trainHours)).append(" on the fastest route");
 		if (mine == null)
 		{
 			sb.append("<br><i>Log in to start from your own level.</i>");
 		}
 		UiUtil.addRow(list, text(sb.toString(), Color.WHITE));
+		ItemRow train = new ItemRow(itemManager, -1, "Open the plan on the Train tab", null, null,
+			"Each step, and the way to get there", null, null);
+		train.onClick(showTrain);
+		UiUtil.addRow(list, train);
 
 		if (iron)
 		{

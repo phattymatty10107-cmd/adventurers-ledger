@@ -1,0 +1,154 @@
+# Where to go for each training method on the Train tab.
+# method name (exactly as in training.txt)|x y plane;x y plane;...|where
+# With more than one tile the route goes to whichever is quickest to reach.
+# BANK instead of tiles: the method is done at a bank, so the route goes to the nearest bank.
+# Methods with no single place to go (farm runs, Slayer anywhere, burying bones...) are left out:
+# they get no route rather than a wrong one.
+# Every tile is checked by TrainSpotsTest: you can stand on it and the route finder can reach it.
+
+# ---- Agility (the start of each course)
+Gnome Stronghold course|2474 3438 0|Gnome Stronghold Agility Course
+Draynor rooftop|3103 3279 0|Draynor Village rooftop course
+Al Kharid rooftop|3273 3195 0|Al Kharid rooftop course
+Varrock rooftop|3221 3414 0|Varrock rooftop course
+Canifis rooftop|3507 3488 0|Canifis rooftop course
+Falador rooftop|3036 3341 0|Falador rooftop course
+Seers' Village rooftop|2729 3489 0|Seers' Village rooftop course
+Pollnivneach rooftop|3351 2961 0|Pollnivneach rooftop course
+Rellekka rooftop|2625 3677 0|Rellekka rooftop course
+Ardougne rooftop|2673 3297 0|Ardougne rooftop course
+
+# ---- Melee, Ranged and Hitpoints
+Cows, chickens & goblins (F2P)|3256 3269 0;3233 3295 0|Cows and chickens by Lumbridge
+Hill & moss giants (F2P)|3117 9846 0|Hill giants, Edgeville Dungeon
+Ranging hill/moss giants (F2P)|3117 9846 0|Hill giants, Edgeville Dungeon
+Sand & rock crabs (AFK)|2673 3713 0|Rock crabs, north of Rellekka
+Sand & ammonite crabs with arrows/darts|2673 3713 0|Rock crabs, north of Rellekka
+Nightmare Zone (Dharok's / obsidian, absorptions)|2608 3115 0|Nightmare Zone, Yanille (Dominic Onion)
+Nightmare Zone (Dharok's)|2608 3115 0|Nightmare Zone, Yanille (Dominic Onion)
+Nightmare Zone (toxic blowpipe)|2608 3115 0|Nightmare Zone, Yanille (Dominic Onion)
+
+# ---- Cooking (nearest range)
+Cook shrimps|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook trout|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook salmon|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook tuna|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook karambwans|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook lobster|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook swordfish|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook monkfish|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook shark|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Cook anglerfish|3211 3215 0;3273 3180 0;2817 3443 0|The nearest range
+Make jugs of wine|BANK|The nearest bank
+
+# ---- Crafting
+Leather items (gloves → chaps)|BANK|The nearest bank
+Gold amulets (u) at a furnace|3109 3499 0;3275 3186 0|The nearest furnace (Edgeville or Al Kharid)
+Cut sapphires|BANK|The nearest bank
+Cut emeralds|BANK|The nearest bank
+Cut rubys|BANK|The nearest bank
+Cut diamonds|BANK|The nearest bank
+Cut dragonstones|BANK|The nearest bank
+Glassblowing unpowered orbs|BANK|The nearest bank
+Glassblowing light orbs|BANK|The nearest bank
+Green d'hide bodies|BANK|The nearest bank
+Blue d'hide bodies|BANK|The nearest bank
+Red d'hide bodies|BANK|The nearest bank
+Black d'hide bodies|BANK|The nearest bank
+Air battlestaves|BANK|The nearest bank
+
+# ---- Firemaking
+Burn logs|3165 3487 0|Grand Exchange
+Burn oak logs|3165 3487 0|Grand Exchange
+Burn willow logs|3165 3487 0|Grand Exchange
+Burn teak logs|3165 3487 0|Grand Exchange
+Burn maple logs|3165 3487 0|Grand Exchange
+Burn yew logs|3165 3487 0|Grand Exchange
+Burn magic logs|3165 3487 0|Grand Exchange
+Burn redwood logs|3165 3487 0|Grand Exchange
+Wintertodt|1640 3944 0|Wintertodt camp
+
+# ---- Fishing
+Shrimps & anchovies|3087 3229 0|Draynor Village fishing spots
+Fly fishing trout & salmon (powerfish)|3104 3430 0|Barbarian Village river
+Lobsters|2837 3432 0|Catherby fishing spots
+Sharks|2837 3432 0|Catherby fishing spots
+Barbarian fishing|2499 3506 0|Otto's Grotto, south of Baxtorian Falls
+Tempoross|3156 2835 0|Ruins of Unkah (Tempoross)
+
+# ---- Fletching, Herblore and Magic: done at a bank
+Arrow shafts|BANK|The nearest bank
+Headless arrows|BANK|The nearest bank
+Cut oak longbows (u)|BANK|The nearest bank
+String oak longbows|BANK|The nearest bank
+Steel darts|BANK|The nearest bank
+Cut willow longbows (u)|BANK|The nearest bank
+String willow longbows|BANK|The nearest bank
+Mithril darts|BANK|The nearest bank
+Cut maple longbows (u)|BANK|The nearest bank
+String maple longbows|BANK|The nearest bank
+Adamant darts|BANK|The nearest bank
+Cut yew longbows (u)|BANK|The nearest bank
+String yew longbows|BANK|The nearest bank
+Rune darts|BANK|The nearest bank
+Cut magic longbows (u)|BANK|The nearest bank
+String magic longbows|BANK|The nearest bank
+Dragon darts|BANK|The nearest bank
+Make Attack potion(3)|BANK|The nearest bank
+Make Antipoison(3)|BANK|The nearest bank
+Make Strength potion(3)|BANK|The nearest bank
+Make Restore potion(3)|BANK|The nearest bank
+Make Energy potion(3)|BANK|The nearest bank
+Make Prayer potion(3)|BANK|The nearest bank
+Make Super attack(3)|BANK|The nearest bank
+Make Superantipoison(3)|BANK|The nearest bank
+Make Super energy(3)|BANK|The nearest bank
+Make Super strength(3)|BANK|The nearest bank
+Make Super restore(3)|BANK|The nearest bank
+Make Super defence(3)|BANK|The nearest bank
+Make Antifire potion(3)|BANK|The nearest bank
+Make Ranging potion(3)|BANK|The nearest bank
+Make Magic potion(3)|BANK|The nearest bank
+Make Saradomin brew(3)|BANK|The nearest bank
+High Level Alchemy|BANK|The nearest bank
+Superglass Make|BANK|The nearest bank
+Tan Leather (Lunar)|BANK|The nearest bank
+Plank Make (Lunar)|BANK|The nearest bank
+
+# ---- Mining
+Copper & tin ore|3226 3147 0;3286 3367 0|Lumbridge Swamp or south-east Varrock mine
+Iron ore (powermine)|3286 3367 0|South-east Varrock mine
+Coal|3081 3421 0|Barbarian Village mine
+Motherlode Mine|3760 5666 0|Motherlode Mine
+Mithril ore|3046 9740 0|Mining Guild
+Adamantite ore|3046 9740 0|Mining Guild
+
+# ---- Runecraft
+Air runes (F2P)|2983 3290 0|Air altar, south of Falador
+
+# ---- Slayer (the master who gives the tasks)
+Turael / Spria tasks|2931 3536 0|Turael, Burthorpe
+Vannaka / Chaeldar tasks|3145 9913 0|Vannaka, Edgeville Dungeon
+Nieve / Duradel / Konar tasks|2432 3424 0|Nieve, Gnome Stronghold
+
+# ---- Smithing
+Bronze items (F2P)|3188 3425 0|Anvils, west Varrock
+Iron platebodies|3188 3425 0|Anvils, west Varrock
+Steel platebodies|3188 3425 0|Anvils, west Varrock
+Mithril platebodies|3188 3425 0|Anvils, west Varrock
+Adamant platebodies|3188 3425 0|Anvils, west Varrock
+Rune platebodies|3188 3425 0|Anvils, west Varrock
+Cannonballs (AFK)|3109 3499 0|Edgeville furnace
+
+# ---- Thieving
+Pickpocketing men & women|3222 3218 0|Lumbridge
+Master farmers (seeds)|3081 3250 0|Master Farmer, Draynor Village
+Knights of Ardougne|2655 3306 0|Ardougne market
+
+# ---- Woodcutting
+Normal trees|3163 3220 0|Trees west of Lumbridge
+Oak trees|3101 3242 0|Oaks, Draynor Village
+Willow trees|3087 3235 0|Willows, Draynor Village
+Maple trees|2730 3500 0|Maples, Seers' Village
+Yew trees|3087 3476 0|Yews, Edgeville
+Magic trees|2702 3397 0|Magic trees, south of Seers' Village

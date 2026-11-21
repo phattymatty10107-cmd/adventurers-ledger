@@ -44,6 +44,7 @@ Pick a skill and a milestone (for example Mining 15 → 85 for runite ore) and t
 - "Only methods with no supplies" plans a route that doesn't use up items (e.g. Guardians of the Rift, Tithe Farm, Wintertodt).
 - Farming also shows a route using tree runs, with how many runs and days it takes.
 - Logged in, it starts from your current level and xp.
+- **Show the way:** steps and methods marked **→** have a place to go. Click one and the shortest route there is drawn on the world map, minimap and ground, the same as any other route. Methods done at a bank (herblore, fletching, alching...) go to the nearest bank. The places are in `src/main/resources/com/moneymaker/route/trainspots.txt`.
 
 Rates are typical estimates from the OSRS Wiki training guides (`tools/gen_training.py`).
 
@@ -62,7 +63,7 @@ Set-ups included: 61 set-ups for 58 bosses, including all three raids, Fight Cav
 Pick something you want and see how to pay for it:
 
 - **Buy an item**: search the Grand Exchange, pick the item, and see what it costs, the coins you already have (bag and bank) and the fastest money makers you have the levels for, with how long each takes. On the Boss tab, click any gear and choose **Plan how to afford this**.
-- **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that.
+- **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that. The goal is added to the **Train** tab straight away (marked "Your goal"), so the plan and the way to each step are waiting there; click **Open the plan on the Train tab** to jump to it.
 
 ## Routes
 

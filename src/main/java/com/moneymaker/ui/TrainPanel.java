@@ -7,6 +7,7 @@ import com.moneymaker.data.ItemPrice;
 import com.moneymaker.data.PriceBook;
 import com.moneymaker.data.Recipe;
 import com.moneymaker.data.Training;
+import com.moneymaker.route.Places;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -40,6 +41,9 @@ class TrainPanel extends JPanel
 	private boolean updating;
 	/** Last skill/level we filled the controls from, so logging in fills them once. */
 	private String filledFor = "";
+	/** The level goal set on the Goal tab (skill as in training.txt, e.g. "MINING"), or null. */
+	private String goalSkill;
+	private int goalLevel;
 
 	private static class Target
 	{
@@ -127,6 +131,42 @@ class TrainPanel extends JPanel
 		refresh();
 	}
 
+	/**
+	 * Show the plan for a level goal picked on the Goal tab: that skill, from your level, to the
+	 * goal level (added to the list even when it isn't a milestone).
+	 */
+	void setGoal(String skillName, int level)
+	{
+		int i = skills.indexOf(skillName);
+		if (i < 0 || level < 2 || level > 99)
+		{
+			return;
+		}
+		goalSkill = skillName;
+		goalLevel = level;
+		updating = true;
+		skill.setSelectedIndex(i);
+		updating = false;
+		fillFromLevel();
+		fillTargets();
+		selectTarget(level);
+		refresh();
+	}
+
+	private void selectTarget(int level)
+	{
+		for (int i = 0; i < target.getItemCount(); i++)
+		{
+			if (target.getItemAt(i).level == level)
+			{
+				updating = true;
+				target.setSelectedIndex(i);
+				updating = false;
+				return;
+			}
+		}
+	}
+
 	private String selectedSkill()
 	{
 		int i = skill.getSelectedIndex();
@@ -167,7 +207,28 @@ class TrainPanel extends JPanel
 		{
 			ts.add(new Target(99, "Skill cape"));
 		}
-		Target select = ts.size() > 1 && ts.get(0).text.equals("Next level") ? ts.get(1) : ts.get(0);
+		Target goal = null;
+		if (selectedSkill().equals(goalSkill) && goalLevel > fromLvl)
+		{
+			for (int i = 0; i < ts.size(); i++)
+			{
+				Target t = ts.get(i);
+				if (t.level == goalLevel)
+				{
+					goal = new Target(t.level, "Your goal · " + t.text);
+					ts.set(i, goal);
+					break;
+				}
+				if (t.level > goalLevel)
+				{
+					goal = new Target(goalLevel, "Your goal");
+					ts.add(i, goal);
+					break;
+				}
+			}
+		}
+		Target select = goal != null ? goal
+			: ts.size() > 1 && ts.get(0).text.equals("Next level") ? ts.get(1) : ts.get(0);
 		for (Target t : ts)
 		{
 			target.addItem(t);
@@ -231,6 +292,10 @@ class TrainPanel extends JPanel
 		{
 			list.add(UiUtil.emptyState("No methods match your filters at this level."));
 		}
+		else
+		{
+			list.add(UiUtil.emptyState("Click a step marked → to be shown the shortest way there."));
+		}
 		for (Training.Step s : steps)
 		{
 			UiUtil.addRow(list, stepRow(s, iron));
@@ -273,14 +338,14 @@ class TrainPanel extends JPanel
 	private ItemRow stepRow(Training.Step s, boolean iron)
 	{
 		Training.Method m = s.getMethod();
-		String title = "Lv " + s.getFromLevel() + "–" + s.getToLevel() + ": " + m.getName();
+		String title = mark(m) + "Lv " + s.getFromLevel() + "–" + s.getToLevel() + ": " + m.getName();
 		String line2 = "~" + UiUtil.compact(Math.round(m.xpPerHour(s.getFromLevel()))) + " xp/h · " + UiUtil.compact(Math.round(s.getXp())) + " xp"
 			+ (s.getActions() > 0 ? " · " + UiUtil.gp(s.getActions()) + " " + plural(m.getUnit(), s.getActions()) : "");
 		String line3 = supplies(m, s.getActions(), iron);
 		String value = s.getDays() > 0 ? "~" + Math.round(s.getDays()) + "d" : time(s.getHours());
 		ItemRow row = new ItemRow(itemManager, icon(m), title, value, Color.WHITE, line2, line3, tooltip(m, s, iron));
 		row.setLine3Color(line3.startsWith("Needs") ? UiUtil.LOSS : UiUtil.MUTED);
-		return row;
+		return showWay(row, m);
 	}
 
 	private ItemRow methodRow(Training.Method m, int fromLvl, boolean iron)
@@ -291,9 +356,26 @@ class TrainPanel extends JPanel
 			+ (m.isMembers() ? "" : " · F2P") + (m.isIntense() ? " · intense" : "")
 			+ (m.getNeeds().isEmpty() ? " · no supplies" : "");
 		String line3 = !m.getRequirements().isEmpty() ? "Needs: " + m.getRequirements() : m.getNote();
-		ItemRow row = new ItemRow(itemManager, icon(m), m.getName(), UiUtil.compact(Math.round(rate)) + "/h",
+		ItemRow row = new ItemRow(itemManager, icon(m), mark(m) + m.getName(), UiUtil.compact(Math.round(rate)) + "/h",
 			locked ? UiUtil.MUTED : UiUtil.PROFIT, line2, line3.isEmpty() ? " " : line3, tooltip(m, null, iron));
 		row.setLine3Color(UiUtil.MUTED);
+		return showWay(row, m);
+	}
+
+	/** "→ " in front of methods that have a place to go, so you can tell which rows a click routes. */
+	private String mark(Training.Method m)
+	{
+		return plugin.getTrainSpots().find(m.getName()) != null ? "→ " : "";
+	}
+
+	/** A click on the row shows the shortest way to where the method is done, when it has a place. */
+	private ItemRow showWay(ItemRow row, Training.Method m)
+	{
+		Places.Place place = plugin.getTrainSpots().find(m.getName());
+		if (place != null)
+		{
+			row.onClick(() -> plugin.routeTo(place, "train"));
+		}
 		return row;
 	}
 
@@ -371,6 +453,11 @@ class TrainPanel extends JPanel
 	private String tooltip(Training.Method m, Training.Step s, boolean iron)
 	{
 		StringBuilder sb = new StringBuilder("<html><b>").append(esc(m.getName())).append("</b>");
+		Places.Place place = plugin.getTrainSpots().find(m.getName());
+		if (place != null)
+		{
+			sb.append("<br><font color='#64c864'>Click to show the way: ").append(esc(place.getName())).append("</font>");
+		}
 		sb.append("<br>From level ").append(m.getLevel()).append(m.isMembers() ? " (members)" : " (F2P)");
 		if (m.getXpEach() > 0)
 		{

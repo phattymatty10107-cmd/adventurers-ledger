@@ -69,6 +69,8 @@ public class MoneyMakerPanel extends PluginPanel
 		tab(tabs, "Farm", "Best farm runs, bird houses and dailies, with timers", farm);
 		goalTab = tab(tabs, "Goal", "What you want, what it costs and the quickest way to pay for it", goal);
 		tabs.select(plugin.isIronman() ? trainTab : jobsTab);
+		// a level goal picked on the Goal tab shows up on the Train tab straight away
+		goal.setOnLevelGoal(train::setGoal, () -> tabs.select(trainTab));
 
 		// the route box sits above the tabs so it shows whichever tab you're on
 		routeBar = new RouteBar(plugin);
