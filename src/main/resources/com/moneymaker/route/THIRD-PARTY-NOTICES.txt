@@ -5,17 +5,29 @@ The route finder's own code (the com.*.route classes) was written for this plugi
 The data it reads is not:
 
 1. Shortest Path  -  https://github.com/Skretzo/shortest-path  (BSD 2-Clause)
-   collision-map.zip, item-variations.tsv, everything in transports/, and the bank and boss
-   tiles in places.txt / plusplaces.txt are copied from, or taken from, that project's resources.
+   collision-map.zip, item-variations.tsv, everything in transports/, and the bank tiles in
+   places.txt are copied from, or taken from, that project's resources.
    Its licence file is reproduced in full below, as published.
 
 2. RuneLite  -  https://github.com/runelite/runelite  (BSD 2-Clause)
-   The quest start points, farming patch tiles and dungeon entrances come from RuneLite's world
-   map plugin (QuestStartLocation, FarmingPatchLocation, DungeonLocation):
+   The quest start points (places.txt), farming patch tiles and dungeon and minigame entrances
+   (places-bosses-farms.txt) and many training spots (trainspots.txt) come from RuneLite's world
+   map plugin (QuestStartLocation, FarmingPatchLocation, DungeonLocation, MinigameLocation,
+   AgilityCourseLocation, FishingSpotLocation, HunterAreaLocation, MiningSiteLocation,
+   RareTreeLocation, RunecraftingAltarLocation):
    Copyright (c) 2018, John James Hamilton <https://github.com/johnhamilto>
    Copyright (c) 2018, Torkel Velure <https://github.com/TorkelV>
    Copyright (c) 2020, Arman S <https://github.com/Rman887>
+   Copyright (c) 2018, Magic fTail
+   Copyright (c) 2020, melky <https://github.com/melkypie>
+   Copyright (c) 2020, dekvall <https://github.com/dekvall>
+   Copyright (c) 2018, Spedwards <https://github.com/Spedwards>
+   Copyright (c) 2019, Dava96 <https://github.com/Dava96>
    All rights reserved. Redistributed under the same BSD 2-Clause terms as below.
+
+3. OSRS Wiki  -  https://oldschool.runescape.wiki  (CC BY-NC-SA 3.0)
+   The bird house spots and the boss spots RuneLite doesn't list (in places-bosses-farms.txt)
+   are taken from the OSRS Wiki's pages for them.
 
 ------------------------------------------------------------------------------
 Shortest Path licence

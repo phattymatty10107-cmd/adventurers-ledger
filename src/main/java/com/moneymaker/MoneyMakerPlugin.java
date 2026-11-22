@@ -504,12 +504,12 @@ public class MoneyMakerPlugin extends Plugin
 	}
 
 	/** The files of named places, next to the route classes. */
-	private static final String[] ROUTE_PLACE_FILES = {"places.txt"};
+	private static final String[] ROUTE_PLACE_FILES = {"places.txt", "places-bosses-farms.txt"};
 
-	/** Routes to bosses and farm stops aren't part of this version. */
+	/** Routes to bosses and farm stops are on: their places are in places-bosses-farms.txt. */
 	public boolean canRoutePerks()
 	{
-		return false;
+		return true;
 	}
 
 	/** A line to show where those routes would be, or null to show nothing. */

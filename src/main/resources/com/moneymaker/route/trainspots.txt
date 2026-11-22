@@ -152,3 +152,40 @@ Willow trees|3087 3235 0|Willows, Draynor Village
 Maple trees|2730 3500 0|Maples, Seers' Village
 Yew trees|3087 3476 0|Yews, Edgeville
 Magic trees|2702 3397 0|Magic trees, south of Seers' Village
+
+# ---- More places, from RuneLite's world map plugin (agility courses, fishing, hunter, mining, trees,
+# runecrafting altars, dungeons and minigames; BSD 2-Clause) and the OSRS Wiki.
+Colossal Wyrm course|1648 2929 0|Colossal Wyrm Agility Course, Varlamore
+Wilderness Agility Course|2996 3916 0|Wilderness Agility Course
+Prifddinas course|3253 6109 0|Prifddinas Agility Course
+Aerial fishing|1362 3631 0|Lake Molch
+Monkfish|2308 3700 0|Piscatoris Fishing Colony
+Karambwans|2897 3118 0|Karambwan spots by fairy ring DKP
+Anglerfish|1831 3773 0|Port Piscarilius
+Bird snaring|2557 2912 0;1372 3135 0|Crimson swifts (Feldip Hills or Varlamore)
+Swamp lizards|3534 3446 0;3553 3438 0|Swamp lizards, Canifis swamp
+Falconry (spotted/dark kebbits)|2379 3599 0|Piscatoris Falconry area
+Hunters' Rumours (Varlamore)|1555 3047 0|Hunter Guild, Varlamore
+Orange salamanders|3285 2739 0|South of Sophanem
+Red salamanders|2445 3217 0;2475 3240 0|Ourania Cave area, south of Castle Wars
+Red chinchompas|2524 2893 0;2268 3407 0|Red chinchompa hunting grounds
+Black salamanders|3294 3673 0|Boneyard, Wilderness
+Black chinchompas (Wilderness)|3142 3771 0|Black chinchompas, Wilderness
+Herbiboar|3693 3800 0|Mushroom Forest, Fossil Island
+Gold ore|3298 3282 0;2732 3225 0|Al Kharid mine (south) or Brimhaven
+Granite (desert quarry)|3171 2912 0|Desert Quarry
+Volcanic Mine|3812 3810 0|Volcanic Mine, Fossil Island
+Amethyst|3020 9703 0|Mining Guild amethyst
+Runite ore|2940 9884 0|Heroes' Guild mine
+Teak trees|2820 3083 0;2333 3049 0|Teak trees (Tai Bwo Wannai or Prifddinas route)
+Mahogany trees|2820 3083 0;2946 2908 0|Mahogany trees (Tai Bwo Wannai)
+Redwood trees|1566 3490 0|Woodcutting Guild redwoods
+Ourania Altar (ZMI)|2452 3232 0|Ourania Cave entrance
+Lava runes (binding necklace + Magic Imbue)|3311 3253 0|Fire altar
+Astral runes|2156 3862 0|Astral altar, Lunar Isle
+Soul runes (Arceuus, dense essence)|1814 3856 0|Soul altar, Arceuus
+Giants' Foundry|3360 3149 0|Giants' Foundry, Al Kharid
+Pyramid Plunder|3288 2787 0|Pyramid Plunder, Sophanem
+Tithe Farm|1796 3501 0|Tithe Farm, Hosidius
+Mahogany Homes contracts|2634 3295 0;2988 3362 0;1779 3622 0;3239 3471 0|Nearest Mahogany Homes office
+Gemstone crab (Cam Torum)|1277 3167 0;1349 3126 0;1244 3034 0|Passage to the Gemstone Crab

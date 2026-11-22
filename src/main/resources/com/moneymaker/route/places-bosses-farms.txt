@@ -1,0 +1,102 @@
+# Bosses and farm patches you can ask for a route to (same format as places.txt).
+# kind|name|x y plane;x y plane;...|note
+# Boss names match bosses.txt; farm names are "<route>: <stop>" from farmroutes.txt.
+# A boss's place is where you go in (the entrance), not the fight itself, which is often a private instance.
+#
+# Dungeon, minigame and farming patch locations are from RuneLite's world map plugin
+# (github.com/runelite/runelite, BSD 2-Clause). Bird house spots, and boss spots RuneLite doesn't list,
+# are from the OSRS Wiki (CC BY-NC-SA 3.0). Every tile is checked by PerkPlacesTest: you can stand on it
+# and the route finder can reach it.
+
+
+# ---- Bosses
+boss|Abyssal Sire|3105 4789 0|Abyssal Nexus, through the Abyss
+boss|Alchemical Hydra|1305 3807 0|Karuulm Slayer Dungeon entrance on Mount Karuulm
+boss|Amoxliatl|1692 3230 0;1639 3220 0|Ruins of Tapoyauik entrance
+boss|Araxxor|3630 9813 0|Morytania Spider Cave
+boss|Artio|3114 3676 0|Hunter's End (Wilderness)
+boss|Barrows|3565 3288 0|Barrows mounds
+boss|Brutus|3263 3297 0|Lumbridge cow field
+boss|Bryophyta|3236 3458 0|Varrock Sewers entrance (bring a mossy key)
+boss|Callisto|3290 3848 0|Callisto's Den (Wilderness)
+boss|Calvar'ion|3179 3684 0|Skeletal Tomb (Wilderness)
+boss|Cerberus|2883 3397 0|Taverley Dungeon entrance
+boss|Chambers of Xeric (raid)|1232 3572 0|Mount Quidamortem
+boss|Chaos Elemental|3261 3927 0|West of the Rogues' Castle (Wilderness)
+boss|Chaos Fanatic|2979 3846 0|West of the Lava Maze (Wilderness)
+boss|Commander Zilyana|2916 3746 0|God Wars Dungeon entrance
+boss|General Graardor|2916 3746 0|God Wars Dungeon entrance
+boss|K'ril Tsutsaroth|2916 3746 0|God Wars Dungeon entrance
+boss|Kree'arra|2916 3746 0|God Wars Dungeon entrance
+boss|Nex|2916 3746 0|God Wars Dungeon entrance
+boss|Corporeal Beast|3200 3679 0|Corporeal Beast's cave (Wilderness)
+boss|Crazy archaeologist|2977 3702 0|Ruins (west), Wilderness
+boss|Dagannoth Kings|2518 3738 0;2541 3740 0|Waterbirth Island Dungeon entrance
+boss|Giant Mole|2985 3387 0;2997 3376 0|Falador Park (dig with a spade)
+boss|Grotesque Guardians|3428 3536 0|Slayer Tower
+boss|Hespori|1230 3728 0|Farming Guild
+boss|Kalphite Queen|3226 3108 0|Kalphite Lair entrance
+boss|King Black Dragon|3016 3849 0|King Black Dragon Lair lever (Wilderness)
+boss|Kraken|2276 3610 0|Kraken Cove entrance
+boss|Moons of Peril|1434 3130 0|Cam Torum entrance (Neypotzli is below)
+boss|Obor|3095 3468 0;3115 3452 0|Edgeville Dungeon entrance (bring a giant key)
+boss|Phosani's Nightmare|3726 3299 0|Sisterhood Sanctuary, Slepe
+boss|The Nightmare|3726 3299 0|Sisterhood Sanctuary, Slepe
+boss|Sarachnis|1701 3574 0;1668 3566 0|Forthos Dungeon entrance
+boss|Scorpia|3230 3937 0|Scorpion Pit (Wilderness)
+boss|Scurrius|3236 3458 0|Varrock Sewers entrance
+boss|Shellbane gryphon|3175 2478 0|Shellbane Gryphon Cave
+boss|Skotizo|1633 3670 0|Catacombs of Kourend entrance (bring a dark totem)
+boss|Sol Heredit (Fortis Colosseum)|1798 3107 0|Fortis Colosseum
+boss|Spindel|3182 3743 0|Web Chasm (Wilderness)
+boss|The Hueycoatl|1508 3289 0|The Darkfrost
+boss|Theatre of Blood (raid)|3676 3219 0|Ver Sinhaza
+boss|Thermonuclear smoke devil|2410 3062 0|Smoke Devil Dungeon entrance
+boss|Tombs of Amascut (raid)|3356 2711 0|Jaldraocht Pyramid
+boss|TzKal-Zuk (Inferno)|2496 5117 0|The Inferno, Mor Ul Rek
+boss|TzTok-Jad (Fight Caves)|2436 5169 0|TzHaar Fight Cave
+boss|Venenatis|3319 3798 0|Silk Chasm (Wilderness)
+boss|Vet'ion|3220 3787 0|Vet'ion's Rest (Wilderness)
+boss|Vorkath|2271 4052 0|Ungael (Torfinn sails there from Rellekka)
+boss|Zulrah|2200 3055 0|Zul-Andra
+
+# ---- Farm patches
+farm|Herb runs: Falador (south)|3052 3309 0|
+farm|Herb runs: Catherby|2810 3462 0|
+farm|Herb runs: Ardougne (north)|2663 3375 0|
+farm|Herb runs: Port Phasmatys (west)|3598 3524 0|
+farm|Herb runs: Hosidius (south-west)|1729 3558 0|
+farm|Herb runs: Farming Guild|1235 3724 0|
+farm|Herb runs: Ortus Farm (Varlamore)|1587 3101 0|
+farm|Herb runs: Troll Stronghold roof|2828 3696 0|
+farm|Herb runs: Weiss|2847 3933 0|
+farm|Herb runs: Harmony Island|3789 2840 0|
+farm|Tree runs: Lumbridge (west of the castle)|3189 3233 0|
+farm|Tree runs: Varrock Castle courtyard|3226 3457 0|
+farm|Tree runs: Falador Park|3005 3375 0|
+farm|Tree runs: Taverley|2933 3436 0|
+farm|Tree runs: Gnome Stronghold|2434 3418 0|
+farm|Tree runs: Farming Guild|1234 3736 0|
+farm|Tree runs: Nemus Retreat (Varlamore)|1366 3318 0|
+farm|Fruit tree runs: Gnome Stronghold|2472 3445 0|
+farm|Fruit tree runs: Tree Gnome Village (west of the maze)|2487 3181 0|
+farm|Fruit tree runs: Catherby (east)|2858 3432 0|
+farm|Fruit tree runs: Brimhaven (north)|2765 3211 0|
+farm|Fruit tree runs: Lletya|2342 3161 0|
+farm|Fruit tree runs: Farming Guild|1242 3755 0|
+farm|Fruit tree runs: Kastori (Varlamore)|1347 3058 0|
+farm|Hardwood runs: Fossil Island Mushroom Forest (3 patches)|3707 3838 0|
+farm|Hardwood runs: Locus Oasis (Varlamore)|1683 2971 0|
+farm|Hardwood runs: Anglers' Retreat|2472 2705 0|
+farm|Calquat tree run: Tai Bwo Wannai (north)|2793 3099 0|
+farm|Calquat tree run: Kastori (Varlamore)|1365 3035 0|
+farm|Calquat tree run: The Summer Shore|3125 2403 0|
+farm|Redwood tree run: Farming Guild (west wing)|1233 3754 0|
+farm|Planting Celastrus sapling: Farming Guild (west wing)|1242 3755 0|
+farm|Hops: Lumbridge (north of the farm)|3224 3313 0|
+farm|Hops: McGrubor's Wood (north)|2661 3523 0|
+farm|Hops: Yanille|2572 3102 0|
+farm|Hops: Entrana|2812 3334 0|
+farm|Hops: Aldarin (Varlamore)|1367 2938 0|
+farm|Bird house run: Verdant Valley (2 houses)|3762 3754 0;3767 3760 0|
+farm|Bird house run: Mushroom Meadow (2 houses)|3676 3881 0;3679 3814 0|
