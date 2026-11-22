@@ -33,7 +33,7 @@ The best farm runs at live prices: herbs, hops, trees, fruit trees, hardwood, ca
 
 Click a run when you've planted it to start its **timer**. You get a notification when it's ready (turn it off with "Farm run alerts" in the settings), and timers are saved so they survive closing RuneLite. Each account has its own timers.
 
-Click a run and choose **Show route** to see the patches in the order to visit them, how to get to each one and anything you need for it (a level, quest or diary). Click a stop to tick it off as you go.
+Click a run and choose **Show route** to see the patches in the order to visit them, how to get to each one and anything you need for it (a level, quest or diary). Click a stop to tick it off as you go, and click **Show the way to the next stop** to have the route drawn to each patch in turn.
 
 ## Train (and Ironman mode)
 
@@ -63,14 +63,16 @@ Set-ups included: 61 set-ups for 58 bosses, including all three raids, Fight Cav
 Pick something you want and see how to pay for it:
 
 - **Buy an item**: search the Grand Exchange, pick the item, and see what it costs, the coins you already have (bag and bank) and the fastest money makers you have the levels for, with how long each takes. On the Boss tab, click any gear and choose **Plan how to afford this**.
-- **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that. The goal is added to the **Train** tab straight away (marked "Your goal"), so the plan and the way to each step are waiting there; click **Open the plan on the Train tab** to jump to it.
+- **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that. The goal is added to the **Train** tab straight away (marked "Your goal"), so the plan and the way to each step are waiting there; click **Open the plan on the Train tab** to jump to it. When you reach the level you get a chat message and a notification (turn the notification off with "Goal alerts" in the settings).
 
 ## Routes
 
 The Ledger can show you the way somewhere: a line on the world map, the minimap and the ground, and a list of steps above the tabs ("Varrock tablet, walk 132 tiles").
 
-- **Goal tab → Go somewhere:** the nearest bank, the Grand Exchange, or search for any quest to be taken to where it starts.
-- **Boss tab:** click a quest a boss needs → *Show the way to the start*.
+- **Goal tab → Go somewhere:** the nearest bank, the Grand Exchange, any boss or farm patch, or search for any quest to be taken to where it starts.
+- **Boss tab:** *Show the way* takes you to the boss's entrance (49 bosses), and clicking a quest a boss needs → *Show the way to the start*.
+- **Farm tab:** the route to each patch on a run, in order.
+- **Train tab:** click a step marked **→**.
 - **World map:** right-click anywhere → *Route here*. *Clear route* is in the same menu and in the box above the tabs.
 
 It uses doors, stairs, boats, fairy rings, spirit trees and the teleports you can use right now (the level, the quest, and the runes or item in your inventory or worn; your bank isn't checked). Wander off or teleport somewhere else and it works the route out again. Settings are under **Routes**: which teleports to use, staying out of the Wilderness (on by default), where the line is drawn and its colour.

@@ -7,6 +7,7 @@ import com.moneymaker.data.BossSetup;
 import com.moneymaker.data.FarmRoute;
 import com.moneymaker.data.FarmRun;
 import com.moneymaker.data.Gear;
+import com.moneymaker.data.GoalWatch;
 import com.moneymaker.data.Training;
 import com.moneymaker.data.GearPricer;
 import com.moneymaker.data.ItemPrice;
@@ -38,6 +39,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.swing.SwingUtilities;
+import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.Experience;
 import net.runelite.api.GameState;
@@ -309,8 +311,46 @@ public class MoneyMakerPlugin extends Plugin
 		if (!sameSkills(now, skills))
 		{
 			skills = Collections.unmodifiableMap(now);
+			checkGoal();
 			updatePanel(MoneyMakerPanel::refreshJobs);
 		}
+	}
+
+	/** Watches for you reaching the level goal set on the Goal tab. */
+	private final GoalWatch goalWatch = new GoalWatch();
+
+	/** Saved as "goalDone" once the level goal is reached, so the Goal tab can say so. */
+	private void checkGoal()
+	{
+		String skill = "Reach a level".equals(getSaved("goalMode")) ? getSaved("goalSkill") : null;
+		int goal;
+		try
+		{
+			goal = Integer.parseInt(String.valueOf(getSaved("goalLevel")));
+		}
+		catch (NumberFormatException e)
+		{
+			return;
+		}
+		long[] mine = skill == null ? null : getSkill(skill);
+		if (!goalWatch.update(skill, goal, mine == null ? -1 : (int) mine[0]))
+		{
+			return;
+		}
+		save("goalDone", skill + ":" + goal);
+		String name = skill.charAt(0) + skill.substring(1).toLowerCase(java.util.Locale.ROOT);
+		client.addChatMessage(ChatMessageType.GAMEMESSAGE, "",
+			"<col=00c000>Adventurer's Ledger:</col> goal reached, level " + goal + " " + name + "!", null);
+		if (config.goalNotify())
+		{
+			notifier.notify("Adventurer's Ledger: goal reached, level " + goal + " " + name);
+		}
+	}
+
+	/** The level goal you've reached ("MINING:62"), as saved when it happened, or null. */
+	public String getGoalDone()
+	{
+		return getSaved("goalDone");
 	}
 
 	/** Logging out: forget the levels and items of the account that just left. */
@@ -322,6 +362,7 @@ public class MoneyMakerPlugin extends Plugin
 			return;
 		}
 		skills = Collections.emptyMap();
+		goalWatch.reset();
 		questStates = Collections.emptyMap();
 		questCheckIn = 0;
 		accountType = -1;
@@ -447,6 +488,11 @@ public class MoneyMakerPlugin extends Plugin
 		}
 		// things the plugin saves for itself (goal, timers, bank) aren't settings: nothing to redraw
 		String key = event.getKey();
+		if (key.equals("goalMode") || key.equals("goalSkill") || key.equals("goalLevel"))
+		{
+			// a new goal: note where you stand now, so reaching it later is noticed
+			clientThread.invokeLater(this::checkGoal);
+		}
 		if (key.startsWith("goal") || key.startsWith("route") || key.startsWith("farm_") || key.startsWith("farmdone_") || key.equals("farmAccount")
 			|| key.startsWith("bank_"))
 		{

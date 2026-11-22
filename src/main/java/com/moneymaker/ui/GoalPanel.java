@@ -436,7 +436,10 @@ class GoalPanel extends JPanel
 		list.add(UiUtil.header("Your goal"));
 		if (fromLevel >= target)
 		{
-			UiUtil.addRow(list, text("You're already level " + fromLevel + " " + pretty(sk) + ". Pick a higher level.", UiUtil.PROFIT));
+			boolean reached = (sk + ":" + target).equals(plugin.getGoalDone());
+			UiUtil.addRow(list, text(reached
+				? "<b>Goal reached!</b> You're level " + fromLevel + " " + pretty(sk) + ". Pick your next level above."
+				: "You're already level " + fromLevel + " " + pretty(sk) + ". Pick a higher level.", UiUtil.PROFIT));
 			return;
 		}
 

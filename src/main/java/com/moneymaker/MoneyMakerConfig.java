@@ -99,6 +99,18 @@ public interface MoneyMakerConfig extends Config
 	}
 
 	@ConfigItem(
+		keyName = "goalNotify",
+		name = "Goal alerts",
+		description = "Send a notification when you reach the level goal set on the Goal tab "
+			+ "(a chat message is always shown)",
+		position = 6
+	)
+	default boolean goalNotify()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 		keyName = "ironman",
 		name = "Ironman mode",
 		description = "Detect from account: on for ironman, hardcore, ultimate and group ironman accounts. "
