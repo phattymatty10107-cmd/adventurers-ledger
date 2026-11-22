@@ -19,7 +19,7 @@ import com.moneymaker.route.Places;
 import com.moneymaker.route.Pos;
 import com.moneymaker.route.RouteOverlays;
 import com.moneymaker.route.RouteService;
-import com.moneymaker.route.TrainSpots;
+import com.moneymaker.route.Spots;
 import com.moneymaker.ui.MoneyMakerPanel;
 import java.awt.Color;
 import java.awt.Font;
@@ -115,7 +115,9 @@ public class MoneyMakerPlugin extends Plugin
 	private RouteService routes;
 	private volatile Places places = Places.empty();
 	/** Where to go for each training method on the Train tab. */
-	private volatile TrainSpots trainSpots = TrainSpots.empty();
+	private volatile Spots trainSpots = Spots.empty();
+	/** Where to go for each money maker on the Jobs tab. */
+	private volatile Spots jobSpots = Spots.empty();
 	private final List<Overlay> routeOverlays = new java.util.ArrayList<>();
 	/** The flag on the world map where the route ends. Only touched under its own lock. */
 	private WorldMapPoint routeMarker;
@@ -186,7 +188,8 @@ public class MoneyMakerPlugin extends Plugin
 		bossCheck = load("bossskills.txt", BossCheck::load, BossCheck.empty());
 		farmAccount = savedFarmAccount();
 		places = loadPlaces();
-		trainSpots = loadTrainSpots(places);
+		trainSpots = loadSpots("trainspots.txt", places);
+		jobSpots = loadSpots("jobspots.txt", places);
 		routes = new RouteService(client, clientThread, new RouteService.Settings()
 		{
 			@Override
@@ -527,24 +530,30 @@ public class MoneyMakerPlugin extends Plugin
 		return all;
 	}
 
-	private TrainSpots loadTrainSpots(Places places)
+	private Spots loadSpots(String file, Places places)
 	{
-		try (InputStream in = RouteService.class.getResourceAsStream("trainspots.txt"))
+		try (InputStream in = RouteService.class.getResourceAsStream(file))
 		{
 			if (in != null)
 			{
-				return TrainSpots.load(in, places);
+				return Spots.load(in, places);
 			}
 		}
 		catch (IOException | RuntimeException e)
 		{
-			log.error("Adventurer's Ledger couldn't load trainspots.txt", e);
+			log.error("Adventurer's Ledger couldn't load {}", file, e);
 		}
-		return TrainSpots.empty();
+		return Spots.empty();
+	}
+
+	/** Where to go for each money maker, so the Jobs tab can show the way. */
+	public Spots getJobSpots()
+	{
+		return jobSpots;
 	}
 
 	/** Where to go for each training method, so the Train tab can show the way. */
-	public TrainSpots getTrainSpots()
+	public Spots getTrainSpots()
 	{
 		return trainSpots;
 	}
@@ -579,6 +588,12 @@ public class MoneyMakerPlugin extends Plugin
 	public void routeTo(Places.Place place, String tag)
 	{
 		routes.routeTo(place.getName(), tag, place.getTiles());
+	}
+
+	/** Route to a place, shown under your own name for it (e.g. the job's name). */
+	public void routeTo(String name, Places.Place place, String tag)
+	{
+		routes.routeTo(name, tag, place.getTiles());
 	}
 
 	/** Start a route to where a quest begins. */

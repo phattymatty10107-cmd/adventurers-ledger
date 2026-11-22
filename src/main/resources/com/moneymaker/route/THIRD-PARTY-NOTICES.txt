@@ -26,8 +26,9 @@ The data it reads is not:
    All rights reserved. Redistributed under the same BSD 2-Clause terms as below.
 
 3. OSRS Wiki  -  https://oldschool.runescape.wiki  (CC BY-NC-SA 3.0)
-   The bird house spots and the boss spots RuneLite doesn't list (in places-bosses-farms.txt)
-   are taken from the OSRS Wiki's pages for them.
+   The bird house spots and the boss spots RuneLite doesn't list (in places-bosses-farms.txt),
+   and the job places in jobspots.txt (from each money making guide's map, or the page of the
+   place or monster it names), are taken from the OSRS Wiki.
 
 ------------------------------------------------------------------------------
 Shortest Path licence

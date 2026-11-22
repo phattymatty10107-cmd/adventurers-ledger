@@ -4,7 +4,7 @@
 # BANK instead of tiles: the method is done at a bank, so the route goes to the nearest bank.
 # Methods with no single place to go (farm runs, Slayer anywhere, burying bones...) are left out:
 # they get no route rather than a wrong one.
-# Every tile is checked by TrainSpotsTest: you can stand on it and the route finder can reach it.
+# Every tile is checked by SpotsTest: you can stand on it and the route finder can reach it.
 
 # ---- Agility (the start of each course)
 Gnome Stronghold course|2474 3438 0|Gnome Stronghold Agility Course

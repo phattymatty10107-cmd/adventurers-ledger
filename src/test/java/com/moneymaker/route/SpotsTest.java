@@ -16,12 +16,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /** Every training spot is a real method, a tile you can stand on, and reachable on the map. */
-public class TrainSpotsTest
+public class SpotsTest
 {
 	private static final int LUMBRIDGE = Pos.pack(3222, 3218, 0);
 
 	private static Places places;
-	private static TrainSpots spots;
+	private static Spots spots;
 	private static CollisionMap map;
 	private static Pathfinder finder;
 
@@ -36,7 +36,7 @@ public class TrainSpotsTest
 		try (InputStream in = RouteService.class.getResourceAsStream("trainspots.txt"))
 		{
 			assertNotNull("missing trainspots.txt", in);
-			spots = TrainSpots.load(in, places);
+			spots = Spots.load(in, places);
 		}
 		try (InputStream in = RouteService.class.getResourceAsStream("collision-map.zip"))
 		{
@@ -78,7 +78,7 @@ public class TrainSpotsTest
 	{
 		Places.Place p = spots.find("High Level Alchemy");
 		assertNotNull(p);
-		assertEquals(places.find("place", TrainSpots.BANK_PLACE).getTiles(), p.getTiles());
+		assertEquals(places.find("place", Spots.BANK_PLACE).getTiles(), p.getTiles());
 	}
 
 	@Test
@@ -87,7 +87,7 @@ public class TrainSpotsTest
 		PlayerState maxed = PlayerState.maxed();
 		List<String> problems = new ArrayList<>();
 		Set<Integer> checked = new HashSet<>();
-		Places.Place bank = places.find("place", TrainSpots.BANK_PLACE);
+		Places.Place bank = places.find("place", Spots.BANK_PLACE);
 		for (Map.Entry<String, Places.Place> e : spots.all().entrySet())
 		{
 			if (e.getValue().getTiles().equals(bank.getTiles()))

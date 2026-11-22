@@ -5,6 +5,7 @@ import com.moneymaker.MoneyMakerPlugin;
 import com.moneymaker.data.JobResult;
 import com.moneymaker.data.PriceBook;
 import com.moneymaker.data.Recipe;
+import com.moneymaker.route.Places;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -251,6 +252,11 @@ class JobsPanel extends JPanel
 		ItemRow row = new ItemRow(itemManager, icon, rec.getName(), UiUtil.signedGp(gpHr) + "/h", UiUtil.profitColor(gpHr),
 			line2, line3, tooltip(r));
 		row.setLine3Color(line3Color);
+		Places.Place place = plugin.getJobSpots().find(rec.getName());
+		if (place != null)
+		{
+			row.action("Show the way (" + place.getName() + ")", () -> plugin.routeTo(rec.getName(), place, "job"));
+		}
 		if (!rec.getUrl().isEmpty())
 		{
 			row.action("Open wiki guide", () -> LinkBrowser.browse(rec.getUrl()));

@@ -1,0 +1,579 @@
+# Where to go for each money maker on the Jobs tab ("Show the way" in a job's menu).
+# job name (exactly as in recipes.txt)|tiles or a reference|where
+#   tiles: x y plane;x y plane;...  With more than one the route goes to whichever is quickest.
+#   BANK: the nearest bank.  @place:<name> / @boss:<name>: a place from places.txt or places-bosses-farms.txt.
+# Jobs not listed get no route rather than a guessed one (farm runs are on the Farm tab).
+#
+# Places come from each job's OSRS Wiki money making guide (its map, or the page of the place or
+# monster it names; CC BY-NC-SA 3.0). JobSpotsTest checks every name is a job, every reference
+# exists, and every tile can be stood on and reached.
+Clean grimy guam leaf|BANK|The nearest bank
+Make Guam potion (unf)|BANK|The nearest bank
+Clean grimy marrentill|BANK|The nearest bank
+Make Marrentill potion (unf)|BANK|The nearest bank
+Clean grimy tarromin|BANK|The nearest bank
+Make Tarromin potion (unf)|BANK|The nearest bank
+Clean grimy harralander|BANK|The nearest bank
+Make Harralander potion (unf)|BANK|The nearest bank
+Clean grimy ranarr weed|BANK|The nearest bank
+Make Ranarr potion (unf)|BANK|The nearest bank
+Clean grimy toadflax|BANK|The nearest bank
+Make Toadflax potion (unf)|BANK|The nearest bank
+Clean grimy irit leaf|BANK|The nearest bank
+Make Irit potion (unf)|BANK|The nearest bank
+Clean grimy avantoe|BANK|The nearest bank
+Make Avantoe potion (unf)|BANK|The nearest bank
+Clean grimy kwuarm|BANK|The nearest bank
+Make Kwuarm potion (unf)|BANK|The nearest bank
+Clean grimy snapdragon|BANK|The nearest bank
+Make Snapdragon potion (unf)|BANK|The nearest bank
+Clean grimy cadantine|BANK|The nearest bank
+Make Cadantine potion (unf)|BANK|The nearest bank
+Clean grimy lantadyme|BANK|The nearest bank
+Make Lantadyme potion (unf)|BANK|The nearest bank
+Clean grimy dwarf weed|BANK|The nearest bank
+Make Dwarf weed potion (unf)|BANK|The nearest bank
+Clean grimy torstol|BANK|The nearest bank
+Make Torstol potion (unf)|BANK|The nearest bank
+Make Attack potion(3)|BANK|The nearest bank
+Make Antipoison(3)|BANK|The nearest bank
+Make Strength potion(3)|BANK|The nearest bank
+Make Restore potion(3)|BANK|The nearest bank
+Make Energy potion(3)|BANK|The nearest bank
+Make Prayer potion(3)|BANK|The nearest bank
+Make Agility potion(3)|BANK|The nearest bank
+Make Super attack(3)|BANK|The nearest bank
+Make Superantipoison(3)|BANK|The nearest bank
+Make Fishing potion(3)|BANK|The nearest bank
+Make Super energy(3)|BANK|The nearest bank
+Make Super strength(3)|BANK|The nearest bank
+Make Super restore(3)|BANK|The nearest bank
+Make Super defence(3)|BANK|The nearest bank
+Make Antifire potion(3)|BANK|The nearest bank
+Make Ranging potion(3)|BANK|The nearest bank
+Make Magic potion(3)|BANK|The nearest bank
+Make Zamorak brew(3)|BANK|The nearest bank
+Make Saradomin brew(3)|BANK|The nearest bank
+Cut opal|BANK|The nearest bank
+Cut jade|BANK|The nearest bank
+Cut red topaz|BANK|The nearest bank
+Cut sapphire|BANK|The nearest bank
+Cut emerald|BANK|The nearest bank
+Cut ruby|BANK|The nearest bank
+Cut diamond|BANK|The nearest bank
+Cut dragonstone|BANK|The nearest bank
+Cut onyx|BANK|The nearest bank
+Cut zenyte|BANK|The nearest bank
+String oak shortbow|BANK|The nearest bank
+String oak longbow|BANK|The nearest bank
+Cut oak longbow (u)|BANK|The nearest bank
+String willow shortbow|BANK|The nearest bank
+String willow longbow|BANK|The nearest bank
+Cut willow longbow (u)|BANK|The nearest bank
+String maple shortbow|BANK|The nearest bank
+String maple longbow|BANK|The nearest bank
+Cut maple longbow (u)|BANK|The nearest bank
+String yew shortbow|BANK|The nearest bank
+String yew longbow|BANK|The nearest bank
+Cut yew longbow (u)|BANK|The nearest bank
+String magic shortbow|BANK|The nearest bank
+String magic longbow|BANK|The nearest bank
+Cut magic longbow (u)|BANK|The nearest bank
+Tan cowhide into leather|3274 3192 0|Ellis the tanner, Al Kharid
+Tan cowhide into hard leather|3274 3192 0|Ellis the tanner, Al Kharid
+Tan green dragonhide into green dragon leather|3274 3192 0|Ellis the tanner, Al Kharid
+Tan blue dragonhide into blue dragon leather|3274 3192 0|Ellis the tanner, Al Kharid
+Tan red dragonhide into red dragon leather|3274 3192 0|Ellis the tanner, Al Kharid
+Tan black dragonhide into black dragon leather|3274 3192 0|Ellis the tanner, Al Kharid
+Decant Attack potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Attack potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Attack potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Strength potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Strength potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Strength potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Restore potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Restore potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Restore potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Energy potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Energy potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Energy potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Prayer potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Prayer potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Prayer potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super attack (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super attack (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super attack (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super strength (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super strength (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super strength (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super defence (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super defence (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super defence (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super energy (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super energy (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super energy (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super restore (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super restore (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super restore (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Ranging potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Ranging potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Ranging potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Magic potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Magic potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Magic potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Antifire potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Antifire potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Antifire potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Extended antifire (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Extended antifire (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Extended antifire (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Saradomin brew (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Saradomin brew (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Saradomin brew (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super combat potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Super combat potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Super combat potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Stamina potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Stamina potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Stamina potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Divine super combat potion (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Divine super combat potion (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Divine super combat potion (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Anti-venom+ (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Anti-venom+ (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Anti-venom+ (2) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Superantipoison (3) to (4)|@place:Grand Exchange|Grand Exchange
+Decant Superantipoison (4) to (3)|@place:Grand Exchange|Grand Exchange
+Decant Superantipoison (2) to (4)|@place:Grand Exchange|Grand Exchange
+Combine Rune armour set (lg)|@place:Grand Exchange|Grand Exchange
+Split Rune armour set (lg)|@place:Grand Exchange|Grand Exchange
+Combine Rune armour set (sk)|@place:Grand Exchange|Grand Exchange
+Split Rune armour set (sk)|@place:Grand Exchange|Grand Exchange
+Combine Adamant set (lg)|@place:Grand Exchange|Grand Exchange
+Split Adamant set (lg)|@place:Grand Exchange|Grand Exchange
+Combine Dragon armour set (lg)|@place:Grand Exchange|Grand Exchange
+Split Dragon armour set (lg)|@place:Grand Exchange|Grand Exchange
+Combine Dharok's armour set|@place:Grand Exchange|Grand Exchange
+Split Dharok's armour set|@place:Grand Exchange|Grand Exchange
+Combine Guthan's armour set|@place:Grand Exchange|Grand Exchange
+Split Guthan's armour set|@place:Grand Exchange|Grand Exchange
+Combine Karil's armour set|@place:Grand Exchange|Grand Exchange
+Split Karil's armour set|@place:Grand Exchange|Grand Exchange
+Combine Ahrim's armour set|@place:Grand Exchange|Grand Exchange
+Split Ahrim's armour set|@place:Grand Exchange|Grand Exchange
+Combine Torag's armour set|@place:Grand Exchange|Grand Exchange
+Split Torag's armour set|@place:Grand Exchange|Grand Exchange
+Combine Verac's armour set|@place:Grand Exchange|Grand Exchange
+Split Verac's armour set|@place:Grand Exchange|Grand Exchange
+Combine Justiciar armour set|@place:Grand Exchange|Grand Exchange
+Split Justiciar armour set|@place:Grand Exchange|Grand Exchange
+Combine Ancestral robes set|@place:Grand Exchange|Grand Exchange
+Split Ancestral robes set|@place:Grand Exchange|Grand Exchange
+Combine Inquisitor's armour set|@place:Grand Exchange|Grand Exchange
+Split Inquisitor's armour set|@place:Grand Exchange|Grand Exchange
+Combine Obsidian armour set|@place:Grand Exchange|Grand Exchange
+Split Obsidian armour set|@place:Grand Exchange|Grand Exchange
+Combine Dagon'hai robes set|@place:Grand Exchange|Grand Exchange
+Split Dagon'hai robes set|@place:Grand Exchange|Grand Exchange
+Combine Masori armour set (f)|@place:Grand Exchange|Grand Exchange
+Split Masori armour set (f)|@place:Grand Exchange|Grand Exchange
+Combine Torva armour set|@place:Grand Exchange|Grand Exchange
+Split Torva armour set|@place:Grand Exchange|Grand Exchange
+Combine Virtus armour set|@place:Grand Exchange|Grand Exchange
+Split Virtus armour set|@place:Grand Exchange|Grand Exchange
+Aerial fishing for Shark lures|1369 3632 0|Molch lake
+Making baked potatoes|3427 2911 0|Nardah
+Playing Barbarian Assault and gambling|2549 3558 0|Barbarian Outpost
+Barrows|@boss:Barrows|Barrows
+Bird house trapping (every 50 min)|3676 3881 0;3679 3814 0;3762 3754 0;3767 3760 0|Bird house trapping
+Blast mine|1487 3862 0|Blast mine
+Brewing chef's delight(m) (every 2 days)|3679 3486 0|Port Phasmatys
+Brewing greenman's ale(m) (every 2 days)|3679 3486 0|Port Phasmatys
+Buying Relicym's Balm|2465 3046 0|Jiggig
+Collecting wizard's mind bombs, Asgarnian ales, or dwarven stouts|2955 3379 0;2955 3375 0;2953 3375 0;2952 3366 0;2954 3366 0;2959 3365 0|Rising Sun Inn
+Buying battlestaves from Zaff (every 24h)|3203 3434 0|Zaff's Superior Staves
+Buying Beer|1505 3232 0|Quetzacalli Gorge
+Buying Beer Tankards|2658 3677 0|Rellekka
+Buying Feather packs|3028 3220 0;3008 3206 0;3016 3229 0;3008 3203 0;3008 3206 0;3009 3202 0|Port Sarim
+Buying iron ore from Ordan|2931 10196 0|Blast Furnace
+Buying jug packs|3103 3265 0|Draynor Village
+Buying kebabs|3290 3185 0|Al Kharid
+Buying Kegs of beer|2658 3677 0|Rellekka
+Buying Mixed hide bases|1558 3047 0|Hunter Guild
+Buying Monkey nuts|2750 2750 0|Ape atoll
+Buying pies at the Cooks' Guild|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Buying Steel Nailss|3303 3494 0;1620 3502 0;3314 6120 0;3316 6119 0;3316 6115 0;3319 6115 0|Construction_supplies
+Buying team capes|3000 3929 0;3286 3924 0;3202 3864 0;3128 3764 0;2975 3749 0;3033 3702 0|Wilderness
+Spinning flax|BANK|The nearest bank
+Casting Superglass Make with giant seaweed|BANK|The nearest bank
+Casting Tan Leather|BANK|The nearest bank
+Casting Plank Make|BANK|The nearest bank
+Catching anglerfish|1803 3752 0|Port Piscarilius
+Fishing raw dark crabs|3173 3943 0;3174 3925 0;3175 3924 0;3195 3923 0;3197 3925 0;3197 3944 0|Resource Area
+Catching infernal eels|2855 3167 0|Mor Ul Rek
+Catching lobsters|2605 3422 0|Fishing Guild
+Catching lobsters (free-to-play)|2477 2892 0|Corsair Cove Resource Area
+Catching minnows|2605 3422 0|Fishing Guild
+Catching sacred eels|2193 3060 0|Zul-Andra
+Catching sardines & herring|3103 3265 0|Draynor Village
+Catching sharks|2405 3805 0|Jatizso
+Catching shrimps & anchovies (free-to-play)|3103 3265 0|Draynor Village
+Catching snowy knights|2721 3791 0|Rellekka Hunter area
+Catching tuna & swordfish (free-to-play)|2903 3163 0|Musa Point
+Chambers of Xeric (Challenge Mode)|@boss:Chambers of Xeric (raid)|Chambers of Xeric (raid)
+Chambers of Xeric (Normal Mode)|@boss:Chambers of Xeric (raid)|Chambers of Xeric (raid)
+Charging air orbs|3088 3568 0|Air Obelisk
+Charging and alchemising bracelets of ethereum|BANK|The nearest bank
+Charging earth orbs|3085 9931 0|Earth Obelisk
+Charging fire orbs|2818 9827 0|Fire Obelisk
+Charging water orbs|2842 3422 0;2841 9823 0|Water Obelisk
+Cutting infected roots|1311 9382 0;1309 3104 0;1304 3032 0|Tonali cavern
+Chopping the engorged bloodwood tree|2603 7808 0|Vampyrium
+Claiming dynamite from Thirus (every 24h)|1505 3801 0|Lovakengj
+Claiming pure essence from Wizard Cromperty (every 24h)|2624 3300 0|East Ardougne
+Claiming runes from Lundail (every 24h)|3090 3956 0|Mage Arena bank
+Collecting Air talismans from Duke Horacio|3204 3237 0;3200 3233 0;3201 3220 0;3200 3220 0;3198 3218 0;3199 3218 0|Lumbridge Castle
+Collecting and tanning cowhide|3241 3298 0;3265 3298 0;3265 3255 0;3253 3255 0;3253 3278 0;3241 3278 0|Lumbridge cow field
+Collecting anti-dragon shields.|3080 3492 0|Edgeville
+Collecting anti-dragon shields|3080 3492 0|Edgeville
+Collecting beer glasses|3290 3185 0|Al Kharid
+Collecting big bones from the Bone Yard|3246 3736 0|Bone Yard
+Collecting black scimitars from Ardougne Castle|2577 3298 0|Ardougne Castle
+Collecting bronze pickaxes from a barrel|2968 5808 0;2922 5826 0;2922 5826 0;2922 5825 0;2917 5824 0;2917 5824 0|Ruins of Camdozaal
+Collecting chaos runes within the Dark Warrior's Fortress|3029 3630 0|Dark Warriors' Fortress
+Collecting climbing boots|2821 3556 0|Tenzing
+Collecting Eclipse Red from Guildmaster Apatura's quarters, top floor|1555 3035 0|Guildmaster Apatura
+Collecting fish food in Draynor Manor|3109 3357 1|Draynor Manor
+Collecting iron ore|3290 3185 0|Al Kharid
+Collecting jangerberries|2584 2967 0;2585 2977 0;2592 2965 0;2510 3044 0;2520 3046 0;2522 3055 0|Ogre
+Collecting monk's robes|3052 3490 0|Edgeville Monastery
+Collecting mort myre fungi|3478 3390 0|Mort Myre Swamp
+Collecting Nature Runes from the Lava Island south-east of Demonic Ruins.|3288 3884 0|Demonic Ruins
+Collecting Ruby rings from the basement of Varrock West Bank|3185 3440 0|Varrock West Bank
+Collecting snape grass|2523 3745 0|Waterbirth Island
+Collecting and banking steel platebodies|3069 3854 0|Lava maze
+Collecting and alching steel platebodies|3072 3854 0|Lava Maze
+Collect tinderboxes from the old bookshelf in the Wise Old Man's house|3103 3265 0|Draynor Village
+Collecting white berries|2244 3182 0|Isafdar
+Collecting Wine of Zamorak|2934 3516 0|Chaos Temple (Asgarnia)
+Collecting Wine of Zamorak at the Deep Wilderness Dungeon|3046 3924 0|Deep Wilderness Dungeon
+Collecting wine of zamorak (free-to-play)|2947 3369 0;2947 3375 0;2965 3385 0;2965 3395 0;2947 3440 0;2940 3517 0|Chaos Temple
+Completing The Corrupted Gauntlet|3259 6079 0|Prifddinas
+Completing The Gauntlet|3259 6079 0|Prifddinas
+Completing the Fortis Colosseum (Wave 1)|@boss:Sol Heredit (Fortis Colosseum)|Fortis Colosseum
+Completing the Fortis Colosseum (Wave 12)|@boss:Sol Heredit (Fortis Colosseum)|Fortis Colosseum
+Cooking anglerfish|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Cooking raw chicken|2943 3416 0;3072 3417 0;3072 3520 0;3008 3520 0;3008 3456 0;2881 3457 0|Fires
+Cooking raw dark crabs|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Cooking raw karambwan|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Cooking raw marlin|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Cooking raw moonlight antelope|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Cooking raw yellowfin|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Crafting Aether runes|2429 4429 0|Zanaris
+Crafting Aether runes using Scarred extract|2429 4429 0|Zanaris
+Crafting astral runes|2117 3903 0|Lunar Isle
+Crafting blood runes|3230 4830 0|Blood Altar
+Crafting blood runes at Arceuus|1715 3827 0|Blood Altar (Kourend)
+Crafting blood runes at Arceuus (minimal requirements)|1715 3827 0|Blood Altar (Kourend)
+Crafting blood runes at Arceuus (no diary)|1715 3827 0|Blood Altar (Kourend)
+Crafting blood runes through the Abyss|3230 4830 0|Blood Altar
+Crafting chaos runes through the Abyss|2269 4840 0;3058 3589 0|Chaos Altar
+Crafting Clockworks|BANK|The nearest bank
+Crafting cosmic runes|2429 4429 0|Zanaris
+Crafting cosmic runes through the Abyss|2140 4831 0;2406 4375 0|Cosmic Altar
+Crafting death runes through the Abyss|2203 4834 0;1858 4637 0|Death Altar
+Crafting diamond bracelets|BANK|The nearest bank
+Crafting diamond jewellery|BANK|The nearest bank
+Crafting double law runes through the Abyss|2856 3379 0|Law Altar
+Crafting double nature runes with the achievement diary cape teleport[1]|2398 4839 0;2867 3017 0|Nature Altar
+Crafting dragonstone jewellery|BANK|The nearest bank
+Crafting  Drift nets|BANK|The nearest bank
+Crafting emerald bracelets|BANK|The nearest bank
+Crafting emerald jewellery|BANK|The nearest bank
+Crafting gold bracelets|BANK|The nearest bank
+Crafting gold jewellery|BANK|The nearest bank
+Crafting jade jewellery|BANK|The nearest bank
+Crafting law runes through the Abyss|2856 3379 0|Law Altar
+Crafting nature runes through the Abyss|2398 4839 0;2867 3017 0|Nature Altar
+Crafting opal jewellery|BANK|The nearest bank
+Crafting ruby bracelets|BANK|The nearest bank
+Crafting ruby jewellery|BANK|The nearest bank
+Crafting runes at the Ourania altar|2452 3232 0|Ourania Altar
+Crafting sapphire bracelets|BANK|The nearest bank
+Crafting sapphire jewellery|BANK|The nearest bank
+Crafting soul runes|1813 3852 0|Soul Altar (Kourend)
+Crafting red topaz jewellery|BANK|The nearest bank
+Crafting wrath runes|2456 2845 0|Myths' Guild
+Creating Ardougne teleport tablets|2662 3305 0|Ardougne teleport (tablet)
+Creating Barrows teleport tablets|@boss:Barrows|Barrows
+Creating Camelot teleport tablets|2757 3479 0|Camelot teleport (tablet)
+Creating crystal keys|2913 3451 0|crystal keys
+Creating Amulet of eternal glory|3366 3899 0;3366 3898 0;3367 3898 0;3368 3898 0;3368 3897 0;3369 3897 0|Fountain of Rune
+Creating teleport tablets at Lectern (Lunar)|2117 3903 0|Lunar Isle
+Crushing bird nests|BANK|The nearest bank
+Cutting camphor logs|3196 2438 0|The Great Conch
+Cutting diamond bolt tips|BANK|The nearest bank
+Cutting magic logs|1565 3498 0;1562 3498 0;1563 3478 0;1564 3477 0;1582 3477 0;1587 3472 0|Woodcutting Guild
+Cutting oak logs|3103 3265 0|Draynor Village
+Cutting redwood logs|1565 3498 0;1562 3498 0;1563 3478 0;1564 3477 0;1582 3477 0;1587 3472 0|Woodcutting Guild
+Cutting ruby bolt tips|BANK|The nearest bank
+Cutting yew logs|1565 3498 0;1562 3498 0;1563 3478 0;1564 3477 0;1582 3477 0;1587 3472 0|Woodcutting Guild
+Cutting yew logs (free-to-play)|3188 3220 0|Lumbridge
+Deep sea trawling Yellowfin shoals|1948 2782 0;1939 2756 0;1944 2757 0;1937 2761 0;1939 2762 0|Deepfin point
+Degriming grimy avantoe|BANK|The nearest bank
+Degriming grimy cadantine|BANK|The nearest bank
+Degriming grimy dwarf weed|BANK|The nearest bank
+Degriming grimy harralander|BANK|The nearest bank
+Degriming grimy irit leaf|BANK|The nearest bank
+Degriming grimy kwuarm|BANK|The nearest bank
+Degriming grimy lantadyme|BANK|The nearest bank
+Degriming grimy marrentill|BANK|The nearest bank
+Degriming grimy ranarr weed|BANK|The nearest bank
+Degriming grimy snapdragon|BANK|The nearest bank
+Degriming grimy tarromin|BANK|The nearest bank
+Degriming grimy toadflax|BANK|The nearest bank
+Degriming grimy torstol|BANK|The nearest bank
+Dismantling bracelets of ethereum|BANK|The nearest bank
+Enchanting diamond necklaces|BANK|The nearest bank
+Enchanting dragonstone jewellery|BANK|The nearest bank
+Enchanting jade amulets|BANK|The nearest bank
+Enchanting sapphire rings|BANK|The nearest bank
+Enchanting Topaz jewellery|BANK|The nearest bank
+Exchanging mole parts (every 4h)|2980 3388 0;2980 3381 0;2982 3379 0;2986 3380 0;2990 3376 0;2991 3376 0|Falador Park
+Humidifying Buckets of Water|BANK|The nearest bank
+Filling bullseye lantern (empty)|2947 3263 0;2976 3263 0;2984 3250 0;2988 3248 0;2988 3247 0;2989 3246 0|Rimmington
+Filling water containers|2966 3395 0;2957 3395 0;2955 3394 0;2948 3395 0;2948 3395 0;2945 3395 0|Falador
+Filling water containers (Hosidius kitchen)|1679 3618 0|Hosidius kitchen
+Fletching diamond bolts|BANK|The nearest bank
+Fletching flighted ogre arrows|BANK|The nearest bank
+Fletching gem-tipped dragon bolts|BANK|The nearest bank
+Fletching headless arrows|BANK|The nearest bank
+Fletching ogre arrow shafts|BANK|The nearest bank
+Fletching ruby bolts|BANK|The nearest bank
+Fletching sunlight antler bolts|BANK|The nearest bank
+Forging Giant swords|3358 3149 0|Giants' Foundry
+Grinding chocolate bars|BANK|The nearest bank
+Grinding Goat horns|BANK|The nearest bank
+Grinding unicorn horns|BANK|The nearest bank
+Guardians of the Rift|3612 9500 0|Temple of the Eye (location)
+Completing The Hallowed Sepulchre (Floor 3)|3597 3360 0|Darkmeyer
+Completing The Hallowed Sepulchre (Floor 4)|3597 3360 0|Darkmeyer
+Completing The Hallowed Sepulchre (Floor 5)|3597 3360 0|Darkmeyer
+High alching profitable free-to-play items|BANK|The nearest bank
+Humidifying clay|BANK|The nearest bank
+Hunting carnivorous chinchompas|2500 2942 0;2616 2942 0;2616 2880 0;2500 2881 0;2558 2911 0;2556 2915 0|Feldip Jungle
+Hunting chinchompas|2329 3585 0|Piscatoris Hunter area
+Hunting Herbiboars|3730 3807 0|Fossil island
+Hunting moonlight antelopes|1558 3047 0|Hunter's Guild
+Hunting pyre foxes|1617 2997 0|Avium Savannah
+Hunting sunlight antelopes|1745 3007 0|Avium Savannah
+Killing Amoxliatl|@boss:Amoxliatl|Amoxliatl
+Killing Araxxor|@boss:Araxxor|Araxxor
+Killing Artio|@boss:Artio|Artio
+Moons of Peril (Blood Moon Only)|@boss:Moons of Peril|Moons of Peril
+Killing Bryophyta (free-to-play)|@boss:Bryophyta|Bryophyta
+Killing Callisto|@boss:Callisto|Callisto
+Killing Calvar'ion|@boss:Calvar'ion|Calvar'ion
+Killing Cerberus|@boss:Cerberus|Cerberus
+Killing Chaos Elemental|@boss:Chaos Elemental|Chaos Elemental
+Killing Commander Zilyana|@boss:Commander Zilyana|Commander Zilyana
+Killing Dagannoth Kings (Rex only)|@boss:Dagannoth Kings|Dagannoth Kings
+Killing Dagannoth Kings (Solo tribrid)|@boss:Dagannoth Kings|Dagannoth Kings
+Killing Drakes (Slayer)|@boss:Alchemical Hydra|Karuulm Slayer Dungeon
+Killing Duke Sucellus|2919 10328 0|Ghorrock dungeon
+Killing Feral Vampyres|3502 3220 0;3478 3234 0|Burgh De Rott
+Killing General Graardor|@boss:General Graardor|General Graardor
+Killing Hueycoatl|1512 3285 0|The Darkfrost
+Killing Jubsters|2647 3225 0;2642 3220 0;2642 3215 0;2646 3211 0;2651 3211 0;2656 3217 0|Tower of Life (building)
+Killing K'ril Tsutsaroth|@boss:K'ril Tsutsaroth|K'ril Tsutsaroth
+Killing Necromancers (Great Kourend)|1505 3801 0|Lovakengj
+Killing Kree'arra|@boss:Kree'arra|Kree'arra
+Killing Lizardman Shaman in the Lizardman Canyon|1424 3718 0;1424 3700 0;1434 3711 0|Lizardman Shaman
+Killing Lizardman Shaman in the Lizardman Temple or Lizardman Caves (when on Slayer Task)|1424 3718 0;1424 3700 0;1434 3711 0|Lizardman Shaman
+Killing Nex (Duo)|@boss:Nex|Nex
+Killing Nex|@boss:Nex|Nex
+Killing Phantom Muspah (Twisted Bow)|2870 3940 0;2858 3928 0;2860 3923 0;2872 3921 0;2876 3920 0;2877 3922 0|Weiss
+Killing Phosani's Nightmare|@boss:Phosani's Nightmare|Phosani's Nightmare
+Killing Sarachnis|@boss:Sarachnis|Sarachnis
+Killing Scorpia|@boss:Scorpia|Scorpia
+Killing Scurrius|@boss:Scurrius|Scurrius
+Killing Spindel|@boss:Spindel|Spindel
+Killing Spitting Wyverns|3679 3854 0;3746 3779 0|Wyvern Cave
+Killing The Leviathan|2040 6429 0|the Scar
+Killing  The Nightmare|@boss:The Nightmare|The Nightmare
+Killing The Whisperer|2663 6367 0|Lassar Undercity
+Killing Tormented Demons|4136 4372 0;4117 4385 0|Tormented Demon
+Killing Vardorvis|1162 3379 0|the Stranglewood
+Killing Venenatis|@boss:Venenatis|Venenatis
+Killing Vet'ion|@boss:Vet'ion|Vet'ion
+Killing Vorkath using Dragon hunter crossbow|@boss:Vorkath|Vorkath
+Killing Vorkath using Dragon hunter lance|@boss:Vorkath|Vorkath
+Killing Vorkath using Bandos godsword and toxic blowpipe|@boss:Vorkath|Vorkath
+Killing Vyrewatch Sentinels|3597 3360 0|Darkmeyer
+Killing Wyrms (Slayer)|@boss:Alchemical Hydra|Karuulm Slayer Dungeon
+Killing Yama (solo)|1435 3668 0|Chasm of Fire
+Killing Zalcano|3259 6079 0|Prifddinas
+Killing Zalcano (Experience)|3259 6079 0|Prifddinas
+Killing Monks of Zamorak|2931 3516 0;2933 3514 0;2934 3515 0;3213 3476 0;2454 3247 0|Monks of Zamorak
+Killing Zulrah|@boss:Zulrah|Zulrah
+Killing Zulrah (max efficiency)|@boss:Zulrah|Zulrah
+Killing adamant dragons|1568 5088 0|Lithkren Vault
+Killing ankou|1637 9991 0;1638 9995 0;1640 9990 0;2051 9181 0;2053 9174 0;2053 9177 0|ankou
+Killing ankou (free-to-play)|1637 9991 0;1638 9995 0;1640 9990 0;2051 9181 0;2053 9174 0;2053 9177 0|ankou
+Killing araxytes off-task.|3658 9842 0;3663 9831 0;3664 9837 0;3693 9845 0;3696 9847 0;3697 9841 0|araxytes
+Killing aviansie|2917 3744 0|Armadyl's Eyrie
+Killing basilisk knights (Slayer)|2621 3691 0;2463 4009 0|Jormungand's Prison
+Killing black unicorns|3228 3674 0|Level 15-21 Wilderness
+Killing blue dragons|2884 3398 0;2881 9828 0|Taverley Dungeon
+Killing brine rats|2743 3732 0|Brine Rat Cavern
+Killing brutal black dragons|1695 3864 0;1562 3790 0;1469 3652 0;1668 3566 0;1639 3674 0;1420 3588 0|Catacombs of Kourend
+Killing brutal green dragons|1764 5344 0;2511 3511 0;2511 3511 0|Ancient Cavern
+Killing brutal red dragons|1695 3864 0;1562 3790 0;1469 3652 0;1668 3566 0;1639 3674 0;1420 3588 0|Catacombs of Kourend
+Killing cave horrors|3749 2973 0|Mos Le'Harmless Cave
+Killing chaos druids|3116 9908 0;3096 3468 0;3115 3451 0;3154 9904 0|Edgeville Dungeon
+Killing chaos dwarves|2976 3750 0|The Forgotten Cemetery
+Killing cows and tanning cowhide|3241 3299 0;3239 3297 0;3240 3296 0;3241 3295 0;3241 3294 0;3242 3293 0|Lumbridge cow field
+Killing dark wizards|3210 3448 0|Varrock
+Killing demonic gorillas|2435 3519 0|Crash Site Cavern
+Killing disciples of Iban|2448 3312 0|Underground Pass (dungeon)
+Killing fire wizards|2966 3395 0;2957 3395 0;2955 3394 0;2948 3395 0;2948 3395 0;2945 3395 0|Falador
+Killing ents|3164 3672 0|Graveyard of Shadows
+Killing fever spiders|3678 3536 0;3679 3534 0|Braindeath Island
+Killing fiyr shades|3484 3322 0|Shade Catacombs
+Killing Frost naguas|1627 9623 0;1627 9638 0;1631 9618 0|Frost nagua
+Killing gargoyles|3429 3555 0|Slayer Tower
+Killing green dragons|2978 3615 0|Immediately north of the Graveyard of Shadows
+Killing green dragons (Myths Guild)|2456 2845 0|Myths' Guild
+Killing hill giants|3094 3849 0;3110 3854 0;3117 3854 0;1446 3614 0;1448 3609 0;1440 3606 0|Hill Giant
+Killing hydras|@boss:Alchemical Hydra|Karuulm Slayer Dungeon
+Killing ice troll runts|2331 3802 0|Neitiznot
+Killing imps|2966 3395 0;2957 3395 0;2955 3394 0;2948 3395 0;2948 3395 0;2945 3395 0|Falador
+Killing kurasks|2796 3615 0|Fremennik Slayer Dungeon
+Killing lava dragons|3204 3828 0|Lava Dragon Isle
+Killing mithril dragons|1764 5344 0;2511 3511 0;2511 3511 0|Ancient Cavern
+Killing ogress shamans|1975 9020 1;2522 2860 0|Corsair Cove Dungeon
+Killing Ogress Warrior|1989 8986 1;2010 9000 1;2014 9002 1;2043 8975 1|South of Falador
+Killing red dragons|2742 3153 0;2760 3064 0|Brimhaven Dungeon
+Killing revenants (Craw's bow)|3216 10128 0;3230 10133 0;3207 10093 0;3221 10095 0|Revenant Caves
+Killing revenants (Ranged)|3216 10128 0;3230 10133 0;3207 10093 0;3221 10095 0|Revenant Caves
+Killing rune dragons|1568 5088 0|Lithkren Vault
+Killing Skeletal Wyverns|3007 3149 0;3007 3149 0|Asgarnian Ice Dungeon
+Killing skogres and zogres|2465 3046 0|Jiggig
+Killing spidines|2647 3225 0;2642 3220 0;2642 3215 0;2646 3211 0;2651 3211 0;2656 3217 0|Tower of Life (building)
+Killing spiritual mages|2917 3744 0|God Wars Dungeon
+Killing the Abyssal Sire|@boss:Abyssal Sire|Abyssal Sire
+Killing the Alchemical Hydra|@boss:Alchemical Hydra|Alchemical Hydra
+Killing the Chaos Fanatic|@boss:Chaos Fanatic|Chaos Fanatic
+Killing the Corporeal Beast|@boss:Corporeal Beast|Corporeal Beast
+Killing the crazy archaeologist|@boss:Crazy archaeologist|Crazy archaeologist
+Killing the Giant Mole|@boss:Giant Mole|Giant Mole
+Killing the Giant Mole (Twisted Bow)|@boss:Giant Mole|Giant Mole
+Killing Grotesque Guardians|@boss:Grotesque Guardians|Grotesque Guardians
+Killing the Kalphite Queen|@boss:Kalphite Queen|Kalphite Queen
+Killing the King Black Dragon|@boss:King Black Dragon|King Black Dragon
+Killing the Kraken boss.|@boss:Kraken|Kraken
+Killing the Mad Angel|2571 2239 0|Wyrmscraig
+Killing the Maggot King|2658 7792 0;2575 7818 0;2653 7818 0;2678 7850 0|Maggot King
+Killing the Maggot King (Ranged)|2658 7792 0;2575 7818 0;2653 7818 0;2678 7850 0|Maggot King
+Killing Thermonuclear Smoke Devil|@boss:Thermonuclear smoke devil|Thermonuclear smoke devil
+Killing unicows|2647 3225 0;2642 3220 0;2642 3215 0;2646 3211 0;2651 3211 0;2656 3217 0|Tower of Life (building)
+Killing urium shades|3484 3322 0|Shade Catacombs
+Killing wizards|3109 3160 0|Wizard's tower
+Killing Zombie pirates|3239 3607 0|Chaos Temple (Wilderness)
+Killing zombie pirates|3239 3607 0|Chaos Temple (Wilderness)
+Playing Last Man Standing|3142 3636 0|Last Man Standing
+Killing Royal Titans and looting Branda the Fire Queen|3007 3149 0;3007 3149 0|Asgarnian Ice Dungeon
+Killing Royal Titans and looting Eldric the Ice King|3007 3149 0;3007 3149 0|Asgarnian Ice Dungeon
+Making Guthix rests|BANK|The nearest bank
+Making adamant brutal arrows|BANK|The nearest bank
+Making divine bastion potions|BANK|The nearest bank
+Making divine battlemage potions|BANK|The nearest bank
+Making divine magic potions|BANK|The nearest bank
+Making divine ranging potions|BANK|The nearest bank
+Making divine super attack potions|BANK|The nearest bank
+Making divine super combat potions|BANK|The nearest bank
+Making divine super defence potions|BANK|The nearest bank
+Making divine super strength potions|BANK|The nearest bank
+Making dough|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Making dyes|3103 3265 0|Draynor Village
+Making flour|3137 3451 0;3138 3448 0;3142 3444 0;3144 3443 0;3149 3448 0;3149 3452 0|Cooks' Guild
+Creating gloves of silence|3210 3448 0|Varrock
+Making planks at the Woodcutting Guild|1565 3498 0;1562 3498 0;1563 3478 0;1564 3477 0;1582 3477 0;1587 3472 0|Woodcutting Guild
+Making prayer potions|BANK|The nearest bank
+Making sacred oil|BANK|The nearest bank
+Making Sanfew serum(4)|BANK|The nearest bank
+Making Super combat potions|BANK|The nearest bank
+Making weapon poison(++)|2521 3065 0;2524 3013 0|Skavid Caves
+Managing Miscellania (every 24h)|2560 3870 0|Miscellania
+Mastering Mixology|1389 2918 0|Alchemical society
+Mining adamantite ore|3033 9726 0;3018 3338 0|Mining Guild
+Mining amethyst|3033 9726 0;3018 3338 0|Mining Guild
+Mining and crushing infernal shale (Infernal shale deposit)|1435 3668 0|Chasm of Fire
+Mining and crushing infernal shale (Infernal shale rocks)|1435 3668 0|Chasm of Fire
+Mining and crushing infernal shale (Tick manipulation)|1435 3668 0|Chasm of Fire
+Mining basalt|2870 3940 0;2858 3928 0;2860 3923 0;2872 3921 0;2876 3920 0;2877 3922 0|Weiss
+Mining coal ore|3018 3450 0;3059 3378 0;3018 3340 0|Dwarven Mine
+Mining gem rocks|2842 9388 0;2823 3001 0|Shilo Village Mine
+Mining iron ore|3033 9726 0;3018 3338 0|Mining Guild
+Mining iron ore (free-to-play)|3018 3450 0;3059 3378 0;3018 3340 0|Dwarven Mine
+Mining lead rocks|3039 2981 0|The Pandemonium
+Mining lead ore (Deepfin mine)|1942 2803 0;1948 2782 0|Deepfin Mine
+Mining runite ore (free-to-play)|3059 3883 0|Lava Maze runite mine
+Mining salts|2870 3940 0;2858 3928 0;2860 3923 0;2872 3921 0;2876 3920 0;2877 3922 0|Weiss
+Moons of Peril|@boss:Moons of Peril|Moons of Peril
+Motherlode Mine|3745 5663 0|Motherlode Mine
+Picking up drops from Greater Nechryael|1691 10081 0;1692 10078 0;1692 10083 0;3218 12421 0;3220 12417 0;3220 12425 0|Greater Nechryael
+Opening crystal chests|2910 3451 0|Taverley
+Opening grubby chests|1701 3573 0;1668 3566 0;1691 3569 0|Forthos Dungeon
+Opening 15 herb boxes (every 24h)|2605 3115 0|Nightmare Zone
+Opening sinister chest|2571 3122 0;2603 3080 0|Yanille Agility dungeon
+Pasting squid|BANK|The nearest bank
+Picking bananas|2903 3163 0|Musa Point
+Picking up chisels|3612 9500 0|Temple of the Eye (location)
+Pickpocketing H.A.M. Members|3161 3248 0|H.A.M. Hideout
+Pickpocketing Knights of Ardougne|2660 3300 0|Ardougne Market
+Pickpocketing Elves|3259 6079 0|Prifddinas
+Pickpocketing master farmers|2570 3300 0|Ardougne
+Pickpocketing Paladins|2660 3300 0|Ardougne Market
+Pickpocketing Vyres|3597 3360 0|Darkmeyer
+Planting Crystal acorn (every 8h)|3259 6079 0|Prifddinas
+Poisoning ammo|3163 3492 0|Grand exchange
+Picking up drops from Araxytes|3658 9842 0;3663 9831 0;3664 9837 0;3693 9845 0;3696 9847 0;3697 9841 0|Araxytes
+Selling archery supplies to Brian's Archery Supplies|2957 3204 0|Brian's Archery Supplies.
+Selling silk to silk merchant|2570 3300 0|Ardougne
+Slaying venators|2603 7808 0|Vampyrium
+Smelting adamantite bars with superheat item|3163 3492 0|grand exchange
+Smithing adamantite bars at the Blast Furnace|2931 10196 0|Blast Furnace
+Smithing iron bars|3080 3492 0|Edgeville
+Smithing iron bars at the Blast Furnace|2931 10196 0|Blast Furnace
+Smithing mithril bars at the Blast Furnace|2931 10196 0|Blast Furnace
+Smelting runite bars|3095 3487 0|Edgeville Furnace
+Smelting runite bars with superheat item|3163 3492 0|grand exchange
+Smithing runite bars at the Blast Furnace|2931 10196 0|Blast Furnace
+Smelting silver bars|3080 3492 0|Edgeville
+Smelting steel bars|3095 3487 0|Edgeville Furnace
+Smelting steel bars at the Blast Furnace|2931 10196 0|Blast Furnace
+Smithing bronze dart tips|3185 3440 0|Varrock West Bank
+Smithing iron dart tips|3185 3440 0|Varrock West Bank
+Smithing mithril dart tips|3185 3440 0|Varrock West Bank
+Smithing steel cannonballs|3080 3492 0|Edgeville
+Smithing steel dart tips|3185 3440 0|Varrock West Bank
+Spinning Flax to Bow string|BANK|The nearest bank
+Stealing from Wydin|3028 3220 0;3008 3206 0;3016 3229 0;3008 3203 0;3008 3206 0;3009 3202 0|Port Sarim
+Stealing from Rogues' Castle chests|3286 3933 0|Rogues' Castle
+Stealing valuables|1725 3128 0|Civitas illa Fortis
+Fishing at the Fishing spot (Stranglewood)|1162 3379 0|The Stranglewood
+Stringing amulets|BANK|The nearest bank
+Subduing Tempoross|3165 2845 0|Ruins of Unkah
+Taking from the infinite money bag while picking up coin spawns in Varrock West bank (free-to-play)|3185 3440 0|Varrock west bank
+Tanning black dragonhide|3274 3192 0|Al Kharid
+Tanning blue dragonhide|3274 3192 0|Al Kharid
+Tanning cowhide|3274 3192 0|Al Kharid
+Tanning green dragonhide|3274 3192 0|Al Kharid
+Tanning red dragonhide|3274 3192 0|Al Kharid
+Temple Trekking|3502 3220 0;3478 3234 0|Burgh de Rott
+Completing the Theatre of Blood (trio)|@boss:Theatre of Blood (raid)|Theatre of Blood (raid)
+Completing Expert solo Tombs of Amascut (lvl 300)|@boss:Tombs of Amascut (raid)|Tombs of Amascut (raid)
+Completing solo Tombs of Amascut at raid level 450|@boss:Tombs of Amascut (raid)|Tombs of Amascut (raid)
+Completing solo Tombs of Amascut at raid level 545|@boss:Tombs of Amascut (raid)|Tombs of Amascut (raid)
+Picking up drops from Vyrewatch Sentinels|3597 3360 0|Darkmeyer

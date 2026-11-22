@@ -21,7 +21,7 @@ When you're logged in, each job also shows **what it takes to reach your next le
 - how much you'll make (or lose) by the time you level
 - roughly how long it takes
 
-Jobs you don't have the levels for are marked in red (or hidden with "only jobs you can do"). Hover a job for the full breakdown, or right-click it to open its wiki guide. In the settings you can choose:
+Jobs you don't have the levels for are marked in red (or hidden with "only jobs you can do"). Hover a job for the full breakdown, or click it for **Show the way** (the shortest route to where the job is done; about 570 of the jobs have a place, and bank-standing jobs go to the nearest bank) or its wiki guide. In the settings you can choose:
 
 - **Price mode:** Instant (default and safest), Average (last hour), or Patient (place offers and wait)
 - **Your speed:** scale the rates to how fast you play
@@ -73,6 +73,7 @@ The Ledger can show you the way somewhere: a line on the world map, the minimap 
 - **Boss tab:** *Show the way* takes you to the boss's entrance (49 bosses), and clicking a quest a boss needs → *Show the way to the start*.
 - **Farm tab:** the route to each patch on a run, in order.
 - **Train tab:** click a step marked **→**.
+- **Jobs tab:** click a job → *Show the way*.
 - **World map:** right-click anywhere → *Route here*. *Clear route* is in the same menu and in the box above the tabs.
 
 It uses doors, stairs, boats, fairy rings, spirit trees and the teleports you can use right now (the level, the quest, and the runes or item in your inventory or worn; your bank isn't checked). Wander off or teleport somewhere else and it works the route out again. Settings are under **Routes**: which teleports to use, staying out of the Wilderness (on by default), where the line is drawn and its colour.
