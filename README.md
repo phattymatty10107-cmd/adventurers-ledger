@@ -1,6 +1,6 @@
 # Adventurer's Ledger: a RuneLite plugin
 
-A side panel with five tabs (Jobs, Train, Boss, Farm and Goal), priced live from the OSRS Wiki real-time prices API.
+A side panel with six tabs (Jobs, Train, Boss, Farm, Goal and Bank), priced live from the OSRS Wiki real-time prices API.
 
 ## Jobs
 
@@ -64,6 +64,19 @@ Pick something you want and see how to pay for it:
 
 - **Buy an item**: search the Grand Exchange, pick the item, and see what it costs, the coins you already have (bag and bank) and the fastest money makers you have the levels for, with how long each takes. On the Boss tab, click any gear and choose **Plan how to afford this**.
 - **Reach a level**: pick a skill and a level to see the training time, the cost of supplies and how long it takes to earn that. The goal is added to the **Train** tab straight away (marked "Your goal"), so the plan and the way to each step are waiting there; click **Open the plan on the Train tab** to jump to it. When you reach the level you get a chat message and a notification (turn the notification off with "Goal alerts" in the settings).
+
+## Bank
+
+Help organising your bank. Open your bank once and the Ledger sorts it (it's remembered per account, so it works when the bank is closed).
+
+- **Sorted by type:** your bank split into coins & runes, teleports, weapons, armour, jewellery, ammo, potions, food, tools, herbs, seeds & farming, ores & bars, logs & planks, crafting & fletching, raw fish, bones & ashes, clues and everything else, with what each is worth at live prices. Click a type to see its items, most valuable first.
+- **Copy tidy bank tab:** copies a tag tab called `ledger` holding your whole bank laid out by type, each type starting on a new row and matching items side by side (all the rune armour together, every dose of a potion together). In the bank, right-click the **+** (new tag tab) button and choose **Import tag tab**. It uses RuneLite's Bank Tags plugin, which is on by default, and doesn't move anything in your real bank.
+- Right-click a type to copy just that type as its own tag tab (`ledger potions`, `ledger teleports`...).
+- **Clear-out ideas:** what you could get rid of, with how many bank slots it frees and what it's worth:
+  - **Tools you've outgrown:** pickaxes, axes, harpoons and defenders when you own a better one you have the level for.
+  - **Worth more alched:** stacks where high alching beats the GE price, even after the nature rune.
+  - **Low-value clutter:** stacks worth less than 1k, 10k or 100k in total (you choose). Runes, teleports, tools and clues are never listed.
+  - **Copy clear-out tab** puts all of them in a `ledger clear out` tag tab, so you can open it at the bank and sell, alch or drop as you go.
 
 ## Routes
 

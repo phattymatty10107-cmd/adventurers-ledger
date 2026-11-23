@@ -228,6 +228,65 @@ public class Gear
 		return String.join(", ", s);
 	}
 
+	/** Tools where a better one makes the old one useless. */
+	private static final java.util.Set<String> REPLACEABLE = new java.util.HashSet<>(
+		java.util.Arrays.asList("Pickaxe", "Axe", "Harpoon", "Defender"));
+
+	/**
+	 * Tools you've replaced: for each tool (pickaxe, axe, harpoon...), the weaker ones you own when you
+	 * also own a better one you have the level for. Lower-case item name -> why it can go.
+	 *
+	 * @param owned   everything you own (worn, bag and bank) by lower-case name
+	 * @param levelOf your level in a skill, or -1 if unknown (then any owned tool counts)
+	 */
+	public Map<String, String> outgrown(Map<String, Owned> owned, java.util.function.ToIntFunction<String> levelOf)
+	{
+		Map<String, String> out = new LinkedHashMap<>();
+		for (Map.Entry<String, SkillGear> skill : bySkill.entrySet())
+		{
+			int level = levelOf.applyAsInt(skill.getKey());
+			for (Map.Entry<String, List<Tier>> tool : skill.getValue().tools.entrySet())
+			{
+				// weapons, staves and armour have other uses, and essence pouches are used together
+				if (!REPLACEABLE.contains(tool.getKey()))
+				{
+					continue;
+				}
+				List<Tier> tiers = tool.getValue();
+				Tier best = null;
+				for (Tier t : tiers)
+				{
+					if ((level < 0 || t.level <= level) && find(owned, t.item) != null
+						&& (best == null || t.level > best.level))
+					{
+						best = t;
+					}
+				}
+				if (best == null)
+				{
+					continue;
+				}
+				for (Tier t : tiers)
+				{
+					if (t.level >= best.level)
+					{
+						continue;
+					}
+					String why = "Replaced by your " + best.item;
+					for (String name : owned.keySet())
+					{
+						String key = t.item.toLowerCase(Locale.ROOT);
+						if (name.equals(key) || name.startsWith(key + " (") || name.startsWith(key + "("))
+						{
+							out.put(name, why);
+						}
+					}
+				}
+			}
+		}
+		return out;
+	}
+
 	/** Parse gear.txt. */
 	public static Gear load(InputStream in) throws IOException
 	{

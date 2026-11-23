@@ -1,6 +1,7 @@
 package com.moneymaker;
 
 import com.google.inject.Provides;
+import com.moneymaker.data.BankBook;
 import com.moneymaker.data.BossCheck;
 import com.moneymaker.data.BossQuests;
 import com.moneymaker.data.BossSetup;
@@ -10,6 +11,7 @@ import com.moneymaker.data.Gear;
 import com.moneymaker.data.GoalWatch;
 import com.moneymaker.data.Training;
 import com.moneymaker.data.GearPricer;
+import com.moneymaker.data.GeTax;
 import com.moneymaker.data.ItemPrice;
 import com.moneymaker.data.PriceBook;
 import com.moneymaker.data.RefreshCooldown;
@@ -148,6 +150,8 @@ public class MoneyMakerPlugin extends Plugin
 	private volatile Map<Integer, Long> bankItems = Collections.emptyMap();
 	private volatile boolean bankSeen;
 	private final Map<Integer, String> itemNames = new java.util.concurrent.ConcurrentHashMap<>();
+	/** Alch value, tradeability and worn slot for items in your bank, looked up on the client thread. */
+	private final Map<Integer, BankBook.Info> itemInfo = new java.util.concurrent.ConcurrentHashMap<>();
 	/** Account type varbit: 0 normal, anything else is an ironman type. -1 when unknown. */
 	private volatile int accountType = -1;
 	private long loadedBankFor;
@@ -301,7 +305,11 @@ public class MoneyMakerPlugin extends Plugin
 		loadSavedBank();
 		claimFarmTimers();
 		checkQuests();
-		resolveNames();
+		if (resolveNames())
+		{
+			// a big bank is looked up over a few ticks; show the rest as it comes in
+			updatePanel(MoneyMakerPanel::refreshTrain);
+		}
 
 		Map<String, long[]> now = new HashMap<>();
 		for (Skill s : Skill.values())
@@ -865,21 +873,28 @@ public class MoneyMakerPlugin extends Plugin
 		updatePanel(MoneyMakerPanel::refreshTrain);
 	}
 
-	/** Look up names for item ids (client thread only). */
-	private void resolveNames()
+	/** Look up names for item ids (client thread only). True if any were new. */
+	private boolean resolveNames()
 	{
-		int budget = 300;
+		final int perTick = 300;
+		int budget = perTick;
 		for (Map<Integer, Long> m : java.util.Arrays.asList(invItems, wornItems, bankItems))
 		{
 			for (Integer id : m.keySet())
 			{
-				if (budget > 0 && !itemNames.containsKey(id))
+				if (budget > 0 && !itemInfo.containsKey(id))
 				{
 					budget--;
-					itemNames.put(id, itemManager.getItemComposition(id).getName());
+					net.runelite.api.ItemComposition comp = itemManager.getItemComposition(id);
+					net.runelite.client.game.ItemStats stats = itemManager.getItemStats(id);
+					int slot = stats != null && stats.isEquipable() && stats.getEquipment() != null
+						? stats.getEquipment().getSlot() : -1;
+					itemNames.put(id, comp.getName());
+					itemInfo.put(id, new BankBook.Info(comp.getName(), comp.getHaPrice(), comp.isTradeable(), slot));
 				}
 			}
 		}
+		return budget < perTick;
 	}
 
 	/** Everything you own by lower-case name, with where it is. */
@@ -909,6 +924,66 @@ public class MoneyMakerPlugin extends Plugin
 	public boolean isBankSeen()
 	{
 		return bankSeen;
+	}
+
+	/**
+	 * Your bank sorted into types and priced at the chosen price mode. Items whose details haven't
+	 * been looked up yet (it takes a few game ticks for a big bank) are left out until they have.
+	 */
+	public BankBook getBankBook()
+	{
+		List<BankBook.Entry> entries = new java.util.ArrayList<>();
+		for (Map.Entry<Integer, Long> e : bankItems.entrySet())
+		{
+			int id = e.getKey();
+			BankBook.Info info = itemInfo.get(id);
+			if (info == null || info.getName() == null || info.getName().equalsIgnoreCase("null"))
+			{
+				continue;
+			}
+			long ge;
+			if (id == BankBook.COINS)
+			{
+				ge = 1;
+			}
+			else if (id == BankBook.PLATINUM_TOKEN)
+			{
+				ge = 1000;
+			}
+			else
+			{
+				ItemPrice p = info.isTradeable() ? prices.get(info.getName()) : null;
+				long sell = p == null ? 0 : p.sellPrice(config.priceMode());
+				ge = Math.max(0, sell - GeTax.perItem(id, info.getName(), sell));
+			}
+			entries.add(new BankBook.Entry(id, info.getName(), e.getValue(),
+				BankBook.categorise(info.getName(), info.getSlot()), ge, info.getHaPrice(), info.isTradeable()));
+		}
+		return new BankBook(entries);
+	}
+
+	/** How many bank items still need looking up before the bank tab is complete. */
+	public int getBankItemsPending()
+	{
+		int n = 0;
+		for (Integer id : bankItems.keySet())
+		{
+			if (!itemInfo.containsKey(id))
+			{
+				n++;
+			}
+		}
+		return n;
+	}
+
+	/** Tools in your bank that a better one you own (and can use) has replaced. */
+	public Map<String, String> getOutgrownTools()
+	{
+		return gear.outgrown(getOwned(), skill ->
+		{
+			long[] s = skills.get(skill);
+			return s == null ? -1 : (int) s[0];
+		});
 	}
 
 	public Gear getGear()

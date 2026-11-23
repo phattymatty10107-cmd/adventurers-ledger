@@ -27,6 +27,7 @@ public class MoneyMakerPanel extends PluginPanel
 	private final FarmPanel farm;
 	private final TrainPanel train;
 	private final GoalPanel goal;
+	private final BankPanel bank;
 	private final MaterialTabGroup tabs;
 	private final MaterialTab goalTab;
 	private final RouteBar routeBar;
@@ -55,12 +56,13 @@ public class MoneyMakerPanel extends PluginPanel
 		farm = new FarmPanel(plugin, itemManager);
 		train = new TrainPanel(plugin, itemManager);
 		goal = new GoalPanel(plugin, itemManager);
+		bank = new BankPanel(plugin, itemManager);
 
 		JPanel display = new JPanel(new BorderLayout());
 		display.setBackground(ColorScheme.DARK_GRAY_COLOR);
 
 		tabs = new MaterialTabGroup(display);
-		tabs.setLayout(new GridLayout(1, 5, 0, 0));
+		tabs.setLayout(new GridLayout(1, 6, 0, 0));
 		tabs.setBorder(new EmptyBorder(0, 0, 8, 0));
 
 		MaterialTab jobsTab = tab(tabs, "Jobs", "Money-making jobs ranked by gp/hr", jobs);
@@ -68,6 +70,7 @@ public class MoneyMakerPanel extends PluginPanel
 		tab(tabs, "Boss", "Boss gear from cheapest to best, and whether you can fight it", bosses);
 		tab(tabs, "Farm", "Best farm runs, bird houses and dailies, with timers", farm);
 		goalTab = tab(tabs, "Goal", "What you want, what it costs and the quickest way to pay for it", goal);
+		tab(tabs, "Bank", "Your bank sorted by type, tag tabs to tidy it, and what to sell or alch", bank);
 		tabs.select(plugin.isIronman() ? trainTab : jobsTab);
 		// a level goal picked on the Goal tab shows up on the Train tab straight away
 		goal.setOnLevelGoal(train::setGoal, () -> tabs.select(trainTab));
@@ -110,6 +113,7 @@ public class MoneyMakerPanel extends PluginPanel
 			farm.refresh();
 			train.refresh();
 			goal.refresh();
+			bank.refresh();
 			return;
 		}
 		if ((todo & JOBS) != 0)
@@ -119,6 +123,8 @@ public class MoneyMakerPanel extends PluginPanel
 		if ((todo & TRAIN) != 0)
 		{
 			train.refresh();
+			// TRAIN is also what your items changing sets
+			bank.refresh();
 		}
 		if ((todo & FARM) != 0)
 		{
